@@ -1,0 +1,37 @@
+/* ============================================================
+   Mobile / narrow-pane responsive fixes
+   覆盖第三方片段(MCL Multi Column / minimal-cards / MCL Gallery)的
+   桌面优先布局,保持 vendored 文件原样可升级。
+
+   - 列折叠用 @media 宽度判定(窄分屏/手机竖屏都受益,不会误折叠平板/横屏)
+   - 仅平台相关的项才用 .is-mobile
+   - 本片段在 appearance.json 的 enabledCssSnippets 中置于最后,
+     用最低必要的 !important 压过 MCL 的高特异性选择器
+   ============================================================ */
+
+/* ---- 1. MCL 多栏 callout:窄屏折叠成单列 ---- */
+@media (max-width: 500px) {
+  /* 基础 flex 多栏(no-wrap 横向滚动变体除外):每个子项占满一行 */
+  div[data-callout="multi-column"]:not([data-callout-metadata*="no-wrap"]).callout
+    > .callout-content > *:is(div, ul, blockquote, p) {
+    flex-basis: 100% !important;
+  }
+  /* col3 等固定网格变体 → 单列 */
+  div[data-callout="multi-column"][data-callout-metadata*="col"]:not([data-callout-metadata*="icons"]).callout {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ---- 2. minimal-cards:把 400pt(≈533px)的奇怪断点归一到 500px,
+        并给手机更舒服的卡片宽度(原 120px 在手机上会挤成 3 列) ---- */
+@media (max-width: 500px) {
+  body { --cards-min-width: 150px; }
+}
+
+/* ---- 3. MCL Gallery / dv-card:窄屏钳制图片宽度,杜绝横向溢出 ---- */
+@media (max-width: 500px) {
+  body { --img-max-width: 100%; --img-max-width-list: 100%; }
+  div[data-callout-metadata*="gallery"].callout > .callout-content > p img,
+  .image-gallery img { max-width: 100% !important; height: auto; }
+  .dv-card table.dataview tbody { grid-template-columns: 1fr !important; }
+}

@@ -1,0 +1,191 @@
+/*
+ * Datacore Table Polish
+ * --------------------------------------------------------------
+ * Adds a more refined look to <dc.Table> renders without changing any
+ * Datacore behavior. Enable via Settings → Appearance → CSS Snippets.
+ *
+ * Targets the Datacore-injected `.datacore-table` class. All values are
+ * Obsidian theme variables where possible, so this snippet adapts to
+ * both light/dark themes and most community themes.
+ */
+
+/*
+ * NOTE on selector specificity:
+ * The Datacore plugin's own stylesheet uses CHILD combinators
+ *   `.datacore-table > thead > tr > th`
+ *   `.datacore-table > tbody > tr > td`
+ * These have higher specificity than descendant selectors. To win the
+ * cascade, we use the same child combinator pattern below.
+ */
+
+/* Container — rounded corners, subtle shadow */
+.datacore-table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04),
+                0 1px 3px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--background-modifier-border);
+    margin: 0.5em 0;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* Header — soft background, refined typography */
+.datacore-table > thead {
+    background: var(--background-secondary);
+}
+
+.datacore-table > thead > tr > th {
+    padding: 6px 14px;
+    font-weight: 500;
+    font-size: 0.72em;
+    color: var(--text-faint);
+    border-bottom: 1px solid var(--background-modifier-border);
+    text-align: left;
+    user-select: none;
+    white-space: nowrap;            /* prevent vertical stacking of Chinese headers */
+    max-width: none;
+}
+
+/* Body cells — uniform padding for consistent row height */
+.datacore-table > tbody > tr > td {
+    padding: 7px 14px;
+    border-bottom: 1px solid var(--background-modifier-border-hover);
+    vertical-align: middle;
+    font-size: 0.92em;
+    line-height: 1.4;
+}
+
+/* (Zebra striping removed per user feedback — single background looks cleaner) */
+
+/* Row hover highlight */
+.datacore-table > tbody > tr {
+    transition: background-color 0.12s ease;
+}
+
+.datacore-table > tbody > tr:hover {
+    background: var(--background-modifier-hover);
+}
+
+/* Last row — remove bottom border so it sits flush with the rounded container */
+.datacore-table > tbody > tr:last-child > td {
+    border-bottom: none;
+}
+
+/* Links inside cells */
+.datacore-table > tbody > tr > td a.internal-link {
+    text-decoration: none;
+    color: var(--link-color);
+    border-bottom: 1px dotted var(--link-color);
+    padding-bottom: 1px;
+}
+
+.datacore-table > tbody > tr > td a.internal-link:hover {
+    color: var(--link-color-hover);
+    border-bottom-style: solid;
+}
+
+/* Empty state — when table has no rows */
+.datacore-table tbody:empty::after,
+.datacore-table:not(:has(tbody tr)) {
+    color: var(--text-faint);
+    font-style: italic;
+}
+
+/* Pagination control container */
+.datacore-table-paging,
+.datacore-table + .paging,
+.datacore-paging {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 4px;
+    margin-top: 4px;
+    font-size: 0.88em;
+}
+
+/* Pagination buttons — flat, minimal */
+.datacore-table-paging button,
+.datacore-paging button,
+.datacore-table-paging .clickable-icon,
+.datacore-paging .clickable-icon {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-muted);
+    padding: 3px 9px;
+    border-radius: 6px;
+    cursor: pointer;
+    min-width: 28px;
+    transition: all 0.12s ease;
+}
+
+.datacore-table-paging button:hover,
+.datacore-paging button:hover {
+    background: var(--background-modifier-hover);
+    color: var(--text-normal);
+}
+
+/* Active / current page */
+.datacore-table-paging button.is-active,
+.datacore-table-paging button[aria-current="page"],
+.datacore-paging button.is-active {
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border-color: var(--interactive-accent);
+    font-weight: 600;
+}
+
+/* Disabled prev/next when on first/last page */
+.datacore-table-paging button:disabled,
+.datacore-paging button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* Compact mode — narrower table with denser rows */
+.datacore-table.is-compact > thead > tr > th {
+    padding: 6px 10px;
+    font-size: 0.7em;
+}
+
+.datacore-table.is-compact > tbody > tr > td {
+    padding: 5px 10px;
+    font-size: 0.88em;
+}
+
+/* Empty state placeholder — when datacorejsx returns no rows */
+.datacore-result-message {
+    padding: 12px 16px;
+    background: var(--background-secondary);
+    border-left: 3px solid var(--background-modifier-border);
+    color: var(--text-muted);
+    font-size: 0.9em;
+    border-radius: 0 6px 6px 0;
+}
+
+/* ----------------------------------------------------------------
+ * Custom in-block tab switcher — Pill style (Round 4)
+ *
+ * Active tab is filled with --interactive-accent; inactive tabs are
+ * transparent. CSS handles hover/focus only since the main visual
+ * state lives in the JSX inline style.
+ * ---------------------------------------------------------------- */
+.dc-tab-btn {
+    outline: none;
+}
+
+.dc-tab-btn:not(.is-active):hover {
+    background: var(--background-modifier-hover) !important;
+    color: var(--text-normal) !important;
+}
+
+.dc-tab-btn.is-active:hover {
+    /* Active tab hover — slightly brighter so the user gets feedback */
+    filter: brightness(1.08);
+}
+
+.dc-tab-btn:focus-visible {
+    box-shadow: 0 0 0 2px var(--interactive-accent);
+}

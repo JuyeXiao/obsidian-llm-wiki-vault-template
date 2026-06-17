@@ -1,0 +1,90 @@
+/* ============================================================
+   Homepage dashboard styling
+   作用域限定 .homepage（在 HUB/Homepage.md 的 cssclasses 中声明）
+   全部走 Obsidian 主题变量，自动跟随 AnuPpuccin 薰衣草主题（浅/深色）
+   ============================================================ */
+
+/* -- 内联标题与整体宽度 -- */
+.homepage .inline-title { display: none; }                 /* banner 已提供页面语境，隐藏 "Homepage" 大标题 */
+.homepage.markdown-preview-view .markdown-preview-sizer,
+.homepage .cm-sizer { max-width: 1180px; margin-inline: auto; }
+
+/* banner 底部渐隐 + 首块内容上移与之融合（homepage 专属，仿 Banners 的 Gradient 样式） */
+.homepage .obsidian-banner {
+  -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+}
+.homepage .obsidian-banner-wrapper { margin-top: calc(var(--banner-height) - 32px); }
+.homepage .markdown-preview-sizer > .el-pre:first-of-type,
+.homepage .markdown-preview-sizer > div:first-child { margin-top: 0; }
+
+/* -- MCL 多栏导航：把子 callout 渲染成简洁卡片 -- */
+.homepage .callout[data-callout="multi-column"] {
+  --callout-gap: 16px;
+  margin-block: 4px 18px;
+}
+.homepage .callout[data-callout="multi-column"] .callout:not([data-callout="multi-column"]) {
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 14px;
+  padding: 10px 16px 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+  mix-blend-mode: normal;
+}
+.homepage .callout[data-callout="multi-column"] .callout:not([data-callout="multi-column"]):hover {
+  border-color: var(--interactive-accent);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+  transform: translateY(-2px);
+}
+.homepage .callout[data-callout="multi-column"] .callout-title {
+  color: var(--interactive-accent);
+  font-weight: 700;
+  padding: 4px 0 6px;
+}
+.homepage .callout[data-callout="multi-column"] .callout-icon { display: none; }
+
+/* 卡片内的链接列表：去掉项目符号、舒展行距 */
+.homepage .callout[data-callout="multi-column"] .callout-content ul {
+  padding-left: 0;
+  margin: 0.2em 0;
+  list-style: none;
+}
+.homepage .callout[data-callout="multi-column"] .callout-content li {
+  list-style: none;
+  margin: 0.12em 0;
+  padding: 4px 8px;
+  border-radius: 7px;
+  transition: background 0.14s ease;
+}
+.homepage .callout[data-callout="multi-column"] .callout-content li:hover {
+  background: var(--background-modifier-hover);
+}
+.homepage .callout[data-callout="multi-column"] a.internal-link,
+.homepage .callout[data-callout="multi-column"] a {
+  text-decoration: none;
+  color: var(--text-normal);
+}
+.homepage .callout[data-callout="multi-column"] a.internal-link:hover {
+  color: var(--interactive-accent);
+}
+.homepage .callout[data-callout="multi-column"] .callout[data-callout="quote"] .callout-content {
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* -- Banner 微调 -- */
+.homepage .obsidian-banner-image { border-radius: 0 0 4px 4px; }
+
+/* -- datacore 块之间的留白统一 -- */
+.homepage .block-language-datacorejsx { margin-block: 0; }
+
+/* -- 移动端：释放桌面宽度上限 + 导航卡片单列 -- */
+@media (max-width: 500px) {
+  .homepage .callout[data-callout="multi-column"] { --callout-gap: 10px; }
+  .homepage.markdown-preview-view .markdown-preview-sizer,
+  .homepage .cm-sizer { max-width: 100%; padding-inline: 8px; }
+}
+.is-mobile .homepage.markdown-preview-view .markdown-preview-sizer,
+.is-mobile .homepage .cm-sizer { max-width: 100%; }

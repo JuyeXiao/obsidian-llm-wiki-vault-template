@@ -1,0 +1,3798 @@
+{
+  "debugEnabled": false,
+  "defaultToolbar": null,
+  "editorMenuAsToolbar": false,
+  "editorMenuToolbar": null,
+  "emptyViewToolbar": null,
+  "export": {
+    "includeIcons": true,
+    "replaceVars": true,
+    "useDataEls": true,
+    "useIds": true
+  },
+  "folderMappings": [
+    {
+      "folder": "HUB/Map of Content",
+      "toolbar": "db2947d6-48e4-4559-9bb3-cc615be3a2fd"
+    },
+    {
+      "folder": "HUB/Mail Box",
+      "toolbar": "db2947d6-48e4-4559-9bb3-cc615be3a2fd"
+    },
+    {
+      "folder": "PARA/PROJECTS",
+      "toolbar": "2ef139db-c160-4837-bc3d-78d8d016c9b7"
+    },
+    {
+      "folder": "PARA/AREAS",
+      "toolbar": "6836d5e9-9886-4a16-b9ce-3b9d08a27240"
+    },
+    {
+      "folder": "PARA/RESOURCES/CONTACTS",
+      "toolbar": "8a125111-fb31-43f0-b176-701879d690e8"
+    },
+    {
+      "folder": "PARA/RESOURCES/DOCUMENTATIONS",
+      "toolbar": "8a125111-fb31-43f0-b176-701879d690e8"
+    },
+    {
+      "folder": "PARA/RESOURCES/MEETINGS",
+      "toolbar": "8a125111-fb31-43f0-b176-701879d690e8"
+    },
+    {
+      "folder": "PARA/ARCHIVES",
+      "toolbar": "8a125111-fb31-43f0-b176-701879d690e8"
+    },
+    {
+      "folder": "PARA/WORKSTATION",
+      "toolbar": "8a125111-fb31-43f0-b176-701879d690e8"
+    },
+    {
+      "folder": "ZETA",
+      "toolbar": "8a125111-fb31-43f0-b176-701879d690e8"
+    },
+    {
+      "folder": "DAILY",
+      "toolbar": "8a125111-fb31-43f0-b176-701879d690e8"
+    },
+    {
+      "folder": "STICKY",
+      "toolbar": "8a125111-fb31-43f0-b176-701879d690e8"
+    },
+    {
+      "folder": "SYSTEM/TEMPLATE",
+      "toolbar": "8a125111-fb31-43f0-b176-701879d690e8"
+    },
+    {
+      "folder": "SYSTEM/DESIGN",
+      "toolbar": "8a125111-fb31-43f0-b176-701879d690e8"
+    },
+    {
+      "folder": "INBOX",
+      "toolbar": "8a125111-fb31-43f0-b176-701879d690e8"
+    }
+  ],
+  "icon": "lucide-brain",
+  "keepPropsState": false,
+  "lockCallouts": false,
+  "obsidianUiVisibility": {},
+  "onboarding": {
+    "new-toolbar-mapping": true,
+    "startup-help-view": true,
+    "startup-help-welcome": true
+  },
+  "ribbonAction": "item-suggester",
+  "ribbonToolbar": null,
+  "rules": [],
+  "scriptingEnabled": true,
+  "showEditInFabMenu": false,
+  "showLaunchpad": false,
+  "showToolbarIn": {
+    "audio": false,
+    "canvas": true,
+    "image": false,
+    "kanban": true,
+    "pdf": true,
+    "video": false,
+    "bases": true
+  },
+  "showToolbarInFileMenu": false,
+  "showToolbarInOther": "",
+  "showWhatsNew": true,
+  "textToolbar": null,
+  "textToolbarOnKeyboard": true,
+  "toolbarProp": "",
+  "toolbars": [
+    {
+      "uuid": "31c81ded-ffa7-4d05-8d56-9ff8807277e3",
+      "defaultStyles": [
+        "border",
+        "even",
+        "sticky"
+      ],
+      "items": [
+        {
+          "uuid": "dc77be8f-d769-4cde-a42c-43b1c6ac133d",
+          "label": "Homepage",
+          "icon": "lucide-home",
+          "link": "Homepage: Open homepage",
+          "linkAttr": {
+            "commandId": "homepage:open-homepage",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Homepage",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "3369f1f0-05d7-4ff5-b054-6529e492bbc4",
+          "label": "Map of Content",
+          "icon": "lucide-map-pinned",
+          "link": "HUB/Map of Content.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "Map of Content",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "0e20e81a-c1a5-4f04-9b48-ae7e491ee11c",
+          "label": "Mail Box",
+          "icon": "lucide-inbox",
+          "link": "HUB/Mail Box.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "Mail Box",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "28af8261-3b59-4393-8911-966d3caf398a",
+          "label": "Tag Navigator",
+          "icon": "lucide-tags",
+          "link": "HUB/Tag Navigator.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "Tag Navigator",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "4b9dde31-c8c3-4f1a-8467-7a90dcaec07f",
+          "label": "PARA-Wiki Atlas",
+          "icon": "lucide-compass",
+          "link": "HUB/PARA-Wiki Atlas.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "PARA-Wiki Atlas",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "15e38a61-26c6-4c39-8108-d948befe4c86",
+          "label": "Graph View",
+          "icon": "lucide-circle-dot-dashed",
+          "link": "Graph view: Open graph view",
+          "linkAttr": {
+            "commandId": "graph:open",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Graph View",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "40594638-fb8e-4675-ae5c-3cc97ce04071",
+          "label": "Local Graph",
+          "icon": "lucide-git-fork",
+          "link": "Graph view: Open local graph",
+          "linkAttr": {
+            "commandId": "graph:open-local",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Local Graph",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        }
+      ],
+      "mobileStyles": [
+        "mbrder",
+        "mevn",
+        "mstcky"
+      ],
+      "name": "hub_nav",
+      "position": {
+        "desktop": {
+          "allViews": {
+            "position": "props"
+          }
+        },
+        "mobile": {
+          "allViews": {
+            "position": "props"
+          }
+        },
+        "tablet": {
+          "allViews": {
+            "position": "props"
+          }
+        }
+      },
+      "updated": "2024-11-11T16:17:04.596Z"
+    },
+    {
+      "uuid": "9a73ece5-9d64-440a-92cb-b28f6bf371a8",
+      "defaultStyles": [
+        "border",
+        "even",
+        "sticky"
+      ],
+      "items": [
+        {
+          "uuid": "03c8a3f0-dc94-403e-ad8c-b3f6df020583",
+          "label": "Homepage",
+          "icon": "lucide-home",
+          "link": "SYSTEM/MOBILE HUB/Mobile Homepage.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "Homepage",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "fc98ca32-fec0-437d-bbbc-15230bda7714",
+          "label": "Map of Content",
+          "icon": "lucide-map-pinned",
+          "link": "SYSTEM/MOBILE HUB/Mobile Map of Content.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "Map of Content",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "0fd9717e-c1b2-43ca-84dd-26a578ba9a27",
+          "label": "Mail Box",
+          "icon": "lucide-inbox",
+          "link": "SYSTEM/MOBILE HUB/Mobile Mail Box.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "Mail Box",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "c2bb9674-0fd3-4bd0-90c2-f949a27b2ca6",
+          "label": "Graph View",
+          "icon": "lucide-circle-dot-dashed",
+          "link": "Graph view: Open graph view",
+          "linkAttr": {
+            "commandId": "graph:open",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Graph View",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        }
+      ],
+      "mobileStyles": [
+        "mbrder",
+        "mevn",
+        "mstcky"
+      ],
+      "name": "hub_nav_mobile",
+      "position": {
+        "desktop": {
+          "allViews": {
+            "position": "props"
+          }
+        },
+        "mobile": {
+          "allViews": {
+            "position": "props"
+          }
+        },
+        "tablet": {
+          "allViews": {
+            "position": "props"
+          }
+        }
+      },
+      "updated": "2024-11-11T16:17:10.547Z"
+    },
+    {
+      "uuid": "73a72f9b-fff3-423f-8f60-c640c9b00b51",
+      "defaultStyles": [
+        "border",
+        "even",
+        "sticky"
+      ],
+      "items": [
+        {
+          "uuid": "f5b1e1df-12c2-4f87-b60b-d4933150fbac",
+          "label": "Show/Hide Sidebars",
+          "icon": "lucide-sidebar-open",
+          "link": "QuickAdd: Enable/Disable Sidebars",
+          "linkAttr": {
+            "commandId": "quickadd:choice:fe2b64be-77df-4bda-9bb7-7aa764ee1446",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Show/Hide Sidebar",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "1a967a89-18c6-4ee9-b63f-7358cd46a25f",
+          "label": "Show/Hide Ribbons",
+          "icon": "lucide-sidebar-open",
+          "link": "Toggle ribbon",
+          "linkAttr": {
+            "commandId": "app:toggle-ribbon",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Show/Hide Ribbons",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "56f722aa-daf7-4926-8414-2bae9e8df4b3",
+          "label": "Focus Mode",
+          "icon": "lucide-fullscreen",
+          "link": "QuickAdd: Hider (Focus Mode)",
+          "linkAttr": {
+            "commandId": "quickadd:choice:c8c7588f-71bc-4aef-97d4-6c34a9e5d554",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Focus Mode",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "ab372d05-8890-4113-bb63-cc37b7f30596",
+          "label": "Light Mode",
+          "icon": "lucide-flashlight",
+          "link": "Use light mode",
+          "linkAttr": {
+            "commandId": "theme:use-light",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Light Mode",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "ba753453-a3e6-489d-9d30-afe15b229234",
+          "label": "Dark Mode",
+          "icon": "lucide-flashlight-off",
+          "link": "Use dark mode",
+          "linkAttr": {
+            "commandId": "theme:use-dark",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Dark Mode",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "a71d106a-6729-42f2-b3d8-96760964b783",
+          "label": "Open Settings",
+          "icon": "lucide-settings",
+          "link": "Open settings",
+          "linkAttr": {
+            "commandId": "app:open-settings",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Open Settings",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "736e5229-88ba-45ab-8372-acd9bd7be2c0",
+          "label": "Vault Guide",
+          "icon": "question-mark-glyph",
+          "link": "SYSTEM/GETTING STARTED/Getting Started.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "Getting Started",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        }
+      ],
+      "mobileStyles": [
+        "mbrder",
+        "mevn",
+        "mstcky"
+      ],
+      "name": "settings_nav",
+      "position": {
+        "desktop": {
+          "allViews": {
+            "position": "props"
+          }
+        },
+        "mobile": {
+          "allViews": {
+            "position": "props"
+          }
+        },
+        "tablet": {
+          "allViews": {
+            "position": "props"
+          }
+        }
+      },
+      "updated": "2024-11-11T11:58:31.249Z"
+    },
+    {
+      "uuid": "6836d5e9-9886-4a16-b9ce-3b9d08a27240",
+      "defaultStyles": [
+        "border",
+        "even",
+        "sticky"
+      ],
+      "items": [
+        {
+          "uuid": "fbf25323-f3b9-4669-b89a-c1ef72b92b3e",
+          "label": "HUB",
+          "icon": "lucide-globe",
+          "link": "31c81ded-ffa7-4d05-8d56-9ff8807277e3",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Open HUB",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": []
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "2216eb65-ec3f-4b4f-8302-29bfc266c10e",
+          "label": "HUB",
+          "icon": "lucide-globe",
+          "link": "9a73ece5-9d64-440a-92cb-b28f6bf371a8",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Open HUB",
+          "visibility": {
+            "desktop": {
+              "components": []
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "424ec613-90b1-4a5d-a72c-0ffd98a60536",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "7657f95a-94d8-47ab-b936-8ef460cd64b5",
+          "hasCommand": false,
+          "icon": "lucide-calendar-check",
+          "inGallery": false,
+          "label": "Daily Notes",
+          "link": "Journals: Open today's note",
+          "linkAttr": {
+            "commandId": "journals:personal-daily:open-today's-note",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Daily Notes",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          }
+        },
+        {
+          "uuid": "d84f125b-7959-42de-b8c4-4e85e57ab0d7",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "9f332582-4870-4e7e-b2e4-388675d51e17",
+          "label": "Toggle Page Task",
+          "icon": "lucide-circle",
+          "link": "Templater: Insert SYSTEM/TEMPLATE/CODE/toggle_todo.md",
+          "linkAttr": {
+            "commandId": "templater-obsidian:SYSTEM/TEMPLATE/CODE/toggle_todo.md",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Toggle Page Task",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "18e60359-7064-43bc-9a52-875275d95c90",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "2c725a6d-a752-4979-a28c-3b2a813c3711",
+          "label": "Create a New Note",
+          "icon": "lucide-plus",
+          "link": "60330be9-d052-4d72-877e-09bd2f49e3e4",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Create a New Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "a8cb95b1-53dc-44b9-9a99-8b8c00907531",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "20e8642a-8fdc-4205-9941-9e379d8d2f46",
+          "label": "Recent Files",
+          "icon": "lucide-navigation",
+          "link": "Quick switcher: Open quick switcher",
+          "linkAttr": {
+            "commandId": "darlal-switcher-plus:switcher-plus:open",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Recent Files",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "e04cc058-c9aa-4971-9182-eb8b73544ec5",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "6879a87a-da62-4a66-8e7f-dd8a883004b5",
+          "label": "Search Vault",
+          "icon": "lucide-search",
+          "link": "Omnisearch: Vault search",
+          "linkAttr": {
+            "commandId": "omnisearch:show-modal",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Search Vault",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "9ede7260-ce9b-4212-9cf7-1c482bde99cc",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "0ac02a17-2d6b-4c86-a610-a218c69f3b3d",
+          "label": "Delete Current File",
+          "icon": "lucide-trash",
+          "link": "Delete current file",
+          "linkAttr": {
+            "commandId": "app:delete-file",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Delete Current File",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "c1ee4a9f-98d7-470a-80cf-26b49c16ccf9",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "bcc1ee46-caa3-4de6-8147-6060b3852428",
+          "label": "Settings",
+          "icon": "lucide-settings",
+          "link": "73a72f9b-fff3-423f-8f60-c640c9b00b51",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Settings",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "697032c2-f66f-4132-8ae4-35c489010abb",
+          "hasCommand": false,
+          "icon": "",
+          "inGallery": false,
+          "label": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          }
+        }
+      ],
+      "mobileStyles": [
+        "mbrder",
+        "mevn",
+        "mstcky"
+      ],
+      "name": "top_area_nav",
+      "position": {
+        "desktop": {
+          "allViews": {
+            "position": "fabr"
+          }
+        },
+        "mobile": {
+          "allViews": {
+            "position": "fabr"
+          }
+        },
+        "tablet": {
+          "allViews": {
+            "position": "fabr"
+          }
+        }
+      },
+      "updated": "2025-06-04T10:13:50.438Z"
+    },
+    {
+      "uuid": "60330be9-d052-4d72-877e-09bd2f49e3e4",
+      "defaultStyles": [
+        "border",
+        "even",
+        "sticky"
+      ],
+      "items": [
+        {
+          "uuid": "313f9da3-0da0-4e63-a3f3-89700bd23429",
+          "label": "Area ",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: New Area Family",
+          "linkAttr": {
+            "commandId": "quickadd:choice:d9e990bb-6ec2-40ce-97e7-536a2dbc8bd2",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Create a new Area Family",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "fb9afbd2-c86c-49e6-b186-6fc02fbe3f39",
+          "hasCommand": false,
+          "icon": "lucide-pencil-line",
+          "inGallery": false,
+          "label": "Area Sub",
+          "link": "QuickAdd: New Area Family Sub",
+          "linkAttr": {
+            "commandId": "quickadd:choice:22c7e6a3-79f4-4c06-9d8a-8a3e116f979a",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Create a new Area Family Sub",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          }
+        },
+        {
+          "uuid": "d40486ae-134e-45a5-8fb8-34ea74a04ee4",
+          "label": "Area Note",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: New Area Note",
+          "linkAttr": {
+            "commandId": "quickadd:choice:2007de3a-6e66-4c31-b749-ea2232af1ebc",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Create a new Area Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "aeb783c5-b973-42b0-a04d-eb20155363ad",
+          "hasCommand": false,
+          "icon": "lucide-pencil-line",
+          "inGallery": false,
+          "label": "Area Note Sub",
+          "link": "QuickAdd: New Area Note Sub",
+          "linkAttr": {
+            "commandId": "quickadd:choice:4d2cd9ad-a9bd-4be5-ba80-a920e0d6c81c",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Create a new Area Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          }
+        },
+        {
+          "uuid": "4c837d54-ed65-465b-8856-aec87a509059",
+          "label": "Documentation Note",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: Area/Project Documentation",
+          "linkAttr": {
+            "commandId": "quickadd:choice:4c0622ad-ab6c-4443-a27e-fa5bc49a239f",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Create a new Documentation Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "1151a9d5-4bbf-466b-9fe9-fc8f20e231c6",
+          "label": "Workstation Note",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: Area/Project Workstation",
+          "linkAttr": {
+            "commandId": "quickadd:choice:da2d7294-e1b7-47a2-958e-eaf9c755c974",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Create a new Workstation Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        }
+      ],
+      "mobileStyles": [
+        "mbrder",
+        "mevn",
+        "mstcky"
+      ],
+      "name": "top_area_sub",
+      "position": {
+        "desktop": {
+          "allViews": {
+            "position": "props"
+          }
+        },
+        "mobile": {
+          "allViews": {
+            "position": "props"
+          }
+        },
+        "tablet": {
+          "allViews": {
+            "position": "props"
+          }
+        }
+      },
+      "updated": "2025-06-04T10:15:06.943Z"
+    },
+    {
+      "uuid": "db2947d6-48e4-4559-9bb3-cc615be3a2fd",
+      "defaultStyles": [
+        "border",
+        "even",
+        "sticky"
+      ],
+      "items": [
+        {
+          "uuid": "a3ee4c5d-8732-4f6d-a6dc-6be537fbd4e2",
+          "label": "HUB",
+          "icon": "lucide-globe",
+          "link": "31c81ded-ffa7-4d05-8d56-9ff8807277e3",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Open HUB",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": []
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "b854bac6-e8a4-473d-98fa-673499ad0085",
+          "label": "HUB",
+          "icon": "lucide-globe",
+          "link": "9a73ece5-9d64-440a-92cb-b28f6bf371a8",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Open HUB",
+          "visibility": {
+            "desktop": {
+              "components": []
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "96e8a067-f1ff-4b0f-af68-a5d4f43a7c0d",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "2c1fb497-b276-4f48-b059-32521cba9dc6",
+          "hasCommand": false,
+          "icon": "lucide-calendar-check",
+          "inGallery": false,
+          "label": "Daily Note",
+          "link": "Journals: Open today's note",
+          "linkAttr": {
+            "commandId": "journals:personal-daily:open-today's-note",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Daily Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          }
+        },
+        {
+          "uuid": "4b50c7a0-487a-4e7e-a8b3-5d9c235b4d08",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "f7b161bd-4529-4c55-bce0-208cc3aadd11",
+          "label": "Toggle Page Task",
+          "icon": "lucide-circle",
+          "link": "Templater: Insert SYSTEM/TEMPLATE/CODE/toggle_todo.md",
+          "linkAttr": {
+            "commandId": "templater-obsidian:SYSTEM/TEMPLATE/CODE/toggle_todo.md",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Toggle Page Task",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "d7897d96-31e3-44d4-a129-62cbbb13609b",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "23977223-5fd5-45df-a482-c4e5842cc58a",
+          "label": "Create a New Note",
+          "icon": "lucide-plus",
+          "link": "248895dd-3211-4c96-bf2b-8945aee0957a",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Create a New Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "7903a521-0846-491d-adc7-637174699921",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "11309934-2b0b-4604-af78-1bbd1d6c4a9b",
+          "label": "Recent Files",
+          "icon": "lucide-navigation",
+          "link": "Quick switcher: Open quick switcher",
+          "linkAttr": {
+            "commandId": "darlal-switcher-plus:switcher-plus:open",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Recent Files",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "94e56162-1124-4792-92fb-061836e9cc07",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "304db4e1-cea1-45a8-a3b3-f32017f2e22c",
+          "label": "Search Vault",
+          "icon": "lucide-search",
+          "link": "Omnisearch: Vault search",
+          "linkAttr": {
+            "commandId": "omnisearch:show-modal",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Search Vault",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "1b604109-482f-42fd-be00-c40cbe7f52c4",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "33199145-f90f-44f4-87a7-48563a2fb7cc",
+          "label": "Settings",
+          "icon": "lucide-settings",
+          "link": "73a72f9b-fff3-423f-8f60-c640c9b00b51",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Settings",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        }
+      ],
+      "mobileStyles": [
+        "mbrder",
+        "mevn",
+        "mstcky"
+      ],
+      "name": "top_hub_nav",
+      "position": {
+        "desktop": {
+          "allViews": {
+            "position": "fabr"
+          }
+        },
+        "mobile": {
+          "allViews": {
+            "position": "fabr"
+          }
+        },
+        "tablet": {
+          "allViews": {
+            "position": "fabr"
+          }
+        }
+      },
+      "updated": "2025-06-04T14:37:51.758Z"
+    },
+    {
+      "uuid": "2ef139db-c160-4837-bc3d-78d8d016c9b7",
+      "defaultStyles": [
+        "border",
+        "even",
+        "sticky"
+      ],
+      "items": [
+        {
+          "uuid": "142d46bd-f4ec-44ab-a980-e71f4ec2bbfe",
+          "label": "HUB",
+          "icon": "lucide-globe",
+          "link": "31c81ded-ffa7-4d05-8d56-9ff8807277e3",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Open HUB",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": []
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "48aca4d6-b1ff-4a29-aa39-708df697fd03",
+          "label": "HUB",
+          "icon": "lucide-globe",
+          "link": "9a73ece5-9d64-440a-92cb-b28f6bf371a8",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Open HUB",
+          "visibility": {
+            "desktop": {
+              "components": []
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "334730e1-0edb-45b8-aa97-2cf60794edac",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "8416a98d-be3e-4cd8-90d8-56ecb43f2bb3",
+          "label": "Daily Note",
+          "icon": "lucide-calendar-days",
+          "link": "Journals: Open today's note",
+          "linkAttr": {
+            "commandId": "journals:personal-daily:open-today's-note",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Daily Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "8ac5560f-7685-4910-bd2e-fc61044d4f64",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "45e61cea-7614-47ff-981e-a53ca99d39cd",
+          "label": "Toggle Page Task",
+          "icon": "lucide-circle",
+          "link": "Templater: Insert SYSTEM/TEMPLATE/CODE/toggle_todo.md",
+          "linkAttr": {
+            "commandId": "templater-obsidian:SYSTEM/TEMPLATE/CODE/toggle_todo.md",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Toggle Page Task",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "f7048e19-de4f-41d9-b085-cb0093ae090c",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "c4bc195a-4184-42e8-97ff-64468edd4054",
+          "label": "Create a New Note",
+          "icon": "lucide-plus",
+          "link": "8f4b270a-66ae-4b9f-9fb8-7d74132da59c",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Create a New Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "1d0a98f2-4d2a-4b03-afc9-19fae7a854db",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "a343805d-6735-4d87-9ae5-3dfb2d98c00b",
+          "label": "Recent Files",
+          "icon": "lucide-navigation",
+          "link": "Quick switcher: Open quick switcher",
+          "linkAttr": {
+            "commandId": "darlal-switcher-plus:switcher-plus:open",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Recent Files",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "c95c9dcb-253b-4b63-99e7-3cdf050b01d4",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "f517ea53-3976-4405-850f-c50fbf008dc2",
+          "label": "Search Vault",
+          "icon": "lucide-search",
+          "link": "Omnisearch: Vault search",
+          "linkAttr": {
+            "commandId": "omnisearch:show-modal",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Search Vault",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "07181e3e-bc63-4a2a-abb5-6406d44edee0",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "ad82a8a1-d3e6-4a4b-b90d-3bb939c11249",
+          "label": "Delete Current File",
+          "icon": "lucide-trash",
+          "link": "Delete current file",
+          "linkAttr": {
+            "commandId": "app:delete-file",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Delete Current File",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "6b9eb3ee-de90-48e8-8334-564ca09096fc",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "db040e11-d85c-4bbb-af0f-138c5e5a9620",
+          "label": "Settings",
+          "icon": "lucide-settings",
+          "link": "73a72f9b-fff3-423f-8f60-c640c9b00b51",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Settings",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        }
+      ],
+      "mobileStyles": [
+        "mbrder",
+        "mevn",
+        "mstcky"
+      ],
+      "name": "top_project_nav",
+      "position": {
+        "desktop": {
+          "allViews": {
+            "position": "fabr"
+          }
+        },
+        "mobile": {
+          "allViews": {
+            "position": "fabr"
+          }
+        },
+        "tablet": {
+          "allViews": {
+            "position": "fabr"
+          }
+        }
+      },
+      "updated": "2024-11-11T16:19:32.375Z"
+    },
+    {
+      "uuid": "8f4b270a-66ae-4b9f-9fb8-7d74132da59c",
+      "defaultStyles": [
+        "border",
+        "even",
+        "sticky"
+      ],
+      "items": [
+        {
+          "uuid": "9ada9d50-e341-4eff-8ab8-b9722259b257",
+          "label": "Project",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: New Project Family",
+          "linkAttr": {
+            "commandId": "quickadd:choice:ff153bd3-6ae3-4098-bcd7-52fe4a558a34",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Create a new Project Family",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "490f284a-6075-4da4-ab29-5d4dfadfcd14",
+          "label": "Project Note",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: New Project Note",
+          "linkAttr": {
+            "commandId": "quickadd:choice:75b22050-2882-4386-b3c9-c9597b9a550a",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Create a new Project Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "921556b0-3ad7-4e1a-bdf1-29d7d2cdc950",
+          "label": "Documentation Note",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: Area/Project Documentation",
+          "linkAttr": {
+            "commandId": "quickadd:choice:4c0622ad-ab6c-4443-a27e-fa5bc49a239f",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Create a new Documentation Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "75cd6ed7-3137-4375-b539-311d09120cf5",
+          "label": "Workstation Note",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: Area/Project Workstation",
+          "linkAttr": {
+            "commandId": "quickadd:choice:da2d7294-e1b7-47a2-958e-eaf9c755c974",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Create a new Workstation Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        }
+      ],
+      "mobileStyles": [
+        "mbrder",
+        "mevn",
+        "mstcky"
+      ],
+      "name": "top_project_sub",
+      "position": {
+        "desktop": {
+          "allViews": {
+            "position": "props"
+          }
+        },
+        "mobile": {
+          "allViews": {
+            "position": "props"
+          }
+        },
+        "tablet": {
+          "allViews": {
+            "position": "props"
+          }
+        }
+      },
+      "updated": "2024-10-08T13:57:51.475Z"
+    },
+    {
+      "uuid": "8a125111-fb31-43f0-b176-701879d690e8",
+      "defaultStyles": [
+        "border",
+        "even",
+        "sticky"
+      ],
+      "items": [
+        {
+          "uuid": "ba18c867-cc16-4361-9413-8f12e661bc58",
+          "label": "HUB",
+          "icon": "lucide-globe",
+          "link": "31c81ded-ffa7-4d05-8d56-9ff8807277e3",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Open HUB",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": []
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "d06747e8-7025-4e53-bc6b-4f39b1373ead",
+          "label": "HUB",
+          "icon": "lucide-globe",
+          "link": "9a73ece5-9d64-440a-92cb-b28f6bf371a8",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Open HUB",
+          "visibility": {
+            "desktop": {
+              "components": []
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "cbeb851f-cf65-4316-852d-825297f04727",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "6ce88280-5223-4a05-be39-87c4ee064d62",
+          "label": "Daily Note",
+          "icon": "lucide-calendar-days",
+          "link": "Journals: Open today's note",
+          "linkAttr": {
+            "commandId": "journals:personal-daily:open-today's-note",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Daily Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "dba745c6-a039-4c07-b5e8-5963eb2d447e",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "495f4bd0-8837-47ab-9788-cac263895b66",
+          "label": "Toggle Page Task",
+          "icon": "lucide-circle",
+          "link": "Templater: Insert SYSTEM/TEMPLATE/CODE/toggle_todo.md",
+          "linkAttr": {
+            "commandId": "templater-obsidian:SYSTEM/TEMPLATE/CODE/toggle_todo.md",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Toggle Page Task",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "f83d70ff-8144-44f3-868f-9fc539706f2f",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "a94e0ca0-147c-4d40-8ece-66b3faf44f9f",
+          "label": "Create a New Note",
+          "icon": "lucide-plus",
+          "link": "248895dd-3211-4c96-bf2b-8945aee0957a",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Create a New Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "31f50076-415e-48df-b962-cde92f558f00",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "f14b5d72-c1a3-4651-9820-e7fbd9bdf66c",
+          "label": "Recent Files",
+          "icon": "lucide-navigation",
+          "link": "Quick switcher: Open quick switcher",
+          "linkAttr": {
+            "commandId": "darlal-switcher-plus:switcher-plus:open",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Recent Files",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "e7171767-b4fc-49d3-8090-4a5589295a3e",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "2fc6a51f-f6ee-4723-98aa-d767670fe38e",
+          "label": "Search Vault",
+          "icon": "lucide-search",
+          "link": "Omnisearch: Vault search",
+          "linkAttr": {
+            "commandId": "omnisearch:show-modal",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Search Vault",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "011c4f77-e0f4-4177-ab7a-b6fbe9589466",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "463cfd36-0eeb-4b77-bc0b-b8f384b10ccf",
+          "label": "Delete Current File",
+          "icon": "lucide-trash",
+          "link": "Delete current file",
+          "linkAttr": {
+            "commandId": "app:delete-file",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Delete Current File",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "ecb32dd9-3f71-4bdb-ad57-0e7fa7e6154a",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "1f54fff4-a7f7-4433-beb9-a96305a390b6",
+          "label": "Settings",
+          "icon": "lucide-settings",
+          "link": "73a72f9b-fff3-423f-8f60-c640c9b00b51",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "menu"
+          },
+          "tooltip": "Settings",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        }
+      ],
+      "mobileStyles": [
+        "mbrder",
+        "mevn",
+        "mstcky"
+      ],
+      "name": "top_self_nav",
+      "position": {
+        "desktop": {
+          "allViews": {
+            "position": "fabr"
+          }
+        },
+        "mobile": {
+          "allViews": {
+            "position": "fabr"
+          }
+        },
+        "tablet": {
+          "allViews": {
+            "position": "fabr"
+          }
+        }
+      },
+      "updated": "2024-11-11T16:19:48.421Z"
+    },
+    {
+      "uuid": "248895dd-3211-4c96-bf2b-8945aee0957a",
+      "defaultStyles": [
+        "border",
+        "even",
+        "sticky"
+      ],
+      "items": [
+        {
+          "uuid": "0d97343b-7e07-46b9-93f3-03ee508630be",
+          "label": "Fleeting Note",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: Create Fleeting Note",
+          "linkAttr": {
+            "commandId": "quickadd:choice:1d743cd7-f1bc-44f1-be65-bda74e4f3640",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Fleeting Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "a1d8c2b3-5f39-42e0-a33a-fc613b18a1a1",
+          "label": "Permanent Note",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: Create Permanent Note",
+          "linkAttr": {
+            "commandId": "quickadd:choice:cd2e64df-c578-4bec-8e75-453a31a0420d",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Permanent Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "0c9bd928-6e02-43e8-9f68-f46a9e17d49b",
+          "label": "Literature Note",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: Create Literature Note",
+          "linkAttr": {
+            "commandId": "quickadd:choice:25d86644-0ea6-4f17-a907-9953661bfabe",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Literature Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "2bd04cc0-b483-4659-b42c-865a633a1305",
+          "label": "Workstation Note",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: Create Workstation Note",
+          "linkAttr": {
+            "commandId": "quickadd:choice:a85c5c66-ebb5-4da7-901e-51752f5e2d07",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Workstation Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "7778e1a4-fc95-436d-bab8-86bcc0802f67",
+          "label": "Project Family",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: New Project Family",
+          "linkAttr": {
+            "commandId": "quickadd:choice:ff153bd3-6ae3-4098-bcd7-52fe4a558a34",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Project Family",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "982a4554-7e8c-49cd-b00f-002ce999cca5",
+          "label": "Area Family",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: Create Area Family",
+          "linkAttr": {
+            "commandId": "quickadd:choice:daeb57fd-fb64-44d2-8c7e-aae4d27afade",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Area Family",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "bf06ff7c-4c7b-4d98-95c9-643213a36101",
+          "hasCommand": false,
+          "icon": "lucide-pencil-line",
+          "inGallery": false,
+          "label": "Area Family Sub",
+          "link": "QuickAdd: Create Area Family Sub",
+          "linkAttr": {
+            "commandId": "quickadd:choice:b25d2ad6-d3bc-4729-b4d9-277a4d60d0db",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Area Family Sub",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          }
+        },
+        {
+          "uuid": "22116590-af3f-41bb-8201-d7766f5dbe6f",
+          "label": "Documentation Note",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: Create Documentation Note",
+          "linkAttr": {
+            "commandId": "quickadd:choice:14720491-67af-4692-a951-169d672f6efe",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Documentation Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "8175248d-5a98-413a-b2f5-0124283b8672",
+          "label": "Create New Note",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: Create New Note",
+          "linkAttr": {
+            "commandId": "quickadd:choice:9a4a8c3c-5e7a-4261-bd7f-85f2891948a7",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "Create New Note",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "17d37aaf-f532-4d69-a2a6-6696492612d5",
+          "label": "New Meeting",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: Create New Meeting",
+          "linkAttr": {
+            "commandId": "quickadd:choice:8e62a781-0fe3-45e6-b50e-60090f6b7dd3",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "New Meeting",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "10843f8c-9e3a-4ddd-ae85-b26b8883ab5d",
+          "label": "New Contact",
+          "icon": "lucide-pencil-line",
+          "link": "QuickAdd: Create Contact",
+          "linkAttr": {
+            "commandId": "quickadd:choice:4761947f-9a9a-486a-9e4b-2bfe26c83dbe",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "New Contact",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        }
+      ],
+      "mobileStyles": [
+        "mbrder",
+        "mevn",
+        "mstcky"
+      ],
+      "name": "top_self_sub",
+      "position": {
+        "desktop": {
+          "allViews": {
+            "position": "props"
+          }
+        },
+        "mobile": {
+          "allViews": {
+            "position": "props"
+          }
+        },
+        "tablet": {
+          "allViews": {
+            "position": "props"
+          }
+        }
+      },
+      "updated": "2025-06-04T14:39:29.514Z"
+    }
+  ],
+  "version": 20260428.1,
+  "webviewerToolbar": null,
+  "whatsnew_version": "1.31"
+}

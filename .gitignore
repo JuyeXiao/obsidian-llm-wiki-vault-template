@@ -1,0 +1,29 @@
+# === OS / editor cruft ===
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+*.swp
+*~
+
+# === Obsidian: device-state & per-user caches (regenerated locally — don't commit) ===
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+.obsidian/plugins/recent-files-obsidian/data.json
+
+# If you install a plugin that stores an API key / token (e.g. an AI plugin),
+# ignore its data.json too — for example:
+#   .obsidian/plugins/<plugin-id>/data.json
+
+# === Claude Code (machine-specific paths & permissions) ===
+.claude/settings.local.json
+
+# === Trash ===
+.trash/
+
+# === Your private journals (optional) ===
+# Daily / weekly / monthly notes can be personal. Uncomment the next line
+# to keep them out of a public repo:
+# DAILY/

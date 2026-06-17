@@ -1,0 +1,966 @@
+{
+  "choices": [
+    {
+      "id": "a019f4b7-7f8e-4937-8069-7a9ad8c4b10e",
+      "name": "Multi - Select Note Type",
+      "type": "Multi",
+      "command": true,
+      "choices": [
+        {
+          "id": "1d743cd7-f1bc-44f1-be65-bda74e4f3640",
+          "name": "Create Fleeting Note",
+          "type": "Template",
+          "command": true,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_fleeting_note.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "ZETA/FLEETING"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        },
+        {
+          "id": "cd2e64df-c578-4bec-8e75-453a31a0420d",
+          "name": "Create Permanent Note",
+          "type": "Template",
+          "command": true,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_permanent_note.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "ZETA/PERMANENT"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        },
+        {
+          "id": "25d86644-0ea6-4f17-a907-9953661bfabe",
+          "name": "Create Literature Note",
+          "type": "Template",
+          "command": true,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_literature_note.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "ZETA/LITERATURE"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        },
+        {
+          "id": "a85c5c66-ebb5-4da7-901e-51752f5e2d07",
+          "name": "Create Workstation Note",
+          "type": "Template",
+          "command": true,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_workstation_note.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "PARA/WORKSTATION"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        },
+        {
+          "id": "daeb57fd-fb64-44d2-8c7e-aae4d27afade",
+          "name": "Create Area Family",
+          "type": "Template",
+          "command": true,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_area.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "2. {{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "PARA/AREAS/{{VALUE}}"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        },
+        {
+          "id": "b25d2ad6-d3bc-4729-b4d9-277a4d60d0db",
+          "name": "Create Area Family Sub",
+          "type": "Template",
+          "command": true,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_area_sub.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "3. {{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [],
+            "chooseWhenCreatingNote": true,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": true
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        },
+        {
+          "id": "14720491-67af-4692-a951-169d672f6efe",
+          "name": "Create Documentation Note",
+          "type": "Template",
+          "command": true,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_documentation_note.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "PARA/RESOURCES/DOCUMENTATIONS"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        },
+        {
+          "id": "9a4a8c3c-5e7a-4261-bd7f-85f2891948a7",
+          "name": "Create New Note",
+          "type": "Template",
+          "command": true,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_new_note.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "STICKY"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        },
+        {
+          "id": "8e62a781-0fe3-45e6-b50e-60090f6b7dd3",
+          "name": "Create New Meeting",
+          "type": "Macro",
+          "command": true,
+          "macro": {
+            "id": "a8df9cd1-20f2-4104-a057-095d3322fa99",
+            "name": "Macro - Meeting",
+            "commands": [
+              {
+                "name": "QuickAdd: Multi - Meeting",
+                "type": "Obsidian",
+                "id": "41b2a065-dade-4525-99a9-8a7f345a239e",
+                "commandId": "quickadd:choice:d4effbbf-f8a1-4605-8d8d-87d640bcab03"
+              }
+            ]
+          },
+          "runOnStartup": false
+        },
+        {
+          "id": "4761947f-9a9a-486a-9e4b-2bfe26c83dbe",
+          "name": "Create Contact",
+          "type": "Template",
+          "command": true,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_contact.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "PARA/RESOURCES/CONTACTS"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        }
+      ],
+      "collapsed": false
+    },
+    {
+      "id": "3169b33b-667a-4321-8527-f085decc898b",
+      "name": "Multi - Project",
+      "type": "Multi",
+      "command": true,
+      "choices": [
+        {
+          "id": "ff153bd3-6ae3-4098-bcd7-52fe4a558a34",
+          "name": "New Project Family",
+          "type": "Template",
+          "command": true,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_project.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "1. {{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "PARA/PROJECTS/{{VALUE}}"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        },
+        {
+          "id": "75b22050-2882-4386-b3c9-c9597b9a550a",
+          "name": "New Project Note",
+          "type": "Template",
+          "command": true,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_project_note.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": true,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        }
+      ],
+      "collapsed": false
+    },
+    {
+      "id": "2633d17f-253a-4781-81aa-d5a6a884becf",
+      "name": "Multi - Area",
+      "type": "Multi",
+      "command": true,
+      "choices": [
+        {
+          "id": "d9e990bb-6ec2-40ce-97e7-536a2dbc8bd2",
+          "name": "New Area Family",
+          "type": "Template",
+          "command": true,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_area.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "2. {{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "PARA/AREAS/{{VALUE}}"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        },
+        {
+          "id": "22c7e6a3-79f4-4c06-9d8a-8a3e116f979a",
+          "name": "New Area Family Sub",
+          "type": "Template",
+          "command": true,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_area_sub.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "3. {{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [],
+            "chooseWhenCreatingNote": true,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": true
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        },
+        {
+          "id": "2007de3a-6e66-4c31-b749-ea2232af1ebc",
+          "name": "New Area Note",
+          "type": "Template",
+          "command": true,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_area_note.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": true,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        },
+        {
+          "id": "4d2cd9ad-a9bd-4be5-ba80-a920e0d6c81c",
+          "name": "New Area Note Sub",
+          "type": "Template",
+          "command": true,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_area_note_sub.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": true,
+            "chooseFromSubfolders": true
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        }
+      ],
+      "collapsed": false
+    },
+    {
+      "id": "d4effbbf-f8a1-4605-8d8d-87d640bcab03",
+      "name": "Multi - Meeting",
+      "type": "Multi",
+      "command": true,
+      "choices": [
+        {
+          "id": "676b825d-c7e5-435d-a3a6-e16840ed7e1e",
+          "name": "Create General Meeting",
+          "type": "Template",
+          "command": false,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_meeting_general.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{DATE:MM-DD}} - {{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "PARA/RESOURCES/MEETINGS/GENERAL"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        },
+        {
+          "id": "474ce73c-7c5e-4e47-b596-002bc0d59ba0",
+          "name": "Create Team Meeting",
+          "type": "Template",
+          "command": false,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_meeting_team.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{DATE:MM-DD}} - Team Meeting"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "PARA/RESOURCES/MEETINGS/TEAM"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        },
+        {
+          "id": "a47eee86-c422-4f4b-8d17-2dd9e30f2664",
+          "name": "Create Standup Meeting",
+          "type": "Template",
+          "command": false,
+          "templatePath": "SYSTEM/TEMPLATE/FORMAT/template_meeting_standup.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{DATE:MM-DD}} - Standup"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "PARA/RESOURCES/MEETINGS/STANDUP"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "tab",
+            "direction": "vertical",
+            "focus": true,
+            "mode": "default"
+          },
+          "fileExistsBehavior": {
+            "kind": "prompt"
+          }
+        }
+      ],
+      "collapsed": false
+    },
+    {
+      "id": "4aab0e52-b2ef-4027-ab42-ee9187fab029",
+      "name": "Capture - Add to Daily Task",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "DAILY/DAILY/{{DATE:YYYY-MM-DD}}",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": true,
+        "createWithTemplate": true,
+        "template": "SYSTEM/TEMPLATE/FORMAT/template_daily_note.md"
+      },
+      "format": {
+        "enabled": true,
+        "format": "#task {{VALUE}}"
+      },
+      "insertAfter": {
+        "enabled": true,
+        "after": "# New Tasks",
+        "insertAtEnd": true,
+        "considerSubsections": false,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "bottom"
+      },
+      "prepend": false,
+      "task": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default",
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "c8c7588f-71bc-4aef-97d4-6c34a9e5d554",
+      "name": "Focus Mode",
+      "type": "Macro",
+      "command": true,
+      "macro": {
+        "id": "a8439f00-249b-4092-8b97-bf677f2bb4be",
+        "name": "Focus Mode",
+        "commands": [
+          {
+            "name": "Toggle left sidebar",
+            "type": "Obsidian",
+            "id": "d064de31-0d50-45de-954d-30cfcb7e69e2",
+            "commandId": "app:toggle-left-sidebar"
+          },
+          {
+            "name": "Toggle right sidebar",
+            "type": "Obsidian",
+            "id": "b42f103d-abe0-49a6-9453-f8919a564feb",
+            "commandId": "app:toggle-right-sidebar"
+          },
+          {
+            "name": "Toggle ribbon",
+            "type": "Obsidian",
+            "id": "3db19c04-2fe4-4a6b-ac16-f65f07b467d6",
+            "commandId": "app:toggle-ribbon"
+          }
+        ]
+      },
+      "runOnStartup": false
+    },
+    {
+      "id": "fe2b64be-77df-4bda-9bb7-7aa764ee1446",
+      "name": "Enable/Disable Sidebars",
+      "type": "Macro",
+      "command": true,
+      "macro": {
+        "id": "8526f4f6-fddc-4013-92f7-1cd7f0d03245",
+        "name": "Enable/Disable Sidebars",
+        "commands": [
+          {
+            "name": "Toggle left sidebar",
+            "type": "Obsidian",
+            "id": "f1c1becd-59ba-44d2-b72b-7aa92fa1b8b4",
+            "commandId": "app:toggle-left-sidebar"
+          },
+          {
+            "name": "Toggle right sidebar",
+            "type": "Obsidian",
+            "id": "6946f898-8894-4e2a-bf41-c27cb71b532b",
+            "commandId": "app:toggle-right-sidebar"
+          }
+        ]
+      },
+      "runOnStartup": false
+    },
+    {
+      "id": "19c0da20-ef04-44e5-acbf-06fd4bac1d8c",
+      "name": "Macro - Startup",
+      "type": "Macro",
+      "command": true,
+      "macro": {
+        "id": "6e7baf31-df5f-4214-beef-15a955b855a2",
+        "name": "Macro - Startup",
+        "commands": [
+          {
+            "name": "Custom File Explorer sorting: Enable and apply the custom sorting, (re)parsing the sorting configuration first. Sort-on.",
+            "type": "Obsidian",
+            "id": "204f3206-b202-467e-96c2-311f62df3fb0",
+            "commandId": "custom-sort:enable-custom-sorting"
+          }
+        ]
+      },
+      "runOnStartup": true
+    },
+    {
+      "id": "7ad0b5b4-05ad-42cb-941d-6cb1cb1a966a",
+      "name": "Open: Mail Box",
+      "type": "Macro",
+      "command": true,
+      "macro": {
+        "id": "134d940a-864f-4923-b990-1eccd4ebca62",
+        "name": "Open: Mail Box",
+        "commands": [
+          {
+            "name": "Open Note",
+            "type": "UserScript",
+            "id": "b592accf-a989-49f9-be66-a2ff7665b6af",
+            "path": "SYSTEM/TEMPLATE/MACROS/open_note.js",
+            "settings": {
+              "File path": "HUB/Mail Box.md"
+            }
+          }
+        ]
+      },
+      "runOnStartup": false
+    },
+    {
+      "id": "0763baf2-ff20-453a-be72-98be63349bb1",
+      "name": "Open: Map of Content",
+      "type": "Macro",
+      "command": true,
+      "macro": {
+        "id": "a2ba6111-7f95-49be-b6f3-5089c6eec62d",
+        "name": "Open: Map of Content",
+        "commands": [
+          {
+            "name": "Open Note",
+            "type": "UserScript",
+            "id": "a11a6d9c-ba9c-4626-b6e6-362d8e746d1f",
+            "path": "SYSTEM/TEMPLATE/MACROS/open_note.js",
+            "settings": {
+              "File path": "HUB/Map of Content.md"
+            }
+          }
+        ]
+      },
+      "runOnStartup": false
+    },
+    {
+      "id": "4c0622ad-ab6c-4443-a27e-fa5bc49a239f",
+      "name": "Area/Project Documentation",
+      "type": "Macro",
+      "command": true,
+      "macro": {
+        "id": "c69d38bd-0405-4d5e-9da1-9ec2f811e24d",
+        "name": "Area/Project Documentation",
+        "commands": [
+          {
+            "name": "Area Context Note",
+            "type": "UserScript",
+            "id": "8fae6825-1d1a-45b7-8697-b3950246e162",
+            "path": "SYSTEM/TEMPLATE/MACROS/area_context_note.js",
+            "settings": {
+              "Kind": "documentation"
+            }
+          }
+        ]
+      },
+      "runOnStartup": false
+    },
+    {
+      "id": "da2d7294-e1b7-47a2-958e-eaf9c755c974",
+      "name": "Area/Project Workstation",
+      "type": "Macro",
+      "command": true,
+      "macro": {
+        "id": "edbb93e4-7a81-45ee-bffa-088730b8023a",
+        "name": "Area/Project Workstation",
+        "commands": [
+          {
+            "name": "Area Context Note",
+            "type": "UserScript",
+            "id": "e1e912b7-1054-4a6d-bdae-8e7fa85f3307",
+            "path": "SYSTEM/TEMPLATE/MACROS/area_context_note.js",
+            "settings": {
+              "Kind": "workstation"
+            }
+          }
+        ]
+      },
+      "runOnStartup": false
+    }
+  ],
+  "inputPrompt": "single-line",
+  "persistInputPromptDrafts": true,
+  "useSelectionAsCaptureValue": true,
+  "devMode": false,
+  "templateFolderPath": "",
+  "announceUpdates": "none",
+  "version": "2.12.2",
+  "globalVariables": {},
+  "onePageInputEnabled": false,
+  "disableOnlineFeatures": true,
+  "enableRibbonIcon": false,
+  "showCaptureNotification": true,
+  "showInputCancellationNotification": false,
+  "enableTemplatePropertyTypes": false,
+  "dateAliases": {
+    "t": "today",
+    "tm": "tomorrow",
+    "yd": "yesterday",
+    "nw": "next week",
+    "nm": "next month",
+    "ny": "next year",
+    "lw": "last week",
+    "lm": "last month",
+    "ly": "last year"
+  },
+  "ai": {
+    "defaultModel": "Ask me",
+    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
+    "promptTemplatesFolderPath": "",
+    "showAssistant": true,
+    "providers": []
+  },
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
+    "setVersionAfterUpdateModalRelease": true,
+    "addDefaultAIProviders": true,
+    "removeMacroIndirection": true,
+    "migrateFileOpeningSettings": true,
+    "setProviderModelDiscoveryMode": true,
+    "backfillFileOpeningDefaults": true,
+    "migrateProviderApiKeysToSecretStorage": true,
+    "consolidateFileExistsBehavior": true
+  },
+  "macros": []
+}

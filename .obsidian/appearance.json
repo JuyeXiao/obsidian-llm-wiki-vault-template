@@ -1,0 +1,28 @@
+{
+  "cssTheme": "AnuPpuccin",
+  "accentColor": "#ba4949",
+  "theme": "moonstone",
+  "interfaceFontFamily": "",
+  "textFontFamily": "",
+  "monospaceFontFamily": "",
+  "enabledCssSnippets": [
+    "base",
+    "Gradient Callouts",
+    "MCL Gallery Cards",
+    "MCL Multi Column",
+    "MCL Wide Views",
+    "show-hover-title",
+    "datacore-classes",
+    "file-explorer-wrap",
+    "extended-colorschemes",
+    "custom-rainbow-colors",
+    "notion-cards",
+    "minimal-cards",
+    "custom-background",
+    "its-frontmatter",
+    "datacore-table-polish",
+    "homepage",
+    "mobile"
+  ],
+  "showRibbon": true
+}

@@ -1,0 +1,26 @@
+{
+  "alwaysUpdateLinks": true,
+  "promptDelete": false,
+  "showInlineTitle": false,
+  "propertiesInDocument": "visible",
+  "userIgnoreFilters": [
+    "SYSTEM/",
+    "HUB/"
+  ],
+  "attachmentFolderPath": "SYSTEM/MEDIA",
+  "livePreview": true,
+  "showUnsupportedFiles": true,
+  "newFileLocation": "current",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "2",
+    "downscalePercent": 100
+  },
+  "trashOption": "local",
+  "defaultViewMode": "source",
+  "vimMode": false,
+  "showLineNumber": false,
+  "readableLineLength": true
+}

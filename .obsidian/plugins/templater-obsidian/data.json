@@ -1,0 +1,108 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "SYSTEM/TEMPLATE",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": true,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "PARA/PROJECTS",
+      "template": "SYSTEM/TEMPLATE/FORMAT/template_project_note.md"
+    },
+    {
+      "folder": "PARA/AREAS",
+      "template": "SYSTEM/TEMPLATE/FORMAT/template_area_note_sub.md"
+    },
+    {
+      "folder": "PARA/RESOURCES/CONTACTS",
+      "template": "SYSTEM/TEMPLATE/FORMAT/template_contact.md"
+    },
+    {
+      "folder": "PARA/RESOURCES/DOCUMENTATIONS",
+      "template": "SYSTEM/TEMPLATE/FORMAT/template_documentation_note.md"
+    },
+    {
+      "folder": "PARA/RESOURCES/MEETINGS/GENERAL",
+      "template": "SYSTEM/TEMPLATE/FORMAT/template_meeting_general.md"
+    },
+    {
+      "folder": "PARA/RESOURCES/MEETINGS/TEAM",
+      "template": "SYSTEM/TEMPLATE/FORMAT/template_meeting_team.md"
+    },
+    {
+      "folder": "PARA/RESOURCES/MEETINGS/STANDUP",
+      "template": "SYSTEM/TEMPLATE/FORMAT/template_meeting_standup.md"
+    },
+    {
+      "folder": "PARA/WORKSTATION",
+      "template": "SYSTEM/TEMPLATE/FORMAT/template_workstation_note.md"
+    },
+    {
+      "folder": "ZETA/PERMANENT",
+      "template": "SYSTEM/TEMPLATE/FORMAT/template_permanent_note.md"
+    },
+    {
+      "folder": "ZETA/FLEETING",
+      "template": "SYSTEM/TEMPLATE/FORMAT/template_fleeting_note.md"
+    },
+    {
+      "folder": "ZETA/LITERATURE",
+      "template": "SYSTEM/TEMPLATE/FORMAT/template_literature_note.md"
+    },
+    {
+      "folder": "STICKY",
+      "template": "SYSTEM/TEMPLATE/FORMAT/template_new_note.md"
+    },
+    {
+      "folder": "PARA/PROJECTS/留学申请/申请项目",
+      "template": "SYSTEM/TEMPLATE/FORMAT/template_master_留学申请项目.md"
+    },
+    {
+      "folder": "PARA/RESOURCES/DOCUMENTATIONS/SQL题库",
+      "template": "SYSTEM/TEMPLATE/FORMAT/template_SQL题目.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    "SYSTEM/TEMPLATE/CODE/toggle_todo.md"
+  ],
+  "startup_templates": [],
+  "intellisense_render": 1,
+  "ignore_folders_on_creation": [
+    {
+      "folder": "DAILY"
+    },
+    {
+      "folder": "DAILY/DAILY"
+    },
+    {
+      "folder": "DAILY/WEEKLY"
+    },
+    {
+      "folder": "DAILY/MONTHLY"
+    },
+    {
+      "folder": "DAILY/QUARTERLY"
+    },
+    {
+      "folder": "DAILY/YEARLY"
+    }
+  ]
+}
