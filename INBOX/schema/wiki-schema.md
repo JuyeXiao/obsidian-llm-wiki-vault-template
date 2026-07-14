@@ -58,6 +58,7 @@ status: draft | stable
 | `wiki_concept`  | a **reusable concept** (e.g. AARRR)       | definition → key points → relations to other concepts → `## Sources` |
 | `wiki_entity`   | an **entity** (person/org/product/tool)   | what it is → key facts → related pages → `## Sources` |
 | `wiki_summary`  | **single-source summary** (1 raw → 1 page, optional) | summary → key points → `## Sources` (pointing at that raw) |
+| `wiki_conflict` | **open contradiction** (created by lint/reconcile when a contradiction is genuinely ambiguous; left for the human to adjudicate) | both claims → evidence & sources for each → verdict area; `status` uses `open \| resolved` |
 | `wiki_index`    | `index.md` / `log.md` only                | see §3 |
 
 > [!warning] Linking rules
@@ -87,6 +88,16 @@ Create a standalone `wiki_concept` only when all three hold:
 - **Standalone articles are folded into existing concept pages on ingest** (into their `## Sources`, enriching points as needed); only add a new concept page when existing ones don't fit.
 - A new **series** of sources → a new sibling overview; don't pour unrelated articles into an existing series overview.
 
+### 2.3 Recency markers & confidence (per-claim)
+
+A page-level `updated` only says "the page was touched" — it can't tell you whether a *specific claim* is still trustworthy. So **volatile claims carry their own inline timestamp**:
+
+- **Volatile external claims** (numbers, version numbers, prices, company/product news, rankings, time-sensitive facts) get an inline recency marker: `(as of YYYY-MM, [[source file]])`.
+- **Inferences** (synthesized, not stated directly by a source) are marked `(inferred)`; strong claims backed by **multiple independent sources** may be marked `(multi-source)`.
+- Evergreen conceptual content (definitions, methods, mental models) does **not** need markers — only mark what can go stale.
+- **Incremental adoption**: apply to new pages / new content immediately; do **not** migrate old pages wholesale — patch them when lint / reconcile touches them.
+- Purpose: these markers are what the §4 Lint "contradiction triage" uses to decide *which claim is newer*.
+
 ## 3. Two special files
 
 **`wiki/index.md` (content catalog)**: one line per wiki page — `[[page]] · <type> · <one line> · <source count>`, grouped by `category`. Updated on every ingest.
@@ -113,11 +124,17 @@ Create a standalone `wiki_concept` only when all three hold:
 ### Lint (health check)
 1. Scan `raw/` for orphan sources **not yet cited by any wiki page**.
 2. Check for: contradictions between pages, stale claims superseded by newer sources, orphan wiki pages (no inbound links), missing concept pages, missing cross-references, data gaps a web search could fill.
+   **Contradiction triage (reconcile)** — when two pages (or two spots on one page) make conflicting claims, ask three questions first: **which source is newer** (compare §2.3 recency markers / source dates)? **Which is more authoritative** (primary research / official docs > industry reporting > blogs / transcripts > personal opinion)? **Genuine contradiction or evolution** (a fact or author changing over time is evolution, not contradiction)? Then pick one of three dispositions:
+   - **Clear winner** → rewrite the stale page, and add/update a `## History` section on it for the audit trail: `Previously stated X per [[old source]] (as of YYYY-MM); updated to Y per [[new source]] in YYYY-MM`. **Never silently overwrite an old claim without leaving a trace.**
+   - **Genuinely ambiguous** (evidence is balanced) → create a `wiki_conflict` page (§2): both claims + evidence + sources, `status: open`, left for the human to adjudicate; each conflicting page gets one `[[link]]` line pointing at it.
+   - **Evolution** → update the page to the current state + keep the timeline (don't delete the old claim; rephrase as "previously... now...").
+   Hard rule: **the wiki must never contain two pages that disagree without knowing they disagree** — every contradiction is either resolved or explicitly parked on a conflict page.
 3. **Data hygiene**: clean stray-quote pollution in source frontmatter tags (e.g. a trailing `"`), which interferes with topic-based routing/clustering.
 4. Suggest new questions to investigate / new sources to find; record results in `log.md`.
 
 ## 5. Other hard rules
 
 - `raw/` body & filenames are read-only: never edit / delete / rename source bodies. **Only exception**: ingest writes the three frontmatter fields via `/tag`. Query / lint keep `raw` strictly read-only.
+- **False-absence rule**: before asserting that a page / source / concept does **not** exist, you must search exhaustively (Glob / grep by every plausible name, alias and folder) — never conclude from memory or a single query. "Said it's missing when it exists" is more common than fabrication, and it directly causes duplicate pages and name collisions (the pre-write filename-uniqueness check is this rule in action).
 - Wiki page `type` must be `wiki_*`; only write `INBOX/wiki/`.
 - No automatic backup (this template ships without auto-commit): after a change, remind the user or run `git add` + commit yourself, and **prompt before pushing**.

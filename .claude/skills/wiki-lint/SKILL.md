@@ -28,9 +28,11 @@ The script reports each item; **all green when there is no ✗**:
 
 ### 2 · Manual-judgment items (what the script can't check)
 Read the relevant pages and judge: **contradictions** between pages, **stale** conclusions, **orphan wiki pages** (no inbound links — `grep -rc "[[<page name>]]" INBOX/wiki` is 0), **missing concept pages / cross-references**, data or sources that could be added.
+When you find a contradiction, triage it with the schema §4 **three reconcile questions**: which source is newer (§2.3 recency markers / source dates)? Which is more authoritative (primary research / official docs > industry reporting > blogs / transcripts > opinion)? Genuine contradiction or **evolution** (change over time is not a contradiction)?
 
 ### 3 · Fix (within scope)
 - **Orphan raw (`•`)** → merge into the appropriate concept page per [`/wiki-ingest`](.claude/skills/wiki-ingest/SKILL.md) conventions (prefer merging into an existing page rather than starting a new one).
+- **Page contradiction (reconcile)** → dispose per [`wiki-schema.md`](INBOX/schema/wiki-schema.md) §4, one of three ways: **clear winner** → rewrite the stale page + leave a `## History` trace (`Previously stated X per [[old source]] (as of YYYY-MM); updated to Y per [[new source]] in YYYY-MM`); **genuinely ambiguous** → create a `wiki_conflict` page (`status: open`, both claims + evidence + sources, each conflicting page links to it) for the human to adjudicate; **evolution** → update to current state + keep the timeline. **Never silently overwrite an old claim without a trace**; add §2.3 recency markers to whatever you touch.
 - **Broken link / source not resolving** → fix the basename (Glob for the exact name first).
 - **Collision** → rename the wiki page to something more specific + update every `[[]]` referencing it (`grep -rl` to find them all).
 - **Tag pollution** → **report only** to the user (raw is read-only).

@@ -29,7 +29,7 @@ INBOX/
 |---|---|
 | **`/wiki-ingest`** | Drop a source into `raw`; the agent reads it, tags it, routes it to a cluster, builds/enriches concept pages, adds `## Sources` back-links, updates `index.md` and `log.md`. One source may touch 10–15 pages. |
 | **`/wiki-query`** | Ask a question against the wiki; the agent locates relevant pages, synthesizes a cited answer, and **files valuable answers back** as new pages so exploration compounds. |
-| **`/wiki-lint`** | Health check: find orphan sources, contradictions, stale claims, missing concept pages, missing cross-references. |
+| **`/wiki-lint`** | Health check: find orphan sources, contradictions, stale claims, missing concept pages, missing cross-references. Contradictions get **triaged** (newer source? more authoritative? contradiction or evolution?) and then resolved with a `## History` trace, parked on a `wiki_conflict` page for you to adjudicate, or rewritten as an evolution — the wiki never keeps two pages that disagree without knowing they disagree. |
 
 ## Two special files
 

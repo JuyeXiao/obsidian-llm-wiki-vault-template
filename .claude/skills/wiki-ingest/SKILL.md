@@ -49,6 +49,7 @@ Read each `[NEW]` source and **copy the exact basename verbatim** (needed for li
 - **§2.1 three criteria for a concept page**: evergreen + reusable + nameable — all three must hold to create a standalone `wiki_concept`; otherwise merge into an existing page's `## Sources` or create a `wiki_summary`. **Multi-membership = prefer merging into an existing page** rather than starting a new one.
 - **Pre-check page-name uniqueness before writing**: `find . -name "<intended page name>.md"`; if >0 (collides with PARA/ZETA or an existing page) → pick a more specific name.
 - Body skeleton: `# Title` → `**Core**: one sentence` → `## Sections` → `## Relations` (cross-links between concepts + **cross-cluster backlinks**: edit the existing page's `## Relations` to add a line pointing back to the new page) → `## Sources` (`[[raw]]` wikilinks).
+- **Recency markers (schema §2.3)**: volatile external claims (numbers / versions / prices / company news) carry an inline `(as of YYYY-MM, [[source]])`; inferences are marked `(inferred)`; evergreen concepts need no marker. Future reconcile passes use these to decide which claim is newer.
 - Frontmatter template at the bottom.
 
 ### 5 · Update index / cluster index / log

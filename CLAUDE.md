@@ -52,3 +52,6 @@ Writes three frontmatter fields: `tags` (controlled, from the tag library), `key
 - **Tagging**: `/tag`
 - **Clip digest**: `/clip-digest` (turns `INBOX/raw/Clippings` into `ZETA/LITERATURE` literature notes)
 - **Journaling rituals**: `/morning-start`, `/daily-review`, `/weekly-start`, `/weekly-review`, `/monthly-start`, `/monthly-review` (guided planning & review of the periodic notes in `DAILY/`)
+- **Red team**: `/vault-challenge` (argues against the user's current claim using their own vault history — DAILY reviews / PARA decisions & archives / PERMANENT positions; four-part output, **strictly read-only, never writes DAILY**; saves to `STICKY/` only when the user explicitly asks)
+
+There is also a **write-guard hook** (`.claude/hooks/validate-vault-write.py`, wired as a PostToolUse Write|Edit hook in `.claude/settings.json`): writes to `INBOX/wiki` are checked for a `wiki_*` type / a `wiki/<cluster>` tag / a `## Sources` section; writes to `PARA`/`ZETA` are checked for the three tagging fields (plus topic-tag drift, if `SYSTEM/TAGS/tag-library.flat.txt` exists). **Warning-only** (exit 2 feeds warnings back without reverting the write) — when you see its warnings, fix the note rather than working around it; `ZETA/FLEETING`, `PARA/WORKSTATION`, `*.excalidraw.md` and `INBOX/raw` are exempt.

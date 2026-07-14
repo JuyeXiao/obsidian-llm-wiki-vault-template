@@ -52,4 +52,5 @@ The tagging system writes three frontmatter fields: `tags` (controlled semantic 
 
 - `raw/` body & filename are **never** changed (only the three frontmatter fields).
 - New tags must be **written back to [[tag-library]]**.
+- **False-absence rule**: before asserting "the tag library has no match", search it exhaustively ([[tag-library]] full text, including synonyms / parent categories / English variants) — never conclude from memory. Wrongly deciding "it's missing" creates duplicate near-synonym tags, the main source of drift.
 - No auto backup: after a change, `git add` + commit with a concise message, and **prompt before pushing**.

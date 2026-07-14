@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/validate-vault-write.py",
+            "timeout": 30,
+            "statusMessage": "Validating vault write rules"
+          }
+        ]
+      }
+    ]
+  }
+}
