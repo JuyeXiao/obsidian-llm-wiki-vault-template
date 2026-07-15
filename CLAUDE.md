@@ -49,7 +49,8 @@ Writes three frontmatter fields: `tags` (controlled, from the tag library), `key
 ## Skills (`.claude/skills/`)
 
 - **LLM Wiki**: `/wiki-ingest`, `/wiki-query`, `/wiki-lint`
-- **Tagging**: `/tag`
+- **Tagging**: `/tag`, `/tag-lint` (health-check the vocabulary — malformed tags / drift / duplicates; it rebuilds `SYSTEM/TAGS/tag-library.flat.txt`, which the write-guard hook below reads)
+- **Docs**: `/doc-lint` (health-check these human-facing docs against the vault's real state — skill registry / wiki cluster wiring / path references / EN↔zh parity)
 - **Clip digest**: `/clip-digest` (turns `INBOX/raw/Clippings` into `ZETA/LITERATURE` literature notes)
 - **Journaling rituals**: `/morning-start`, `/daily-review`, `/weekly-start`, `/weekly-review`, `/monthly-start`, `/monthly-review` (guided planning & review of the periodic notes in `DAILY/`)
 - **Red team**: `/vault-challenge` (argues against the user's current claim using their own vault history — DAILY reviews / PARA decisions & archives / PERMANENT positions; four-part output, **strictly read-only, never writes DAILY**; saves to `STICKY/` only when the user explicitly asks)

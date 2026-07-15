@@ -35,15 +35,16 @@ PARA 和 ZETA 为什么要分开，见 [SYSTEM/DOCS/zh/structure.md](SYSTEM/DOCS
 
 ## 那层 AI
 
-两个子系统，都跑在 [Claude Code](https://claude.com/claude-code) 上：
+下面这些都跑在 [Claude Code](https://claude.com/claude-code) 上：
 
 | 系统 | 干什么 | 技能 | 规则（唯一真源） |
 |---|---|---|---|
 | **LLM Wiki** | 把 `INBOX/raw` 里的资料整理成 `INBOX/wiki` 里互相链接的综合页 | `/wiki-ingest` · `/wiki-query` · `/wiki-lint` | [INBOX/schema/wiki-schema.md](INBOX/schema/wiki-schema.md) |
-| **标签系统** | 给笔记的 frontmatter 写 `tags` / `keywords` / `summary` | `/tag` | [SYSTEM/TAGS/tag-spec.md](SYSTEM/TAGS/tag-spec.md) |
+| **标签系统** | 给笔记的 frontmatter 写 `tags` / `keywords` / `summary` | `/tag` · `/tag-lint` | [SYSTEM/TAGS/tag-spec.md](SYSTEM/TAGS/tag-spec.md) |
 | **剪藏消化** | 把网页剪藏整理成 `ZETA/LITERATURE` 里的文献笔记 | `/clip-digest` | — |
 | **日志复盘** | 带着你做日 / 周 / 月笔记的规划和复盘 | `/morning-start` · `/daily-review` · `/weekly-start` · `/weekly-review` · `/monthly-start` · `/monthly-review` | — |
 | **红队挑战** | 用**你自己的库内历史**（复盘、决策、归档项目、既有立场）反驳你当前的想法；只读、不奉承 | `/vault-challenge` | — |
+| **文档体检** | 拿这些文档跟库的实际状态对账——技能登记 / 簇接线 / 路径引用 / 中英对齐 | `/doc-lint` | — |
 
 另有一个**写入校验 hook**（`.claude/hooks/validate-vault-write.py`，经 `.claude/settings.json` 接线）：Claude 每写一个文件就自动校验——wiki 页要有 `wiki_*` type 和 `## Sources` 段，PARA/ZETA 笔记要有打标三字段。只警告不回滚，提醒 agent 该修什么。
 

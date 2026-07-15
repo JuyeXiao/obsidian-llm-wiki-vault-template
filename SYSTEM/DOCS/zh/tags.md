@@ -27,3 +27,5 @@
 ## 怎么用
 
 在 Claude Code 里对一篇笔记或一个文件夹跑 **`/tag`**——读一遍、三个字段一起写。见 [`.claude/skills/tag/SKILL.md`](../../../.claude/skills/tag/SKILL.md)。
+
+隔段时间跑一次 **`/tag-lint`**，别让词表烂掉：它查 **drift**（用了却没回写进标签库的标签）、malformed 标签、单篇重复。它还会重建 `SYSTEM/TAGS/tag-library.flat.txt`——写入校验 hook 靠这个文件在写入时预警 drift，文件不在它就**静默跳过**这项检查，所以记得让它留在 git 里。

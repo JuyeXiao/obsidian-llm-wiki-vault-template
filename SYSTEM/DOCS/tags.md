@@ -27,3 +27,5 @@ The single source of truth is [`SYSTEM/TAGS/`](../TAGS/):
 ## Using it
 
 Run **`/tag`** in Claude Code on a note or folder — it reads once and writes all three fields. See [`.claude/skills/tag/SKILL.md`](../../.claude/skills/tag/SKILL.md).
+
+Run **`/tag-lint`** now and then to keep the vocabulary honest. It flags **drift** (tags in use that were never written back to the library), malformed tags, and in-note duplicates. It also rebuilds `SYSTEM/TAGS/tag-library.flat.txt`, which the write-guard hook reads to warn about drift at write time — the hook silently skips that check when the file is missing, so keep it committed.

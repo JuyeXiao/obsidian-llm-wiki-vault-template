@@ -35,15 +35,16 @@ For why PARA and ZETA are kept apart, see [SYSTEM/DOCS/structure.md](SYSTEM/DOCS
 
 ## The AI layer
 
-Two subsystems, both run through [Claude Code](https://claude.com/claude-code):
+Everything below runs through [Claude Code](https://claude.com/claude-code):
 
 | System | What it does | Skills | Rules (SSOT) |
 |---|---|---|---|
 | **LLM Wiki** | Turns the sources in `INBOX/raw` into an interlinked synthesis in `INBOX/wiki` | `/wiki-ingest` · `/wiki-query` · `/wiki-lint` | [INBOX/schema/wiki-schema.md](INBOX/schema/wiki-schema.md) |
-| **Tagging** | Writes `tags` / `keywords` / `summary` into a note's frontmatter | `/tag` | [SYSTEM/TAGS/tag-spec.md](SYSTEM/TAGS/tag-spec.md) |
+| **Tagging** | Writes `tags` / `keywords` / `summary` into a note's frontmatter | `/tag` · `/tag-lint` | [SYSTEM/TAGS/tag-spec.md](SYSTEM/TAGS/tag-spec.md) |
 | **Clip digest** | Turns a web clipping into a literature note in `ZETA/LITERATURE` | `/clip-digest` | — |
 | **Journaling** | Walks you through planning and reviewing your daily / weekly / monthly notes | `/morning-start` · `/daily-review` · `/weekly-start` · `/weekly-review` · `/monthly-start` · `/monthly-review` | — |
 | **Red team** | Argues against your current idea using **your own vault history** (reviews, decisions, archived projects, positions); read-only, never agreeable | `/vault-challenge` | — |
+| **Docs** | Checks these docs against what the vault actually is — registry / cluster wiring / path references / EN↔zh parity | `/doc-lint` | — |
 
 A **write-guard hook** (`.claude/hooks/validate-vault-write.py`, wired in `.claude/settings.json`) validates every file Claude writes: wiki pages need a `wiki_*` type and a `## Sources` section; PARA/ZETA notes need the three tagging fields. Warning-only — it never reverts a write, it just tells the agent what to fix.
 
