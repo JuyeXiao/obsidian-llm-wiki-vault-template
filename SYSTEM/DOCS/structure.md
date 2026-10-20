@@ -34,10 +34,12 @@ Link **within** each system by default; cross-system links should be intentional
 ## Time & navigation
 
 - `DAILY/` — Daily / Weekly / Monthly / Quarterly / Yearly journals (managed by your periodic-notes plugin).
-- `HUB/` — the Homepage, Map of Content, and Maps of Content (MOCs) that tie everything together with live Datacore dashboards. See [dashboards.md](dashboards.md).
+- `HUB/` — Homepage and the Permanent / Literature / Projects / Areas / Sources MOCs that tie everything together with live Datacore dashboards. See [dashboards.md](dashboards.md).
 
 ## Note types
 
 Every note carries a `type` in frontmatter (e.g. `project_note`, `area_note`, `literature_note`, `wiki_concept`). **This is load-bearing** — the dashboards query by `type`. Use the templates in `SYSTEM/TEMPLATE/FORMAT/` so the right `type` and fields are set automatically.
 
 **Folder-note convention**: each Project / Area folder holds a container page (`project_family` / `area_family`) named with a numeric prefix — `1. <Project>` / `2. <Area>` — so it sorts to the top of its folder. The folder's other notes are its children (`project_note` / `area_note`). See the examples under `PARA/PROJECTS/Portfolio Website/` and `PARA/AREAS/Data Analysis/`.
+
+Map of Content remains a compatibility page. Raw can independently feed literature or Wiki; `/distill` turns literature into permanent thinking, while projects/areas connect to these outputs explicitly.

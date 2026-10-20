@@ -158,11 +158,11 @@ return function Hero() {
 > [!multi-column]
 >
 >> [!note]+ 🧭 HUB
->> - [[Map of Content|🗺 Map of Content]]
->> - [[Projects MOC|📁 Projects MOC]]
->> - [[Areas MOC|🗂 Areas MOC]]
->> - [[Literature MOC|📖 Literature MOC]]
->> - [[Sources MOC|🗃 Sources MOC]]
+>> - [[HUB/MOC/Permanent MOC|🧠 Permanent]]
+>> - [[HUB/MOC/Literature MOC|📖 Literature]]
+>> - [[HUB/MOC/Projects MOC|📁 Projects]]
+>> - [[HUB/MOC/Areas MOC|🗂 Areas]]
+>> - [[HUB/MOC/Sources MOC|🗃 Sources]]
 >> - [[Mail Box|📬 Mail Box]]
 >> - [[Tag Navigator|🏷 Tag Navigator]]
 >

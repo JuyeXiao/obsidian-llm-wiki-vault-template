@@ -11,17 +11,17 @@ reference:
 
 # <% tp.file.title %>
 
-**Select Connection:** `INPUT[inlineListSuggester(optionQuery(#permanent_note), optionQuery(#literature_note), optionQuery(#fleeting_note)):connections]`
+**Select Connection:** `INPUT[inlineListSuggester(optionQuery("ZETA/PERMANENT"), optionQuery("ZETA/LITERATURE"), optionQuery("ZETA/FLEETING"), useLinks(true)):connections]`
 
 ## Source
-<!-- [[Original clipping title]] · platform (author [[x]]); this single link is the only way back to the source -->
+<!-- Use the full raw path. See literature-note-spec.md for evidence and safe updates. -->
 
 ## Summary
 
 ## Key Points
-<!-- Outline of core points: 5-8 items, numbered, matching the numbering in the next section -->
+<!-- Evidence determines the point count; match the detail numbering. Omit unsupported cases/quotes. -->
 1. **<core point>**: .
-   - Support: .
+   - Support / source locator: .
 
 ## Key Points in Detail
 <!-- Matches the numbering in Key Points; break "concrete examples / data" into labelled sub-items (one aspect per line) -->
@@ -46,15 +46,16 @@ const H = await dc.require(dc.headerLink("SYSTEM/SCRIPTS/datacore_helpers.md", "
 return function Backlinks() {
     const current = dc.useCurrentFile();
     const all = dc.useQuery('@page');
+    const connectionIndex = dc.useMemo(() => H.buildConnectionIndex(all), [all]);
     const rows = dc.useMemo(function () {
         const res = [];
         for (let i = 0; i < all.length; i++) {
             const p = all[i];
             if (p.$path === current.$path) continue;
-            if (H.connectionsInclude(p, current)) res.push(p);
+            if (H.connectionsInclude(p, current, connectionIndex)) res.push(p);
         }
         return res;
-    }, [all, current]);
+    }, [all, current, connectionIndex]);
     return H.tabTable(rows, H.connectionCols, "No backlinks yet", 10);
 }
 ```

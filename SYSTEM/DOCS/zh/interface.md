@@ -7,7 +7,7 @@
 每篇笔记顶部都有一条小工具栏，具体显示哪条，取决于笔记在哪个文件夹——[Note Toolbar](https://github.com/chrisgurney/obsidian-note-toolbar) 插件把文件夹映射到不同工具栏。
 
 - 在 `PARA/PROJECTS`、`PARA/AREAS` 里，工具栏带有新建对应子笔记的按钮（项目笔记、领域笔记、文档…）。
-- 其它地方是一条通用工具栏：回 HUB、打开今天的日记、新建笔记、搜索、最近文件、切换页面任务、打开设置。
+- 其它地方是一条通用工具栏：回 HUB、打开今天的日记、新建笔记、搜索、快速切换、切换页面任务、打开设置。
 
 想改工具栏内容或文件夹映射，去 Note Toolbar 插件设置里调。
 
@@ -20,3 +20,7 @@
 - **处理掉一个**：在 Mail Box 里勾掉它的复选框，这篇笔记就被标记为完成、并写上 `closed` 时间；打开「Completions」开关能回看已完成的。
 
 什么时候用页面任务：当**这篇笔记本身**就是要去做的事——一个要推进的项目、一篇要读的文章、一个要跟进的人——而不是笔记里的某一行清单项。
+
+Mail Box 只收明确的页面任务状态、`file_state: unchecked_task` 或带日期且 `meeting_status` 为布尔值的会议。普通无状态笔记不再进入；SYSTEM/HUB/DAILY/INBOX、文献、永久笔记、归档项目和临时区也被排除。字段读写忽略大小写并保留原拼写。Completions 内可恢复任务：状态任务恢复先前状态，旧版仅有 closed 的页面任务恢复 file_state；筛选或任务数减少后分页保持有效。
+
+搜索和快速切换按钮使用 Obsidian 原生命令，无需 Omnisearch 或 Quick Switcher++。Homepage 打开阅读模式；其它页面可用原生视图切换。页面任务保留 Iconic 图标，不依赖 Tasks 插件。详见[插件清单](plugins.md)。

@@ -720,7 +720,7 @@
       "captureTo": "DAILY/DAILY/{{DATE:YYYY-MM-DD}}",
       "captureToActiveFile": false,
       "createFileIfItDoesntExist": {
-        "enabled": true,
+        "enabled": false,
         "createWithTemplate": true,
         "template": "SYSTEM/TEMPLATE/FORMAT/template_daily_note.md"
       },
@@ -851,12 +851,12 @@
     },
     {
       "id": "0763baf2-ff20-453a-be72-98be63349bb1",
-      "name": "Open: Map of Content",
+      "name": "Open: Permanent Notes",
       "type": "Macro",
       "command": true,
       "macro": {
         "id": "a2ba6111-7f95-49be-b6f3-5089c6eec62d",
-        "name": "Open: Map of Content",
+        "name": "Open: Permanent Notes",
         "commands": [
           {
             "name": "Open Note",
@@ -864,7 +864,7 @@
             "id": "a11a6d9c-ba9c-4626-b6e6-362d8e746d1f",
             "path": "SYSTEM/TEMPLATE/MACROS/open_note.js",
             "settings": {
-              "File path": "HUB/Map of Content.md"
+              "File path": "HUB/MOC/Permanent MOC.md"
             }
           }
         ]

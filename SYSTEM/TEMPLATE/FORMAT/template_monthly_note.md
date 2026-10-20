@@ -186,23 +186,18 @@ const columns = [
 ];
 
 return function MonthlyWeeklySummariesView() {
-    const current = dc.useCurrentFile();
-    const monthRef = dc.useMemo(function () {
-        const cur = H.toDay(current.value("journal-start-date"));
-        if (!cur) return null;
-        return { month: cur.month, year: cur.year };
-    }, [current]);
+    const range = H.useJournalRange();
 
     const allWeeklies = dc.useQuery('@page and path("DAILY/WEEKLY")');
 
     const rows = dc.useMemo(function () {
-        if (!monthRef) return [];
+        if (!range.ok) return [];
         const filtered = [];
         for (let i = 0; i < allWeeklies.length; i++) {
             const p = allWeeklies[i];
-            const day = H.toDay(p.value("journal-start-date"));
-            if (!day) continue;
-            if (day.month !== monthRef.month || day.year !== monthRef.year) continue;
+            const start = H.toDay(p.value("journal-start-date"));
+            const end = H.toDay(p.value("journal-end-date"));
+            if (!H.journalRangesOverlap(start, end, range.start, range.end)) continue;
             filtered.push(p);
         }
         filtered.sort(function (a, b) {
@@ -211,7 +206,7 @@ return function MonthlyWeeklySummariesView() {
             return da < db ? -1 : (da > db ? 1 : 0);
         });
         return filtered;
-    }, [allWeeklies, monthRef]);
+    }, [allWeeklies, range.start, range.end, range.ok]);
 
     return H.tabTable(rows, columns, "No weekly notes this month yet", 10);
 }

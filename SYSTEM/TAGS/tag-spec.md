@@ -10,7 +10,7 @@ type: documentation_note
 
 ## 0. What this is / relation to the LLM Wiki
 
-The tagging system writes three frontmatter fields: `tags` (controlled semantic tags), `keywords` (free), `summary`. The controlled vocabulary's **single source of truth = [[tag-library]]** (the `topic/` + `task/` namespaces). It sits next to the **LLM Wiki**: the wiki *reads* a raw source's `topic` tags for routing and never writes raw; the tagging system *writes* raw's frontmatter. After ingest, the wiki skill can tag in the same read.
+The tagging system writes three frontmatter fields: `tags` (controlled semantic tags), `keywords` (free), `summary`. The controlled vocabulary's **single source of truth = [[tag-library]]** (the `topic/` + `task/` namespaces). It sits next to the **LLM Wiki**: the wiki *reads* a raw source's `topic` tags for routing and never writes raw; the tagging system *writes* raw's frontmatter. Capture/tag is a separate authorized stage before Wiki ingest; Wiki never invokes tagging implicitly.
 
 ## 1. Namespaces & field boundaries
 
@@ -32,7 +32,7 @@ The tagging system writes three frontmatter fields: `tags` (controlled semantic 
 ## 3. Tagging rules (hard)
 
 - **topic: 1–4, most specific** (deepest matching node); **pick only from [[tag-library]]**, **never invent on the fly**.
-- Add a **new** tag only when nothing fits: attach it under the correct parent per §2 → **write it back to [[tag-library]]** → tell the user (otherwise the vocabulary drifts out of sync).
+- Add a **new** tag only when nothing fits: attach it under the correct parent per §2 → **after authorization to extend the vocabulary, write it back to [[tag-library]] and rebuild the flat list** → tell the user (otherwise the vocabulary drifts out of sync).
 - **Merge / never overwrite**: keep existing human `tags` / `keywords` / `summary`; only fill or improve, never delete or re-tag wholesale.
 - **One read, three fields**: read the body once and produce `tags` + `keywords` + `summary` together (saves tokens).
 - **Keep structural tags**; always add a `topic/` semantic tag even if `area/` or `project/` already exist (missing topic = untagged).
@@ -40,7 +40,7 @@ The tagging system writes three frontmatter fields: `tags` (controlled semantic 
 ## 4. Write scope & exclusions
 
 - **Write**: `PARA` + `ZETA` + `INBOX/raw` (raw: **frontmatter only**, never body or filename).
-- **Exclude**: `SYSTEM` / `DAILY` / `HUB` / `.claude` / `docs` / `INBOX/wiki` / `INBOX/schema` / root loose files / `.obsidian` / `.trash`.
+- **Exclude**: `SYSTEM` / `DAILY` / `HUB` / `.agents` / `.codex` / `.claude` / `docs` / `INBOX/wiki` / `INBOX/schema` / root loose files / `.obsidian` / `.trash`.
 
 ## 5. Frontmatter format
 
@@ -48,9 +48,11 @@ The tagging system writes three frontmatter fields: `tags` (controlled semantic 
 - `tags` / `keywords`: **single-line inline array** `[a, b]`, sorted, deduped.
 - Don't break existing formatting; no forced lint (this template keeps lint-on-save off).
 
+Vocabulary additions are a narrow exception to the SYSTEM exclusion: only an explicitly authorized addition may edit `SYSTEM/TAGS/tag-library.md` and rebuild `SYSTEM/TAGS/tag-library.flat.txt` with `bash .agents/skills/tag-lint/scripts/build-taglist.sh`. Lint itself never writes these files or a log.
+
 ## 6. Other
 
 - `raw/` body & filename are **never** changed (only the three frontmatter fields).
 - New tags must be **written back to [[tag-library]]**.
 - **False-absence rule**: before asserting "the tag library has no match", search it exhaustively ([[tag-library]] full text, including synonyms / parent categories / English variants) — never conclude from memory. Wrongly deciding "it's missing" creates duplicate near-synonym tags, the main source of drift.
-- No auto backup: after a change, `git add` + commit with a concise message, and **prompt before pushing**.
+- Follow `SYSTEM/DOCS/agent-workflows.md`: no automatic staging, commit or push; use existing session authorization and an exact file list.

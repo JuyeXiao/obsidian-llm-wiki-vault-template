@@ -480,6 +480,12 @@ const doneTaskCols = [
 // Custom hooks
 // ============================================================
 
+function journalRangesOverlap(start, end, targetStart, targetEnd) {
+    return Boolean(start && end && targetStart && targetEnd &&
+        start.isValid !== false && end.isValid !== false && targetStart.isValid !== false && targetEnd.isValid !== false &&
+        start <= end && targetStart <= targetEnd && start <= targetEnd && end >= targetStart);
+}
+
 function useJournalRange() {
     const current = dc.useCurrentFile();
     return dc.useMemo(function () {
@@ -489,12 +495,11 @@ function useJournalRange() {
         function toDt(v) {
             if (v && typeof v.toFormat === "function") return v;  // already Luxon DateTime
             if (v instanceof Date) return DateTime.fromJSDate(v);  // native Date
-            const s = String(v).slice(0, 10);
-            return dc.coerce.date(s);
+            return dc.coerce.date(String(v));
         }
         const sDt = toDt(rawStart);
         const eDt = toDt(rawEnd);
-        if (!sDt || !sDt.startOf || !eDt || !eDt.startOf) {
+        if (!sDt || !sDt.startOf || !sDt.isValid || !eDt || !eDt.startOf || !eDt.isValid || sDt > eDt) {
             return { start: null, end: null, ok: false, rawStart, rawEnd };
         }
         return { start: sDt.startOf("day"), end: eDt.endOf("day"), ok: true, rawStart, rawEnd };
@@ -536,10 +541,10 @@ function tagMatches(tags, tag) {
 
 function linkPath(c) {
     if (c == null) return null;
-    if (typeof c === "string") return c.replace(/^\[\[/, "").replace(/\]\]$/, "").split("|")[0].split("#")[0];
-    if (c.path) return c.path;
-    if (c.$path) return c.$path;
-    return null;
+    const value = typeof c === "string" ? c : (c.path || c.$path);
+    if (typeof value !== "string") return null;
+    return value.trim().replace(/^\[\[/, "").replace(/\]\]$/, "")
+        .split("|")[0].split("#")[0].replace(/\\/g, "/").replace(/\.md$/i, "");
 }
 
 function baseName(p) {
@@ -547,19 +552,66 @@ function baseName(p) {
     return p.split("/").pop().replace(/\.md$/, "");
 }
 
-// Does page.connections reference current (by full path or note name)?
-function connectionsInclude(page, current) {
+function connectionPath(p) {
+    return typeof p === "string" ? p.replace(/\\/g, "/").replace(/\.md$/i, "") : null;
+}
+
+// Index the complete @page set; display aliases and filtered candidates cannot prove uniqueness.
+function buildConnectionIndex(pages) {
+    const exact = new Set(), bySuffix = new Map();
+    for (const page of pages) {
+        const path = connectionPath(page.$path);
+        if (!path || exact.has(path)) continue;
+        exact.add(path);
+        const parts = path.split("/");
+        for (let i = 0; i < parts.length; i++) {
+            const suffix = parts.slice(i).join("/");
+            if (!bySuffix.has(suffix)) bySuffix.set(suffix, new Set());
+            bySuffix.get(suffix).add(path);
+        }
+    }
+    return { exact, bySuffix };
+}
+
+function resolveConnectionTarget(target, sourcePath, index) {
+    const path = linkPath(target);
+    if (!path || !index || path.startsWith("/") || path.includes(":")) return null;
+    if (path.startsWith("./") || path.startsWith("../")) {
+        const source = connectionPath(sourcePath);
+        if (!source) return null;
+        const parts = source.split("/").slice(0, -1);
+        for (const part of path.split("/")) {
+            if (part === ".") continue;
+            if (part === "..") {
+                if (!parts.length) return null;
+                parts.pop();
+            } else if (part) parts.push(part);
+        }
+        const resolved = parts.join("/");
+        return index.exact.has(resolved) ? resolved : null;
+    }
+    if (path.split("/").some(part => !part || part === "." || part === "..")) return null;
+    if (path.includes("/") && index.exact.has(path)) return path;
+    const matches = index.bySuffix.get(path);
+    return matches && matches.size === 1 ? matches.values().next().value : null;
+}
+
+// Exact paths win; short names and suffix paths must be unique across the vault.
+function connectionsInclude(page, current, index) {
     if (!page || !current) return false;
     const conns = page.value ? page.value("connections") : null;
     if (!conns) return false;
     const arr = Array.isArray(conns) ? conns : [conns];
-    const curPath = current.$path;
-    const curName = baseName(curPath);
+    const curPath = connectionPath(current.$path);
     for (let i = 0; i < arr.length; i++) {
-        const p = linkPath(arr[i]);
-        if (!p) continue;
-        if (p === curPath) return true;
-        if (baseName(p) === curName) return true;
+        const path = linkPath(arr[i]);
+        if (!path) continue;
+        if (index) {
+            if (resolveConnectionTarget(path, page.$path, index) === curPath) return true;
+        } else if (path.includes("/") && !path.startsWith("/") && !path.includes(":") &&
+                   !path.split("/").some(part => !part || part === "." || part === "..") && path === curPath) {
+            return true;
+        }
     }
     return false;
 }
@@ -745,6 +797,8 @@ function isAreaLeaf(t) { return AREA_LEAF_TYPES.indexOf(t) >= 0; }
 
 function AreaDashboard() {
     const current = dc.useCurrentFile();
+    const allConnectionPages = dc.useQuery('@page');
+    const connectionIndex = dc.useMemo(() => buildConnectionIndex(allConnectionPages), [allConnectionPages]);
     const selfFolder = parentFolder(current.$path);   // this area's own folder
     const tag = currentTag(current, "area");
 
@@ -772,13 +826,13 @@ function AreaDashboard() {
             const p = allProjects[i];
             const type = p.value("type") || "";
             if (type !== "project_family" && type !== "project_note") continue;
-            if (connectionsInclude(p, current)) projects.push(p);
+            if (connectionsInclude(p, current, connectionIndex)) projects.push(p);
         }
         for (let i = 0; i < allDocs.length; i++) {
             const p = allDocs[i];
             const type = p.value("type") || "";
             if (type !== "documentation_note" && type !== "workstation_note") continue;
-            if (connectionsInclude(p, current)) other.push(p);
+            if (connectionsInclude(p, current, connectionIndex)) other.push(p);
         }
         for (let i = 0; i < allMeetings.length; i++) {
             const m = allMeetings[i];
@@ -806,7 +860,7 @@ function AreaDashboard() {
         });
         const wiki = relatedWikiRows(current, allWikiPages);
         return { notes, subAreas, projects, other, meetings, ongoing, done, wiki };
-    }, [allAreaPages, allProjects, allDocs, allMeetings, allTasks, allWikiPages, selfFolder, tag, current]);
+    }, [allAreaPages, allProjects, allDocs, allMeetings, allTasks, allWikiPages, selfFolder, tag, current, connectionIndex]);
 
     const tabs = [
         { id: "notes",    label: "Notes",        count: data.notes.length,
@@ -959,11 +1013,11 @@ return {
     // luxon shortcut
     DateTime,
     // pure-function helpers
-    toDay, fmtDate, daysFrom, num,
+    toDay, fmtDate, daysFrom, num, journalRangesOverlap,
     parseDueDate, parseDoneDate, parsePriority, cleanText,
     dateFromTaskFile, hasTaskTag, hasHabitTag,
     // link / tag helpers
-    currentTag, tagMatches, connectionsInclude, wikiClusterTagsForPage, relatedWikiRows,
+    currentTag, tagMatches, buildConnectionIndex, resolveConnectionTarget, connectionsInclude, wikiClusterTagsForPage, relatedWikiRows,
     parentFolder, isAreaContainer, isAreaLeaf,
     // constants
     PRIORITY_COLOR, STATUS_COLOR, STATUS_CYCLE, TOPIC_TO_CLUSTER, WIKI_CLUSTERS, CLUSTER_HUB,
@@ -981,5 +1035,115 @@ return {
     makeWikiCols, atlasWikiCols, atlasParaCols,
     // hooks
     useJournalRange,
+};
+```
+
+# Mail Box Helpers
+
+Shared page-task semantics for the Mail Box. Only explicit task state is actionable.
+
+```jsx
+const MAILBOX_EXCLUDED_FOLDERS = [
+    "SYSTEM", "HUB", "DAILY", "INBOX", "ZETA/LITERATURE",
+    "ZETA/PERMANENT", "ZETA/FLEETING/IDEAS", "PARA/ARCHIVES", "STICKY"
+];
+const MAILBOX_STATUS_VALUES = ["1 To Do", "1 Todo", "2 In Progress", "3 Testing", "4 Completed", "5 Blocked"];
+
+function frontmatterKey(frontmatter, key) {
+    const keys = Object.keys(frontmatter).filter(k => k.toLowerCase() === key.toLowerCase());
+    if (keys.length > 1) throw new Error(`Conflicting frontmatter keys: ${key}`);
+    return keys[0] || key;
+}
+
+function mailboxValue(entry, key) {
+    const fm = entry.$frontmatter || {};
+    const value = fm[frontmatterKey(fm, key)];
+    // Datacore stores FrontmatterEntry objects; processFrontMatter supplies raw values.
+    return value && typeof value === "object" && "key" in value && "value" in value ? value.value : value;
+}
+
+function mailboxKind(entry) {
+    if (MAILBOX_STATUS_VALUES.includes(mailboxValue(entry, "status"))) return "status";
+    if (typeof mailboxValue(entry, "meeting_status") === "boolean" && mailboxValue(entry, "scheduled_date")) return "meeting";
+    if (mailboxValue(entry, "file_state") === "unchecked_task") return "file_state";
+    // Legacy page tasks removed file_state when completed; closed is their remaining marker.
+    if (mailboxValue(entry, "closed")) return "legacy";
+    return null;
+}
+
+function isEntryChecked(entry) {
+    const kind = mailboxKind(entry);
+    if (!kind) return false;
+    return Boolean(mailboxValue(entry, "closed")) ||
+        (kind === "status" && mailboxValue(entry, "status") === "4 Completed") ||
+        (kind === "meeting" && mailboxValue(entry, "meeting_status") === true);
+}
+
+function mailboxIncludes(entry, showCompleted, pathFilter = "") {
+    const path = entry.$path || "";
+    if (path.split("/").some(part => part.startsWith("."))) return false;
+    if (MAILBOX_EXCLUDED_FOLDERS.some(folder => path === folder || path.startsWith(folder + "/"))) return false;
+    if (pathFilter && !path.toLowerCase().includes(pathFilter.toLowerCase())) return false;
+    return Boolean(mailboxKind(entry)) && isEntryChecked(entry) === showCompleted;
+}
+
+function buildMailboxQuery() {
+    return "@page AND " + MAILBOX_EXCLUDED_FOLDERS.map(folder => `!path("${folder}")`).join(" AND ");
+}
+
+function getEntryUpdate(entry) {
+    const kind = mailboxKind(entry);
+    if (!kind) return null;
+    const checked = isEntryChecked(entry);
+    const updates = { closed: checked ? undefined : dc.luxon.DateTime.now().toFormat("yyyy-MM-dd'T'HH:mm") };
+    if (kind === "status") {
+        const previous = mailboxValue(entry, "_previous_status");
+        updates.status = checked
+            ? (MAILBOX_STATUS_VALUES.includes(previous) && previous !== "4 Completed" ? previous : "1 To Do")
+            : "4 Completed";
+        updates._previous_status = checked ? undefined : mailboxValue(entry, "status");
+    } else if (kind === "meeting") {
+        updates.meeting_status = !checked;
+    } else {
+        updates.file_state = "unchecked_task";
+    }
+    return { updates, icon: checked ? "circle" : "lucide-check-circle" };
+}
+
+function applyFrontmatterUpdates(frontmatter, updates) {
+    // Resolve all keys before mutating so conflicting casing never leaves a partial update.
+    const entries = Object.entries(updates).map(([key, value]) => [frontmatterKey(frontmatter, key), value]);
+    for (const [key, value] of entries) {
+        if (value === undefined) delete frontmatter[key];
+        else frontmatter[key] = value;
+    }
+}
+
+async function toggleEntry(app, entry) {
+    const file = app.vault.getAbstractFileByPath(entry.$path);
+    if (!file) throw new Error("The task file no longer exists.");
+    let action = null;
+    await app.fileManager.processFrontMatter(file, frontmatter => {
+        const current = { $frontmatter: frontmatter };
+        if (mailboxKind(current) !== mailboxKind(entry) || isEntryChecked(current) !== isEntryChecked(entry)) {
+            throw new Error("Task state changed; refresh the Mail Box before toggling it.");
+        }
+        action = getEntryUpdate(current);
+        if (action) applyFrontmatterUpdates(frontmatter, action.updates);
+    });
+    return action;
+}
+
+function getFullPath(path) { return path.split("/").slice(0, -1).join(" > "); }
+function formatDate(date) { return date ? date.toFormat("yyyy-MM-dd") : ""; }
+function clampPage(currentPage, totalPages) {
+    const page = Number.isFinite(currentPage) ? Math.floor(currentPage) : 1;
+    return Math.max(1, Math.min(page, Math.max(1, totalPages)));
+}
+
+return {
+    MAILBOX_EXCLUDED_FOLDERS, mailboxValue, mailboxKind, mailboxIncludes,
+    buildMailboxQuery, isEntryChecked, getEntryUpdate, applyFrontmatterUpdates,
+    toggleEntry, getFullPath, formatDate, clampPage,
 };
 ```

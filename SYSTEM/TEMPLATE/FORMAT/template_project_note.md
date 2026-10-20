@@ -15,7 +15,7 @@ Status:
 
 # Components
 
-**Select Connection:** `INPUT[inlineListSuggester(optionQuery(#area)):connections]`
+**Select Connection:** `INPUT[inlineListSuggester(optionQuery("PARA/AREAS"), useLinks(true)):connections]`
 **Select Wiki:** `INPUT[inlineListSuggester(optionQuery("INBOX/wiki")):wiki_links]`
 **Due Date:** `INPUT[dateTime(defaultValue(null)):Due_Date]`
 **Priority Level:** `INPUT[inlineSelect(option(1 Critical), option(2 High), option(3 Medium), option(4 Low)):Priority_Level]`

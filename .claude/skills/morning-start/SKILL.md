@@ -5,11 +5,14 @@ description: Morning kickoff — pull yesterday's "Tomorrow's Top 3" into today'
 
 # Morning Start
 
+Read `SYSTEM/DOCS/agent-workflows.md` before this ritual. Its journal selection, exact-anchor, evidence, protected-content, pre-write conflict and idempotent update rules apply to every step below. Use Journals/Templater to create and render the note; if absent, keep a chat draft and report the missing target. Match the requested period using `journal-start-date` / `journal-end-date` in the user's date/time environment, not the filename. Draft/maintenance modes never write journals. No automatic staging, commit or push.
+
+
 Help the user start the day by setting today's focus. Keep it to a ~2-minute ritual.
 
-1. Open today's daily note (`DAILY/DAILY/<today>.md`); if it doesn't exist, create it from the daily template.
-2. Read **yesterday's** daily note `## 🗺️ Tomorrow's Top 3` and **this week's** weekly note (`DAILY/WEEKLY`) `## 🎯 Weekly MIT`.
-3. Propose today's `## 🎯 Today's Top 3` from those, confirm/adjust with the user, and write them into today's note.
+1. Open today's daily note (`DAILY/DAILY/<today>.md`); if missing, follow the shared missing-target rule.
+2. Read **yesterday's** daily note `## 🗺️ Tomorrow's Top 3` and **this week's** weekly note (`DAILY/WEEKLY`) `## 🎯 Weekly MIT (1-3 most important things)`.
+3. Propose today's `## 🎯 Today's Top 3` from those, resolve only unconfirmed choices with the user, and write them into today's note.
 4. Briefly confirm any fixed events/meetings today.
 
 Only edit today's `## 🎯 Today's Top 3`. Don't touch other sections.

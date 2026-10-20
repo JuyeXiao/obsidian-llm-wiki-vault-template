@@ -43,10 +43,10 @@
 
   <line x1="172" y1="320" x2="452" y2="202" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arrow)"/>
   <text x="232" y="250" font-size="11" fill="#64748b">clip-digest →</text>
-  <text x="232" y="265" font-size="11" fill="#64748b">literature notes</text>
+  <text x="232" y="265" font-size="11" fill="#64748b">literature → /distill → permanent</text>
 
   <!-- AI layer caption -->
-  <text x="44" y="446" font-size="12" font-weight="700" fill="#94a3b8" letter-spacing="1">AI LAYER · Claude Code skills (drive everything above)</text>
+  <text x="44" y="446" font-size="12" font-weight="700" fill="#94a3b8" letter-spacing="1">AI LAYER · Codex + Claude · shared .agents/skills</text>
   <rect x="40" y="454" width="900" height="74" rx="10" fill="#faf5ff" stroke="#a855f7"/>
   <text x="60" y="484" font-size="13" fill="#334155"><tspan font-weight="700" fill="#7e22ce">/wiki-ingest · /wiki-query · /wiki-lint</tspan>  —  build &amp; maintain the wiki from raw</text>
   <text x="60" y="510" font-size="13" fill="#334155"><tspan font-weight="700" fill="#7e22ce">/clip-digest</tspan> raw → ZETA literature  ·  <tspan font-weight="700" fill="#7e22ce">/tag</tspan> note frontmatter  ·  <tspan font-weight="700" fill="#7e22ce">/morning-start …</tspan> DAILY journaling</text>
@@ -54,8 +54,8 @@
   <!-- HUB / SYSTEM -->
   <rect x="40" y="548" width="440" height="50" rx="10" fill="#f1f5f9" stroke="#cbd5e1"/>
   <text x="60" y="572" font-size="14" font-weight="700" fill="#334155">HUB</text>
-  <text x="60" y="589" font-size="11.5" fill="#64748b">Datacore dashboards · Homepage · MOCs</text>
+  <text x="60" y="589" font-size="11.5" fill="#64748b">Permanent · Literature · Projects · Areas · Sources</text>
   <rect x="500" y="548" width="440" height="50" rx="10" fill="#f1f5f9" stroke="#cbd5e1"/>
   <text x="520" y="572" font-size="14" font-weight="700" fill="#334155">SYSTEM</text>
-  <text x="520" y="589" font-size="11.5" fill="#64748b">templates · tag system · Datacore helpers</text>
+  <text x="520" y="589" font-size="11.5" fill="#64748b">templates · tags · validators · /vault-git</text>
 </svg>

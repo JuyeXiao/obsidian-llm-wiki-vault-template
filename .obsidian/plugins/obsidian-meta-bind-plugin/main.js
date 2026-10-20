@@ -1,3 +1,8 @@
+/* Redistribution notice added by this vault template on 2026-10-20.
+ * Upstream mprojectscode/obsidian-meta-bind-plugin @ 6d41566765e19325150c508d3c1146074df78283; license: LICENSE.txt.
+ * Pre-existing packaging change: nosourcemap-comment-only; original date unknown.
+ * This review adds notices only. See THIRD-PARTY-NOTICES.txt for source references and pending redistribution conditions.
+ */
 /*
 -------------------------------------------
 Meta Bind - Release Build

@@ -1,0 +1,30 @@
+Third-party notices for Custom File Explorer sorting 3.1.6
+Upstream author field: SebastianMC
+Upstream repository: https://github.com/sebastianmc/obsidian-custom-sort
+Fixed source tree: https://github.com/sebastianmc/obsidian-custom-sort/tree/284bfdf04055b3ec8a5587b133cfffe8ba157486
+Source archive reference: https://github.com/sebastianmc/obsidian-custom-sort/archive/284bfdf04055b3ec8a5587b133cfffe8ba157486.zip
+Project license evidence: GPLv3; file: LICENSE.md
+Notice collection date: 2026-10-20. This file does not grant new rights or clear redistribution.
+The vault template MIT license does not replace any third-party terms.
+Bundled license comments and copyright statements remain intact.
+Identified dependency notices follow. Direct runtime declarations and observable bundle/source-map paths were cross-checked with version locks.
+This is not a complete dependency inventory: minified code, optional modules, transitive code, icons and assets can require further review.
+A declared runtime dependency may be unused after bundling. Multiple lock versions are retained conservatively, not asserted to be the exact bundled variant.
+
+Observed packaging differences before this review (original change date unknown):
+- main.js: nosourcemap-comment-only
+- manifest.json: exact
+
+
+===== Outstanding review =====
+- SOURCE_DISTRIBUTION: fixed source archive download and build entry verified on 2026-10-20; complete corresponding source/dependency closure, rebuild and continued availability remain unverified. No public source mirror was created.
+- CONFLICTING_METADATA: package.json says MIT; this record follows the restrictive LICENSE text without treating the metadata as an alternative grant. Upstream clarification remains pending.
+- Complete dependency inventory and redistribution clearance remain open.
+
+===== Source access checked 2026-10-20 =====
+Download: https://codeload.github.com/sebastianmc/obsidian-custom-sort/tar.gz/284bfdf04055b3ec8a5587b133cfffe8ba157486
+SHA256: 74652547eca63c42277c5951d7d8e833f7da1fc3993a836e63f6d4d85f8be65f
+Archive files: 85
+Build entry from package.json: tsc -noEmit -skipLibCheck && node esbuild.config.mjs production
+Lock files: yarn.lock
+No build/dependency installation was run. This is source access evidence, not complete build verification.

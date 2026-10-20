@@ -34,10 +34,12 @@
 ## 时间与导航
 
 - `DAILY/`：日 / 周 / 月 / 季 / 年记，由你的周期笔记插件管。
-- `HUB/`：主页、内容地图、各类 MOC，用实时的 Datacore 仪表盘把这些串起来。见 [dashboards.md](dashboards.md)。
+- `HUB/`：主页和 Permanent / Literature / Projects / Areas / Sources 五类 MOC，用实时的 Datacore 仪表盘把这些串起来。见 [dashboards.md](dashboards.md)。
 
 ## 笔记类型
 
 每篇笔记的 frontmatter 里都有一个 `type`（像 `project_note`、`area_note`、`literature_note`、`wiki_concept`）。**这个字段很关键，仪表盘全靠它来查。** 用 `SYSTEM/TEMPLATE/FORMAT/` 里的模板新建，`type` 和字段都会自动设好。
 
 **容器页的命名约定**：每个 Project / Area 文件夹里有一个容器页（`project_family` / `area_family`），名字带数字前缀——`1. <项目>` / `2. <领域>`——好让它排在文件夹最前面；同文件夹里其它笔记就是它的子笔记（`project_note` / `area_note`）。例子看 `PARA/PROJECTS/Portfolio Website/` 和 `PARA/AREAS/Data Analysis/`。
+
+原 Map of Content 保留为兼容导航页。原始来源可以独立进入文献或 Wiki；文献再由 `/distill` 形成永久笔记，项目/领域通过明确关联使用它们。

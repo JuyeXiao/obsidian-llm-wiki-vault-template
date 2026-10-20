@@ -1,0 +1,7 @@
+Minimal 7.7.18 by Steph Ango (@kepano).
+Source: https://github.com/kepano/obsidian-minimal/tree/8ff51e864beb30c72a0d04f1d4338f20d6581109
+License: MIT; full original text is in LICENSE.
+Support the author: https://www.buymeacoffee.com/kepano
+On 2026-10-20, the bundled theme.css matched that fixed source byte for byte.
+This review restored the missing LICENSE and added this notice; it did not change the theme.
+The template's MIT license does not replace third-party terms.

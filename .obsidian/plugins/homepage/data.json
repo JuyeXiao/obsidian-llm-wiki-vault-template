@@ -19,7 +19,7 @@
       "hideReleaseNotes": true
     },
     "Mobile Homepage": {
-      "value": "SYSTEM/MOBILE HUB/Mobile Homepage",
+      "value": "HUB/Homepage",
       "kind": "File",
       "openOnStartup": true,
       "openMode": "Keep open notes",

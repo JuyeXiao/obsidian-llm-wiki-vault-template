@@ -1,23 +1,69 @@
 ---
 tags: [topic/productivity/note-taking]
-keywords: [zettelkasten, atomic notes, linking]
-summary: The Zettelkasten method — atomic, densely linked permanent notes that build a thinking network over time.
+keywords: [future question, evidence, purposeful links]
+summary: "Example candidate judgment: a permanent note should explain a future use and retain the limits of its supporting source."
 type: permanent_note
-created: 2026-01-05
+wiki_links: ["[[INBOX/wiki/Productivity/Note-Taking]]"]
+connections: ["[[ZETA/LITERATURE/Note-Taking Basics (example)]]"]
+created: 2026-01-06
 ---
 
 # Zettelkasten Method
 
-> Example permanent note (`type: permanent_note`). Permanent notes are evergreen, written in your own words, and densely linked.
+> Original example candidate, not a real user's confirmed position or experience.
 
-The Zettelkasten ("slip-box") is a method for building knowledge by writing small, atomic notes and linking them densely, so that structure emerges from connections rather than folders.
+**Select Connection:** `INPUT[inlineListSuggester(optionQuery("ZETA/PERMANENT"), optionQuery("ZETA/LITERATURE"), optionQuery("ZETA/FLEETING"), useLinks(true)):connections]`
+**Select Wiki:** `INPUT[inlineListSuggester(optionQuery("INBOX/wiki")):wiki_links]`
 
-- **Atomic** — one idea per note.
-- **In your own words** — writing is thinking; don't just copy.
-- **Linked** — connect each note to related ones; the network is the value.
-- **Emergent** — let structure grow from links, not a predefined hierarchy.
+> [!abstract] Core candidate judgment
+> A permanent note can be easier to reuse when it names a future question and explains why each source or connection matters.
 
-## 🔗 Related Wiki
+> [!todo] Personal viewpoint pending
+> The usefulness of this method and the acceptable overhead remain for the reader to judge.
+
+## Reasoning
+
+**Source claim:** the example proposes a specific question, traceable source context and purposeful links. [[ZETA/LITERATURE/Note-Taking Basics (example)]] summarizes those claims and their limits.
+
+**AI candidate interpretation:** keeping the intended use alongside the evidence could help a reader decide whether to reuse a note. This is a reasoned proposal, not a demonstrated result or an adopted personal belief.
+
+**User-confirmed position:** none supplied in this example.
+
+## Uses and limits
+
+A hypothetical portfolio writer could consult this question when choosing evidence for an About page. It may be less useful for reference tables that are already easy to retrieve. If recording questions becomes repetitive overhead, the method should be simplified or rejected. No personal practice outcome is claimed.
+
+## Open questions
+
+What kind of note would actually become easier to retrieve? What counterexample would show the extra wording is unnecessary?
+
+## Source literature
+
+- [[ZETA/LITERATURE/Note-Taking Basics (example)]] — supplies the proposal, hypothetical use and explicit lack of outcome evidence.
+
+# 🔗 Backlinks
+
+```datacorejsx
+const H = await dc.require(dc.headerLink("SYSTEM/SCRIPTS/datacore_helpers.md", "Helpers"));
+
+return function Backlinks() {
+    const current = dc.useCurrentFile();
+    const all = dc.useQuery('@page');
+    const connectionIndex = dc.useMemo(() => H.buildConnectionIndex(all), [all]);
+    const rows = dc.useMemo(function () {
+        const res = [];
+        for (let i = 0; i < all.length; i++) {
+            const p = all[i];
+            if (p.$path === current.$path) continue;
+            if (H.connectionsInclude(p, current, connectionIndex)) res.push(p);
+        }
+        return res;
+    }, [all, current, connectionIndex]);
+    return H.tabTable(rows, H.connectionCols, "No backlinks yet", 10);
+}
+```
+
+# 🔗 Related Wiki
 
 ```datacorejsx
 const H = await dc.require(dc.headerLink("SYSTEM/SCRIPTS/datacore_helpers.md", "Helpers"));

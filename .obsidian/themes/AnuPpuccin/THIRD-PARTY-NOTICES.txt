@@ -1,0 +1,14 @@
+AnuPpuccin 1.5.0 by AnubisNekhet.
+Project license: GPL-3.0; preserve LICENSE, README.md and CSS author notices.
+Author support: https://www.buymeacoffee.com/anubisnekhet
+Version reference: https://github.com/AnubisNekhet/AnuPpuccin/tree/93edd678ee5f2e090479f1807dfe13c71fc22720
+The bundled src/, snippets/src/ and Makefile retain editable source and build instructions.
+The local tree contains inherited differences from the v1.5.0 reference, including
+custom-rainbow-colors file-tree selectors and compiled CSS; it is not asserted to
+be an unmodified upstream release. Original change dates/complete provenance are unknown.
+Build entry: Makefile (sass src/base.scss theme.css --no-source-map --no-charset).
+A clean rebuild and exact source-to-CSS equivalence were not run in this review.
+Some snippets explicitly use AGPLv3; minimal-cards uses MIT. These are not relicensed
+by the theme's GPL notice. Full additional texts and mappings are in
+../../snippets/THIRD-PARTY-NOTICES.txt; original snippet headers are retained.
+On 2026-10-20 only this notice was added; theme, source and image bytes were unchanged.

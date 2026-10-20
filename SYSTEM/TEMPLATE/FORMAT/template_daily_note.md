@@ -24,12 +24,13 @@ const H = await dc.require(dc.headerLink("SYSTEM/SCRIPTS/datacore_helpers.md", "
 
 return function TasksTodayView() {
     const current = dc.useCurrentFile();
-    const noteDate = H.DateTime.fromFormat(current.$name, "yyyy-MM-dd");
-    const todayStart = noteDate.startOf("day");
+    const noteDate = H.toDay(current.value("journal-start-date"));
+    const todayStart = noteDate && noteDate.isValid ? noteDate.startOf("day") : null;
 
     const allTasks = dc.useQuery('@task and !path("SYSTEM/TEMPLATE") and !path("Templates")');
 
     const partitioned = dc.useMemo(function () {
+        if (!todayStart) return { dueToday: [], overdue: [], noDueDate: [], completedToday: [] };
         const dueToday = [];
         const overdue = [];
         const noDueDate = [];

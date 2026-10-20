@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|apply_patch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$(git rev-parse --show-toplevel)/.codex/hooks/validate-vault-write.js\"",
+            "timeout": 30,
+            "statusMessage": "Validating vault write rules"
+          }
+        ]
+      }
+    ]
+  }
+}

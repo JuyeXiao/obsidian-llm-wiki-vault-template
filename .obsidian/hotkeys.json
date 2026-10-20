@@ -35,33 +35,6 @@
       "key": "O"
     }
   ],
-  "omnisearch:show-modal": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "F"
-    }
-  ],
-  "darlal-switcher-plus:switcher-plus:open": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "S"
-    }
-  ],
-  "quick-explorer:browse-vault": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "D"
-    }
-  ],
   "graph:open": [
     {
       "modifiers": [
@@ -87,15 +60,6 @@
         "Shift"
       ],
       "key": "R"
-    }
-  ],
-  "quickadd:choice:0b93f2d7-c7e6-4332-91c5-d8085ae85333": [
-    {
-      "modifiers": [
-        "Mod",
-        "Alt"
-      ],
-      "key": "I"
     }
   ],
   "quickadd:choice:9a4a8c3c-5e7a-4261-bd7f-85f2891948a7": [
@@ -157,13 +121,25 @@
       "key": "ArrowUp"
     }
   ],
-  "global-search:open": [],
+  "global-search:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "F"
+    }
+  ],
   "workspace:close-window": [],
   "workspace:undo-close-pane": [],
   "file-explorer:new-file-in-new-pane": [],
-  "editing-toolbar:fullscreen-focus": [],
-  "editing-toolbar:workplace-fullscreen-focus": [],
-  "obsidian-excalidraw-plugin:save": [],
-  "obsidian-excalidraw-plugin:insert-link": [],
-  "table-editor-obsidian:table-control-bar": []
+  "switcher:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "S"
+    }
+  ]
 }

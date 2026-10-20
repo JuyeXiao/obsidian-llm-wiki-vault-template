@@ -5,7 +5,7 @@ type: documentation_note
 
 # Keywords & Summary Spec
 
-> Referenced by [[tag-spec]]. `/tag` (and wiki-ingest) follow this when writing `keywords` / `summary`, produced **in the same read** as `tags`.
+> Referenced by [[tag-spec]]. `/tag` (in the independent capture/tag stage) follow this when writing `keywords` / `summary`, produced **in the same read** as `tags`.
 
 ## keywords (free extraction, uncontrolled)
 

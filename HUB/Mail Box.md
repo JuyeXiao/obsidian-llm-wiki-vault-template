@@ -5,6 +5,8 @@ cssclasses:
 ---
 
 ```datacorejsx
+const H = await dc.require(dc.headerLink("SYSTEM/SCRIPTS/datacore_helpers.md", "Mail Box Helpers"));
+
 ////////////////////////////////////////////////////
 ///             Initial Settings                 ///
 ////////////////////////////////////////////////////
@@ -16,114 +18,13 @@ const initialSettings = {
     dateFilter: "Enter date (YYYY-MM-DD)...",
     headerTitle: "Inbox",
   },
-  excludedFolders: ["SYSTEM", "HUB", "DAILY"],
   pagination: {
     isEnabled: true,
     itemsPerPage: 7,
   },
   sortBy: "mtime", // 'mtime' for last modified, 'ctime' for creation date
   sortOrder: "desc", // 'desc' for descending, 'asc' for ascending
-  statusValues: {
-    todo: "1 Todo",
-    completed: "4 Completed",
-  },
-  fileStateValues: {
-    uncheckedTask: "unchecked_task",
-    closedField: "closed",
-  },
 };
-
-////////////////////////////////////////////////////
-///               Helper Functions               ///
-////////////////////////////////////////////////////
-
-const buildExcludedFoldersQuery = (folders) => {
-  return folders.map(folder => `!path("${folder}")`).join(' AND ');
-};
-
-const updateFrontmatter = async (app, entry, updates) => {
-  const file = app.vault.getAbstractFileByPath(entry.$path);
-  await app.fileManager.processFrontMatter(file, (frontmatter) => {
-    Object.entries(updates).forEach(([key, value]) => {
-      if (value === undefined) {
-        delete frontmatter[key];
-      } else {
-        const existingKey = Object.keys(frontmatter).find(k => k.toLowerCase() === key.toLowerCase());
-        if (existingKey) {
-          frontmatter[existingKey] = value;
-        } else {
-          frontmatter[key] = value;
-        }
-      }
-    });
-  });
-};
-
-const getFullPath = (path) => {
-  const parts = path.split('/');
-  return parts.slice(0, -1).join(' > ');
-};
-
-const formatDate = (date) => {
-  return date ? date.toFormat("yyyy-MM-dd") : "";
-};
-
-////////////////////////////////////////////////////
-///             Display Rules                    ///
-////////////////////////////////////////////////////
-
-const displayRules = [
-  {
-    name: 'Incomplete Tasks',
-    query: `(status != "${initialSettings.statusValues.completed}" OR status = null)`
-  },
-  {
-    name: 'Unchecked Tasks',
-    query: `(file_state = "${initialSettings.fileStateValues.uncheckedTask}")`
-  },
-  {
-    name: 'Unattended Meetings',
-    query: '(meeting_status = false OR meeting_status = null)'
-  },
-];
-
-////////////////////////////////////////////////////
-///         Completed Display Rules              ///
-////////////////////////////////////////////////////
-
-const completedDisplayRules = [
-  {
-    name: 'Completed Tasks',
-    query: `(${initialSettings.fileStateValues.closedField} != null)`
-  },
-];
-
-////////////////////////////////////////////////////
-///             Checkbox Rules                   ///
-////////////////////////////////////////////////////
-
-const checkboxRules = [
-  {
-    condition: (entry) => entry.$frontmatter?.status !== undefined,
-    getUpdates: (isChecked) => ({
-      status: isChecked ? initialSettings.statusValues.todo : initialSettings.statusValues.completed,
-      [initialSettings.fileStateValues.closedField]: isChecked ? undefined : dc.luxon.DateTime.now().toFormat("yyyy-MM-dd'T'HH:mm")
-    }),
-    getIcon: (updates) => updates.status === initialSettings.statusValues.todo ? 'circle' : 'lucide-check-circle'
-  },
-  {
-    condition: (entry) => entry.$frontmatter?.file_state !== undefined,
-    getUpdates: (isChecked) => isChecked
-      ? { file_state: initialSettings.fileStateValues.uncheckedTask, [initialSettings.fileStateValues.closedField]: undefined }
-      : { file_state: undefined, [initialSettings.fileStateValues.closedField]: dc.luxon.DateTime.now().toFormat("yyyy-MM-dd'T'HH:mm") },
-    getIcon: (updates) => updates.file_state === initialSettings.fileStateValues.uncheckedTask ? 'circle' : 'lucide-check-circle'
-  },
-  {
-    condition: (entry) => entry.$frontmatter?.scheduled_date !== undefined && entry.$frontmatter?.meeting_status !== undefined,
-    getUpdates: () => ({ meeting_status: true, [initialSettings.fileStateValues.closedField]: dc.luxon.DateTime.now().toFormat("yyyy-MM-dd'T'HH:mm") }),
-    getIcon: () => 'lucide-check-circle'
-  },
-];
 
 ////////////////////////////////////////////////////
 ///                 Components                   ///
@@ -137,49 +38,46 @@ const Link = ({ path, children }) => (
 
 const FolderPath = ({ path, date, sortBy }) => (
   <div style={styles.folderPathContainer}>
-    <div>{getFullPath(path)}</div>
-    <div>{sortBy === 'mtime' ? 'Last modified: ' : 'Creation Date: '}{formatDate(date)}</div>
+    <div>{H.getFullPath(path)}</div>
+    <div>{sortBy === 'mtime' ? 'Last modified: ' : 'Creation Date: '}{H.formatDate(date)}</div>
   </div>
 );
 
-const Checkbox = ({ entry, onUpdate, isCompleted }) => {
-  const closedField = initialSettings.fileStateValues.closedField;
-
-  const isChecked = entry.$frontmatter?.status === initialSettings.statusValues.completed ||
-                    entry.$frontmatter?.[closedField] !== undefined ||
-                    entry.$frontmatter?.meeting_status === true;
-
+const Checkbox = ({ entry, onUpdate }) => {
+  const [error, setError] = dc.useState("");
+  const isChecked = H.isEntryChecked(entry);
   const icon = isChecked ? 'lucide-check-circle' : 'circle';
 
   const handleClick = async () => {
-    if (isCompleted) return; // Do nothing for completed tasks
-
-    const rule = checkboxRules.find(r => r.condition(entry));
-    if (!rule) return;
-
-    const updates = rule.getUpdates(isChecked);
-    await updateFrontmatter(app, entry, updates);
-
-    const iconic = app.plugins.getPlugin('iconic');
-    if (iconic) {
-      iconic.saveFileIcon({ id: entry.$path }, rule.getIcon(updates), null);
-      iconic.refreshIcons();
+    setError("");
+    try {
+      const action = await H.toggleEntry(app, entry);
+      if (!action) return;
+      const iconic = app.plugins.getPlugin('iconic');
+      if (iconic) {
+        iconic.saveFileIcon({ id: entry.$path }, action.icon, null);
+        iconic.refreshIcons();
+      }
+      onUpdate();
+    } catch (error) {
+      setError(error.message || "Could not update this task.");
     }
-
-    onUpdate();
   };
 
   return (
-    <a onClick={handleClick} style={{ marginRight: '5px', cursor: isCompleted ? 'default' : 'pointer' }}>
-      <dc.Icon icon={icon} className="icon-in-link" />
-    </a>
+    <span>
+      <button type="button" aria-label={isChecked ? 'Restore task' : 'Complete task'} onClick={handleClick} style={{ marginRight: '5px', cursor: 'pointer' }}>
+        <dc.Icon icon={icon} className="icon-in-link" />
+      </button>
+      {error && <span role="alert">{error}</span>}
+    </span>
   );
 };
 
-const Row = ({ entry, onUpdate, sortBy, showCheckbox }) => {
+const Row = ({ entry, onUpdate, sortBy }) => {
   return (
     <div style={styles.row}>
-      <Checkbox entry={entry} onUpdate={onUpdate} isCompleted={!showCheckbox} />
+      <Checkbox entry={entry} onUpdate={onUpdate} />
       <Link path={entry.$path}>{entry.$name}</Link>
       <FolderPath path={entry.$path} date={sortBy === 'mtime' ? entry.$mtime : entry.$ctime} sortBy={sortBy} />
     </div>
@@ -253,53 +151,45 @@ function Inbox() {
   const [dateFilter, setDateFilter] = useState("");
   const [isDateBefore, setIsDateBefore] = useState(false);
 
-  const excludedFoldersQuery = useMemo(() => buildExcludedFoldersQuery(initialSettings.excludedFolders), []);
-  const displayRulesQuery = useMemo(() => {
-    return showCompleted
-      ? completedDisplayRules.map(rule => rule.query).join(' OR ')
-      : displayRules.map(rule => rule.query).join(' OR ');
-  }, [showCompleted]);
-
-  const query = dc.useQuery(`@page AND (${displayRulesQuery}) AND ${excludedFoldersQuery} ${pathFilter ? `AND path("${pathFilter}")` : ''}`, [updateTrigger, pathFilter]);
+  const query = dc.useQuery(H.buildMailboxQuery(), [updateTrigger, pathFilter, showCompleted]);
 
   const filteredData = useMemo(() => {
     return query
       .filter(entry => entry.$name.toLowerCase().includes(nameFilter.toLowerCase()))
-      .filter(entry => {
-        if (showCompleted) {
-          return entry.$frontmatter?.[initialSettings.fileStateValues.closedField] !== undefined;
-        }
-        return true;
-      })
+      .filter(entry => H.mailboxIncludes(entry, showCompleted, pathFilter))
       .filter(entry => {
         if (!dateFilter) return true;
         
         const entryDate = sortBy === 'mtime' ? entry.$mtime : entry.$ctime;
-        const filterDate = dc.luxon.DateTime.fromFormat(dateFilter, "yyyy-MM-dd").startOf('day');
+        const filterDate = dc.luxon.DateTime.fromFormat(dateFilter, "yyyy-MM-dd");
         
         if (!filterDate.isValid) return true;
         
         return isDateBefore 
-          ? entryDate <= filterDate
-          : entryDate >= filterDate;
+          ? entryDate <= filterDate.endOf('day')
+          : entryDate >= filterDate.startOf('day');
       })
       .sort((a, b) => {
         const dateA = sortBy === 'mtime' ? a.$mtime : a.$ctime;
         const dateB = sortBy === 'mtime' ? b.$mtime : b.$ctime;
         return sortOrder === 'asc' ? dateA - dateB : dateB - dateA;
       });
-  }, [query, nameFilter, sortBy, sortOrder, showCompleted, dateFilter, isDateBefore]);
+  }, [query, nameFilter, pathFilter, sortBy, sortOrder, showCompleted, dateFilter, isDateBefore]);
+
+  const totalPages = useMemo(() => {
+    return paginationEnabled ? Math.max(1, Math.ceil(filteredData.length / itemsPerPage)) : 1;
+  }, [filteredData, paginationEnabled, itemsPerPage]);
+
+  // Keep the selected page valid when filters or task counts change.
+  const effectivePage = H.clampPage(currentPage, totalPages);
+  dc.useEffect(() => { setCurrentPage(1); setPageInput(""); }, [nameFilter, pathFilter, showCompleted, dateFilter, isDateBefore, itemsPerPage, paginationEnabled]);
+  dc.useEffect(() => { setCurrentPage(effectivePage); }, [effectivePage]);
 
   const paginatedData = useMemo(() => {
     if (!paginationEnabled) return filteredData;
-    const start = (currentPage - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-    return filteredData.slice(start, end);
-  }, [filteredData, paginationEnabled, currentPage, itemsPerPage]);
-
-  const totalPages = useMemo(() => {
-    return paginationEnabled ? Math.ceil(filteredData.length / itemsPerPage) : 1;
-  }, [filteredData, paginationEnabled, itemsPerPage]);
+    const start = (effectivePage - 1) * itemsPerPage;
+    return filteredData.slice(start, start + itemsPerPage);
+  }, [filteredData, paginationEnabled, effectivePage, itemsPerPage]);
 
   const handleUpdate = useCallback(() => setUpdateTrigger(prev => prev + 1), []);
 
@@ -379,7 +269,7 @@ function Inbox() {
             <dc.Textbox
               type="number"
               value={itemsPerPage}
-              onChange={(e) => setItemsPerPage(Number(e.target.value))}
+              onChange={(e) => setItemsPerPage(Math.max(1, Math.floor(Number(e.target.value)) || 1))}
               style={styles.numberInput}
               min="1"
             />
@@ -394,13 +284,13 @@ function Inbox() {
         </div>
       )}
       <div style={styles.rowsContainer}>
-        {paginatedData.map((entry, index) => (
-          <Row key={index} entry={entry} onUpdate={handleUpdate} sortBy={sortBy} showCheckbox={!showCompleted} />
+        {paginatedData.map((entry) => (
+          <Row key={entry.$path} entry={entry} onUpdate={handleUpdate} sortBy={sortBy} />
         ))}
       </div>
       {paginationEnabled && (
         <PaginationControls
-          currentPage={currentPage}
+          currentPage={effectivePage}
           totalPages={totalPages}
           onPageChange={handlePageChange}
           pageInput={pageInput}
@@ -452,9 +342,6 @@ const styles = {
     display: "flex",
     alignItems: "center",
     gap: "5px",
-    "& input[type='checkbox']": {
-      display: "none",
-    },
   },
   editingControls: {
     display: "flex",

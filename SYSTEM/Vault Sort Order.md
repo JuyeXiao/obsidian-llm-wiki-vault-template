@@ -32,9 +32,10 @@ sorting-spec: |-
 
   // HUB/MOC
   target-folder: HUB/MOC
+  Permanent MOC
+  Literature MOC
   Projects MOC
   Areas MOC
-  Literature MOC
   Sources MOC
 
   // PARA
@@ -134,6 +135,14 @@ sorting-spec: |-
   tags
   dashboards
   interface
+  agent-workflows
+  by-need
+  source-governance
+  migration
+  plugins
+  plugin-licenses
+  plugin-licenses.json
+  asset-licenses
   zh
   assets
 ---

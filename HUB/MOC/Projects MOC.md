@@ -1,6 +1,6 @@
 ---
 type: moc
-summary: Projects dashboard — live search + status/category facets + list/by-status views, surveying every project under PARA/PROJECTS (command center: due-in / priority / status / deadline).
+summary: "Projects dashboard — live search + status/category facets + list/by-status views, surveying every project under PARA/PROJECTS (command center: due-in / priority / status / deadline)."
 cssclasses:
   - hide-properties_editing
   - hide-properties_reading

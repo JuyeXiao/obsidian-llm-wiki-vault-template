@@ -1,14 +1,24 @@
 ---
-title: "Note-Taking Basics (example)"
+title: Note-Taking Basics (example)
 tags: [topic/productivity/note-taking]
-keywords: [note-taking, PKM]
-summary: A placeholder example source in raw, used to demonstrate the LLM Wiki ingest flow.
+keywords: [retrieval, questions, links]
+summary: Original demonstration source about writing a note for a future question and retaining its limits.
 type: clippings
 created: 2026-01-04
 ---
 
 # Note-Taking Basics (example)
 
-> ⚠️ Placeholder example **source** (original text written for this template, not third-party content), here only to demonstrate the LLM Wiki. Real sources go in `INBOX/raw/`; the LLM reads them but never rewrites them. See [[wiki-schema]].
+> Original example written for this template. It describes a hypothetical method, not a real user's experience or measured result.
 
-Good note-taking is less about the tool and more about the habit: capture in your own words, link related ideas, and revisit. A note you can't find later is a note you didn't take.
+## Write for a future question
+
+A useful note names the question it could help answer. “Which evidence belongs on an About page?” is more specific than “writing.” Restating the idea in a short sentence can expose a missing condition; retaining the source makes that condition checkable later.
+
+## Link with a reason
+
+A link is more useful when the note explains what the linked material contributes. For a hypothetical portfolio project, a note about choosing evidence can inform an About-page draft. The link records a possible use, not proof that the draft improved.
+
+## Limits
+
+Not every source needs a permanent note. A reference table may be kept only for lookup, and a tentative claim may remain an open question. This example supplies no experiment, performance figure or personal endorsement. The proposed method should be reconsidered if naming a question adds overhead without helping retrieval.

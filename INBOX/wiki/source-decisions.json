@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "decisions": [
+    {
+      "raw_path": "INBOX/raw/Clippings/Note-Taking Basics (example).md",
+      "disposition": "ingest_existing",
+      "target_wiki": [
+        "INBOX/wiki/Productivity/Note-Taking.md"
+      ],
+      "reason_code": "original_example",
+      "reason": "The original public example is represented by Note-Taking. This demonstrates provenance, not a confirmed user position.",
+      "confidence": "high",
+      "decided_at": "2026-10-19",
+      "review_after": null,
+      "revisit_on": [],
+      "overrides_policy": null,
+      "raw_body_sha256": "5d61c37f99320c83d8e9b8c4fbdda879aaab85915cf5ec543437668f2dd23961"
+    }
+  ]
+}

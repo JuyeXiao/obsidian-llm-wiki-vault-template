@@ -12,7 +12,7 @@
   },
   "folderMappings": [
     {
-      "folder": "HUB/Map of Content",
+      "folder": "HUB/MOC",
       "toolbar": "db2947d6-48e4-4559-9bb3-cc615be3a2fd"
     },
     {
@@ -146,15 +146,147 @@
         },
         {
           "uuid": "3369f1f0-05d7-4ff5-b054-6529e492bbc4",
-          "label": "Map of Content",
-          "icon": "lucide-map-pinned",
-          "link": "HUB/Map of Content.md",
+          "label": "Permanent",
+          "icon": "brain",
+          "link": "HUB/MOC/Permanent MOC.md",
           "linkAttr": {
             "commandId": "",
             "hasVars": false,
             "type": "file"
           },
-          "tooltip": "Map of Content",
+          "tooltip": "Permanent MOC",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "3369f1f0-05d7-4ff5-b054-6529e492bbc4",
+          "label": "Literature",
+          "icon": "book-open",
+          "link": "HUB/MOC/Literature MOC.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "Literature MOC",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "3369f1f0-05d7-4ff5-b054-6529e492bbc4",
+          "label": "Projects",
+          "icon": "folder",
+          "link": "HUB/MOC/Projects MOC.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "Projects MOC",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "3369f1f0-05d7-4ff5-b054-6529e492bbc4",
+          "label": "Areas",
+          "icon": "layers",
+          "link": "HUB/MOC/Areas MOC.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "Areas MOC",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "3369f1f0-05d7-4ff5-b054-6529e492bbc4",
+          "label": "Sources",
+          "icon": "archive",
+          "link": "HUB/MOC/Sources MOC.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "Sources MOC",
           "visibility": {
             "desktop": {
               "components": [
@@ -380,7 +512,7 @@
           "uuid": "03c8a3f0-dc94-403e-ad8c-b3f6df020583",
           "label": "Homepage",
           "icon": "lucide-home",
-          "link": "SYSTEM/MOBILE HUB/Mobile Homepage.md",
+          "link": "HUB/Homepage.md",
           "linkAttr": {
             "commandId": "",
             "hasVars": false,
@@ -411,15 +543,147 @@
         },
         {
           "uuid": "fc98ca32-fec0-437d-bbbc-15230bda7714",
-          "label": "Map of Content",
-          "icon": "lucide-map-pinned",
-          "link": "SYSTEM/MOBILE HUB/Mobile Map of Content.md",
+          "label": "Permanent",
+          "icon": "brain",
+          "link": "HUB/MOC/Permanent MOC.md",
           "linkAttr": {
             "commandId": "",
             "hasVars": false,
             "type": "file"
           },
-          "tooltip": "Map of Content",
+          "tooltip": "Permanent MOC",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "fc98ca32-fec0-437d-bbbc-15230bda7714",
+          "label": "Literature",
+          "icon": "book-open",
+          "link": "HUB/MOC/Literature MOC.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "Literature MOC",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "fc98ca32-fec0-437d-bbbc-15230bda7714",
+          "label": "Projects",
+          "icon": "folder",
+          "link": "HUB/MOC/Projects MOC.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "Projects MOC",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "fc98ca32-fec0-437d-bbbc-15230bda7714",
+          "label": "Areas",
+          "icon": "layers",
+          "link": "HUB/MOC/Areas MOC.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "Areas MOC",
+          "visibility": {
+            "desktop": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "mobile": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            },
+            "tablet": {
+              "components": [
+                "icon",
+                "label"
+              ]
+            }
+          },
+          "inGallery": false
+        },
+        {
+          "uuid": "fc98ca32-fec0-437d-bbbc-15230bda7714",
+          "label": "Sources",
+          "icon": "archive",
+          "link": "HUB/MOC/Sources MOC.md",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "file"
+          },
+          "tooltip": "Sources MOC",
           "visibility": {
             "desktop": {
               "components": [
@@ -446,7 +710,7 @@
           "uuid": "0fd9717e-c1b2-43ca-84dd-26a578ba9a27",
           "label": "Mail Box",
           "icon": "lucide-inbox",
-          "link": "SYSTEM/MOBILE HUB/Mobile Mail Box.md",
+          "link": "HUB/Mail Box.md",
           "linkAttr": {
             "commandId": "",
             "hasVars": false,
@@ -643,48 +907,15 @@
         },
         {
           "uuid": "ab372d05-8890-4113-bb63-cc37b7f30596",
-          "label": "Light Mode",
+          "label": "Toggle Light/Dark",
           "icon": "lucide-flashlight",
-          "link": "Use light mode",
+          "link": "Toggle light/dark mode",
           "linkAttr": {
-            "commandId": "theme:use-light",
+            "commandId": "theme:toggle-light-dark",
             "hasVars": false,
             "type": "command"
           },
-          "tooltip": "Light Mode",
-          "visibility": {
-            "desktop": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "mobile": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            },
-            "tablet": {
-              "components": [
-                "icon",
-                "label"
-              ]
-            }
-          },
-          "inGallery": false
-        },
-        {
-          "uuid": "ba753453-a3e6-489d-9d30-afe15b229234",
-          "label": "Dark Mode",
-          "icon": "lucide-flashlight-off",
-          "link": "Use dark mode",
-          "linkAttr": {
-            "commandId": "theme:use-dark",
-            "hasVars": false,
-            "type": "command"
-          },
-          "tooltip": "Dark Mode",
+          "tooltip": "Toggle Light/Dark",
           "visibility": {
             "desktop": {
               "components": [
@@ -744,7 +975,7 @@
           "uuid": "736e5229-88ba-45ab-8372-acd9bd7be2c0",
           "label": "Vault Guide",
           "icon": "question-mark-glyph",
-          "link": "SYSTEM/GETTING STARTED/Getting Started.md",
+          "link": "SYSTEM/DOCS/getting-started.md",
           "linkAttr": {
             "commandId": "",
             "hasVars": false,
@@ -1101,15 +1332,15 @@
         },
         {
           "uuid": "20e8642a-8fdc-4205-9941-9e379d8d2f46",
-          "label": "Recent Files",
+          "label": "Quick Switcher",
           "icon": "lucide-navigation",
           "link": "Quick switcher: Open quick switcher",
           "linkAttr": {
-            "commandId": "darlal-switcher-plus:switcher-plus:open",
+            "commandId": "switcher:open",
             "hasVars": false,
             "type": "command"
           },
-          "tooltip": "Recent Files",
+          "tooltip": "Quick Switcher",
           "visibility": {
             "desktop": {
               "components": [
@@ -1169,9 +1400,9 @@
           "uuid": "6879a87a-da62-4a66-8e7f-dd8a883004b5",
           "label": "Search Vault",
           "icon": "lucide-search",
-          "link": "Omnisearch: Vault search",
+          "link": "Search: Search in all files",
           "linkAttr": {
-            "commandId": "omnisearch:show-modal",
+            "commandId": "global-search:open",
             "hasVars": false,
             "type": "command"
           },
@@ -1926,15 +2157,15 @@
         },
         {
           "uuid": "11309934-2b0b-4604-af78-1bbd1d6c4a9b",
-          "label": "Recent Files",
+          "label": "Quick Switcher",
           "icon": "lucide-navigation",
           "link": "Quick switcher: Open quick switcher",
           "linkAttr": {
-            "commandId": "darlal-switcher-plus:switcher-plus:open",
+            "commandId": "switcher:open",
             "hasVars": false,
             "type": "command"
           },
-          "tooltip": "Recent Files",
+          "tooltip": "Quick Switcher",
           "visibility": {
             "desktop": {
               "components": [
@@ -1994,9 +2225,9 @@
           "uuid": "304db4e1-cea1-45a8-a3b3-f32017f2e22c",
           "label": "Search Vault",
           "icon": "lucide-search",
-          "link": "Omnisearch: Vault search",
+          "link": "Search: Search in all files",
           "linkAttr": {
-            "commandId": "omnisearch:show-modal",
+            "commandId": "global-search:open",
             "hasVars": false,
             "type": "command"
           },
@@ -2416,15 +2647,15 @@
         },
         {
           "uuid": "a343805d-6735-4d87-9ae5-3dfb2d98c00b",
-          "label": "Recent Files",
+          "label": "Quick Switcher",
           "icon": "lucide-navigation",
           "link": "Quick switcher: Open quick switcher",
           "linkAttr": {
-            "commandId": "darlal-switcher-plus:switcher-plus:open",
+            "commandId": "switcher:open",
             "hasVars": false,
             "type": "command"
           },
-          "tooltip": "Recent Files",
+          "tooltip": "Quick Switcher",
           "visibility": {
             "desktop": {
               "components": [
@@ -2484,9 +2715,9 @@
           "uuid": "f517ea53-3976-4405-850f-c50fbf008dc2",
           "label": "Search Vault",
           "icon": "lucide-search",
-          "link": "Omnisearch: Vault search",
+          "link": "Search: Search in all files",
           "linkAttr": {
-            "commandId": "omnisearch:show-modal",
+            "commandId": "global-search:open",
             "hasVars": false,
             "type": "command"
           },
@@ -3138,15 +3369,15 @@
         },
         {
           "uuid": "f14b5d72-c1a3-4651-9820-e7fbd9bdf66c",
-          "label": "Recent Files",
+          "label": "Quick Switcher",
           "icon": "lucide-navigation",
           "link": "Quick switcher: Open quick switcher",
           "linkAttr": {
-            "commandId": "darlal-switcher-plus:switcher-plus:open",
+            "commandId": "switcher:open",
             "hasVars": false,
             "type": "command"
           },
-          "tooltip": "Recent Files",
+          "tooltip": "Quick Switcher",
           "visibility": {
             "desktop": {
               "components": [
@@ -3206,9 +3437,9 @@
           "uuid": "2fc6a51f-f6ee-4723-98aa-d767670fe38e",
           "label": "Search Vault",
           "icon": "lucide-search",
-          "link": "Omnisearch: Vault search",
+          "link": "Search: Search in all files",
           "linkAttr": {
-            "commandId": "omnisearch:show-modal",
+            "commandId": "global-search:open",
             "hasVars": false,
             "type": "command"
           },

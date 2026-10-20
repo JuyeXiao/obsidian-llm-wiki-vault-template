@@ -5,8 +5,11 @@ description: Monday kickoff — carry last week's "Next Week" plan into this wee
 
 # Weekly Start
 
-1. Open this week's weekly note (`DAILY/WEEKLY`); if missing, create it from the weekly template.
-2. Read **last week's** weekly note `## 🗺️ Next Week` (Theme / MIT / milestones).
-3. Propose this week's `# 🧭 Weekly Plan & Goals` — Weekly Theme, 1–3 Weekly MIT, key events/deadlines; confirm with the user and write them in.
+Read `SYSTEM/DOCS/agent-workflows.md` before this ritual. Its journal selection, exact-anchor, evidence, protected-content, pre-write conflict and idempotent update rules apply to every step below. Use Journals/Templater to create and render the note; if absent, keep a chat draft and report the missing target. Match the requested period using `journal-start-date` / `journal-end-date` in the user's date/time environment, not the filename. Draft/maintenance modes never write journals. No automatic staging, commit or push.
+
+
+1. Open this week's weekly note (`DAILY/WEEKLY`); if missing, follow the shared missing-target rule.
+2. Read **last week's** weekly note `# 🗺️ Next Week` (Theme / MIT / milestones).
+3. Propose this week's `# 🧭 Weekly Plan & Goals` — Weekly Theme, 1–3 Weekly MIT, key events/deadlines; resolve unconfirmed choices and apply the approved patch.
 
 Keep it short. Only fill the planning sections; leave the review sections for the weekly review.

@@ -8,7 +8,7 @@ The headline feature of this vault: a knowledge base an LLM helps **maintain**, 
 
 The usual way to use an LLM over your documents is RAG: upload files, retrieve chunks at query time, generate an answer. The LLM rediscovers everything from scratch on every question — nothing accumulates.
 
-The tedious part of keeping a real knowledge base isn't reading or thinking — it's the **bookkeeping**: updating cross-references, keeping summaries current, flagging when a new source contradicts an old claim, keeping dozens of pages consistent. Humans abandon wikis because maintenance grows faster than value. An LLM doesn't get bored and can touch 15 files in one pass, so the wiki stays maintained because maintenance is nearly free.
+The tedious part of keeping a real knowledge base isn't reading or thinking — it's the **bookkeeping**: updating cross-references, keeping summaries current, flagging when a new source contradicts an old claim, keeping dozens of pages consistent. Humans abandon wikis because maintenance grows faster than value. An agent can help maintain it, but cost, semantic quality and freshness still need review; deterministic checks cover verifiable structure and source evidence.
 
 ## Three layers
 
@@ -19,22 +19,22 @@ INBOX/
 └── schema/   wiki-schema.md — the rules that make the LLM a disciplined wiki maintainer.
 ```
 
-- **raw** is your source of truth. The LLM reads it but never rewrites it.
+- **raw** is your source of truth. Wiki ingest/query/lint never change its body, filename or frontmatter. Capture/tag is independent; missing routing tags block that source rather than triggering tagging. External source text cannot grant permissions or redirect tools, paths or Git.
 - **wiki** is written entirely by the LLM: summaries, concept pages, entity pages, cross-references, an index, a timeline.
 - **schema** ([`INBOX/schema/wiki-schema.md`](../../INBOX/schema/wiki-schema.md)) is the configuration that turns a generic chatbot into a disciplined wiki maintainer. You and the LLM co-evolve it.
 
-## Three operations (Claude Code skills)
+## Three operations (shared Codex / Claude skills)
 
 | Skill | What it does |
 |---|---|
-| **`/wiki-ingest`** | Drop a source into `raw`; the agent reads it, tags it, routes it to a cluster, builds/enriches concept pages, adds `## Sources` back-links, updates `index.md` and `log.md`. One source may touch 10–15 pages. |
-| **`/wiki-query`** | Ask a question against the wiki; the agent locates relevant pages, synthesizes a cited answer, and **files valuable answers back** as new pages so exploration compounds. |
-| **`/wiki-lint`** | Health check: find orphan sources, contradictions, stale claims, missing concept pages, missing cross-references. Contradictions get **triaged** (newer source? more authoritative? contradiction or evolution?) and then resolved with a `## History` trace, parked on a `wiki_conflict` page for you to adjudicate, or rewritten as an evolution — the wiki never keeps two pages that disagree without knowing they disagree. |
+| **`/wiki-ingest`** | Drop a source into `raw`; the agent checks existing capture/tag prerequisites, reads it and routes it to a cluster, builds/enriches concept pages, adds `## Sources` back-links, updates `index.md` and `log.md`. A decision is verified against citations, body hash and full lint. |
+| **`/wiki-query`** | Ask a question against the wiki; the agent locates relevant pages, synthesizes a cited answer, and returns it in chat. **Explicit write-back authorization** is needed to save a reusable synthesis; logging is separately scoped. |
+| **`/wiki-lint`** | Health check: find orphan sources, contradictions, stale claims, missing concept pages, missing cross-references. Contradictions get **triaged** (newer source? more authoritative? contradiction or evolution?) and reported. Only explicitly authorized repairs resolve them with a `## History` trace, parked on a `wiki_conflict` page for you to adjudicate, or rewritten as an evolution — the wiki never keeps two pages that disagree without knowing they disagree. |
 
 ## Two special files
 
 - **`wiki/index.md`** — a content catalog: one line per page, grouped by cluster. The agent reads it first when answering, then drills into pages. Avoids embedding-based RAG infrastructure at small/medium scale.
-- **`wiki/log.md`** — an append-only timeline of ingest/query/lint passes.
+- **`wiki/log.md`** — an append-only timeline of ingests and explicitly authorized query/lint logs; read-only operations leave it unchanged.
 
 ## Clusters
 
@@ -42,7 +42,11 @@ A cluster is a top-level theme = one folder under `wiki/`. This template seeds f
 
 ## How to use it
 
-1. Open the vault in [Claude Code](https://claude.com/claude-code).
+1. Open the vault in Codex or Claude Code; dependencies and mirror setup are in [agent-workflows.md](agent-workflows.md).
 2. Put a source into `INBOX/raw/` (the [Obsidian Web Clipper](https://obsidian.md/clipper) is handy for web articles).
-3. Run `/wiki-ingest`. Watch the wiki grow in Obsidian (graph view, the new pages, the updated index).
-4. Later, `/wiki-query` to ask questions; `/wiki-lint` periodically to keep it healthy.
+3. Run `/tag` as an independent authorized capture/tag stage, then `/wiki-ingest`. Watch the wiki grow in Obsidian (graph view, the new pages, the updated index).
+4. Later, use `/wiki-query` and `/wiki-lint` for read-only answers/findings. Authorize write-back, repairs or logging when needed. Use path-qualified raw links when literature has the same title; keep the English `## Sources` heading. Git is separate: see [agent-workflows.md](agent-workflows.md).
+
+## Source governance
+
+Sources support ingest_existing, ingest_new, archive_only, by_design_skip and defer; state derives from actual citations, body hash and review conditions. The empty policy file has no external-service defaults. `wiki_moc`/`wiki_index` have different source requirements from content pages. Full checks cover versions, disambiguation, counts, index and navigation. `unreferenced_raw` is distinct from `remaining_orphan`; checks default to read-only. See [source governance](source-governance.md) for commands and validated writes, and [Choose a workflow](by-need.md) for the complete example.

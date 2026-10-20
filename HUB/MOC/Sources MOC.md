@@ -94,6 +94,7 @@ function SourceMOC() {
 
   // Derive: per note compute hay (search string) / clusters / src (all sources under INBOX/raw)
   const idx = dc.useMemo(() => pages
+    .filter(p => p.$path !== "INBOX/raw/README.md")
     .map(p => ({ p,
       hay:(titleOf(p)+" "+sv(p.value("summary"))+" "+kwText(p)+" "+sv(p.value("category"))).toLowerCase(),
       clusters:clustersOf(p), src:sourceTypeOf(p) })), [pages]);

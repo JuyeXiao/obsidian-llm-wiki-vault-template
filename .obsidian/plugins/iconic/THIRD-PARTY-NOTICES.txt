@@ -1,0 +1,22 @@
+Third-party notices for Iconic 1.1.9
+Upstream author field: Holo
+Upstream repository: https://github.com/gfxholo/iconic
+Fixed source tree: https://github.com/gfxholo/iconic/tree/d79c1ec50b83d67ba26a70f4dc8c212a414963ef
+Source archive reference: https://github.com/gfxholo/iconic/archive/d79c1ec50b83d67ba26a70f4dc8c212a414963ef.zip
+Project license evidence: MIT-0; file: LICENSE
+Notice collection date: 2026-10-20. This file does not grant new rights or clear redistribution.
+The vault template MIT license does not replace any third-party terms.
+Bundled license comments and copyright statements remain intact.
+Identified dependency notices follow. Direct runtime declarations and observable bundle/source-map paths were cross-checked with version locks.
+This is not a complete dependency inventory: minified code, optional modules, transitive code, icons and assets can require further review.
+A declared runtime dependency may be unused after bundling. Multiple lock versions are retained conservatively, not asserted to be the exact bundled variant.
+
+Observed packaging differences before this review (original change date unknown):
+- main.js: nosourcemap-comment-only
+- manifest.json: exact
+- styles.css: exact
+
+
+===== Outstanding review =====
+
+- Complete dependency inventory and redistribution clearance remain open.

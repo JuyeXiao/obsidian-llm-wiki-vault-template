@@ -27,3 +27,7 @@ desktop.ini
 # Daily / weekly / monthly notes can be personal. Uncomment the next line
 # to keep them out of a public repo:
 # DAILY/
+
+# === Maintenance script runtime caches ===
+__pycache__/
+*.py[cod]

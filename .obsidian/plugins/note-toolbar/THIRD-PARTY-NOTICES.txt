@@ -1,0 +1,69 @@
+Third-party notices for Note Toolbar 1.32.15
+Upstream author field: Chris Gurney
+Upstream repository: https://github.com/chrisgurney/obsidian-note-toolbar
+Fixed source tree: https://github.com/chrisgurney/obsidian-note-toolbar/tree/3a42ed12e98ef24322690983dfd10416eb7f6927
+Source archive reference: https://github.com/chrisgurney/obsidian-note-toolbar/archive/3a42ed12e98ef24322690983dfd10416eb7f6927.zip
+Project license evidence: GPLv3; file: LICENSE
+Notice collection date: 2026-10-20. This file does not grant new rights or clear redistribution.
+The vault template MIT license does not replace any third-party terms.
+Bundled license comments and copyright statements remain intact.
+Identified dependency notices follow. Direct runtime declarations and observable bundle/source-map paths were cross-checked with version locks.
+This is not a complete dependency inventory: minified code, optional modules, transitive code, icons and assets can require further review.
+A declared runtime dependency may be unused after bundling. Multiple lock versions are retained conservatively, not asserted to be the exact bundled variant.
+
+Observed packaging differences before this review (original change date unknown):
+- main.js: nosourcemap-comment-only
+- manifest.json: exact
+- styles.css: exact
+
+
+===== sortablejs@1.15.7 / LICENSE =====
+Source: https://registry.npmjs.org/sortablejs/-/sortablejs-1.15.7.tgz
+
+MIT License
+
+Copyright (c) 2019 All contributors to Sortable
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+===== Existing bundled legal comments (also retained in main.js) =====
+
+/*! Bundled license information:
+
+sortablejs/modular/sortable.esm.js:
+  (**!
+   * Sortable 1.15.7
+   * @author	RubaXa   <trash@rubaxa.org>
+   * @author	owenm    <owen23355@gmail.com>
+   * @license MIT
+   *)
+*/
+
+===== Outstanding review =====
+- SOURCE_DISTRIBUTION: fixed source archive download and build entry verified on 2026-10-20; complete corresponding source/dependency closure, rebuild and continued availability remain unverified. No public source mirror was created.
+- Complete dependency inventory and redistribution clearance remain open.
+
+===== Source access checked 2026-10-20 =====
+Download: https://codeload.github.com/chrisgurney/obsidian-note-toolbar/tar.gz/3a42ed12e98ef24322690983dfd10416eb7f6927
+SHA256: 86e7db5b6280db7c044409b4e2809d28726159ee00f65f93f7ce83556275344b
+Archive files: 260
+Build entry from package.json: tsc --noEmit --skipLibCheck && node esbuild.config.mjs production
+Lock files: package-lock.json
+No build/dependency installation was run. This is source access evidence, not complete build verification.

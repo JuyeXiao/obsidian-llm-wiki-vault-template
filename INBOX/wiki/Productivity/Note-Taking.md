@@ -6,21 +6,25 @@ tags: [wiki/Productivity]
 source_count: 1
 created: 2026-01-04
 updated: 2026-01-04
-status: stable
+status: draft
 ---
 
 # Note-Taking
 
-**Core:** capturing ideas in your own words and linking them so they stay findable and reusable.
+> Original example Wiki synthesis. The source is instructional and hypothetical; it does not prove effectiveness.
 
-> Example wiki page (`type: wiki_concept`), the kind `/wiki-ingest` produces. It synthesizes one or more `raw` sources and links back to them under `## Sources`. Because it carries `wiki/Productivity`, it shows up in the PARA-Wiki Atlas and in the "Related Wiki" of any note mapped to the Productivity cluster.
+**Core:** a note can name a future question, preserve evidence and explain why a link is useful.
 
 ## Key points
 
-- Capture in your own words, not verbatim.
-- Link related notes so structure emerges.
-- Revisit and refine; a knowledge base compounds.
+- A specific question can make missing conditions easier to notice (source proposal).
+- An explicit reason for a link describes a possible use, not an observed benefit.
+- Reference-only material and unresolved claims do not automatically need permanent notes.
+
+## Relations
+
+[[INBOX/wiki/Productivity/Productivity Hub]] is the cluster navigation page. Literature and permanent notes are separate from this synthesis; raw can feed Wiki directly.
 
 ## Sources
 
-- [[Note-Taking Basics (example)]]
+- [[INBOX/raw/Clippings/Note-Taking Basics (example)]] · “Write for a future question”, “Link with a reason”, and “Limits”.

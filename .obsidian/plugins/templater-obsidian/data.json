@@ -61,14 +61,6 @@
     {
       "folder": "STICKY",
       "template": "SYSTEM/TEMPLATE/FORMAT/template_new_note.md"
-    },
-    {
-      "folder": "PARA/PROJECTS/留学申请/申请项目",
-      "template": "SYSTEM/TEMPLATE/FORMAT/template_master_留学申请项目.md"
-    },
-    {
-      "folder": "PARA/RESOURCES/DOCUMENTATIONS/SQL题库",
-      "template": "SYSTEM/TEMPLATE/FORMAT/template_SQL题目.md"
     }
   ],
   "enable_file_templates": false,

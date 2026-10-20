@@ -1,21 +1,23 @@
 #!/usr/bin/env bash
 # Tagging-system health check (deterministic checks, read-only, never modifies any file).
 # Usage (at the vault root):
-#   bash .claude/skills/tag-lint/scripts/tag-lint.sh                  # default scope: PARA + ZETA + INBOX/raw
-#   bash .claude/skills/tag-lint/scripts/tag-lint.sh PARA/AREAS       # explicit scope
-# Source of truth = SYSTEM/TAGS/tag-library.md (the flat list is rebuilt on every run).
+#   bash .agents/skills/tag-lint/scripts/tag-lint.sh                  # default scope: PARA + ZETA + INBOX/raw
+#   bash .agents/skills/tag-lint/scripts/tag-lint.sh PARA/AREAS       # explicit scope
+# Source of truth = SYSTEM/TAGS/tag-library.md (derive a temporary list, no vault writes).
 # Reports each item; an item with no ✗ passes.
 set -u
+export LC_ALL=C
 cd "$(git rev-parse --show-toplevel 2>/dev/null || echo .)" || exit 1
 
-SCRIPT_DIR=".claude/skills/tag-lint/scripts"
-FLAT="SYSTEM/TAGS/tag-library.flat.txt"
+SCRIPT_DIR=".agents/skills/tag-lint/scripts"
+FLAT=$(mktemp) || exit 1
+trap 'rm -f -- "$FLAT"' EXIT
 
-# 0) Rebuild the flat list from the source of truth, so drift is always checked
-#    against the current vocabulary (this also feeds the write-guard hook).
-bash "$SCRIPT_DIR/build-taglist.sh" >/dev/null 2>&1 || { echo "✗ build-taglist failed"; exit 1; }
+# 0) Check current vocabulary without refreshing the hook's tracked artifact.
+bash "$SCRIPT_DIR/build-taglist.sh" --stdout > "$FLAT" || { echo "✗ build-taglist failed"; exit 1; }
 
 if [ "$#" -ge 1 ]; then SCOPE=("$@"); else SCOPE=(PARA ZETA "INBOX/raw"); fi
+for scope in "${SCOPE[@]}"; do [ -e "$scope" ] || { echo "✗ scope does not exist"; exit 1; }; done
 RX="(topic|task|area|project|wiki)/[^]\"',[:space:]]*"
 
 # Take tags only from the frontmatter `tags:` field (both inline [a, b] and block
@@ -43,7 +45,8 @@ MALFORMED=$(printf '%s\n' "$DISTINCT" | grep -E '/$|//|[#`]')
 # 1) malformed: trailing slash / empty segment / type written as an array
 echo ""; echo "── 1) Malformed tags (trailing slash / empty segment / type as array) ──"
 [ -n "$MALFORMED" ] && printf '%s\n' "$MALFORMED" | sed 's/^/  ✗ /'
-grep -rlE '^type:[[:space:]]*\[' "${SCOPE[@]}" --include='*.md' 2>/dev/null | sed 's/^/  ✗ type written as array: /'
+TYPE_ARRAYS=$(grep -rlE '^type:[[:space:]]*\[' "${SCOPE[@]}" --include='*.md' 2>/dev/null)
+[ -z "$TYPE_ARRAYS" ] || printf '%s\n' "$TYPE_ARRAYS" | sed 's/^/  ✗ type written as array: /'
 echo "  (no ✗ = none malformed)"
 
 # 2) drift: topic/task tags in use that are not in the source of truth
@@ -56,13 +59,14 @@ echo "  drift count: $(printf '%s\n' "$DRIFT" | sed '/^$/d' | wc -l)"
 
 # 3) duplicate values within a single note's tags line (one grep+awk pass, no per-file spawn)
 echo ""; echo "── 3) Duplicate values within a single note's tags ──"
-grep -rn '^tags:' "${SCOPE[@]}" --include='*.md' 2>/dev/null | LC_ALL=C awk '
+DUPLICATES=$(grep -rn '^tags:' "${SCOPE[@]}" --include='*.md' 2>/dev/null | LC_ALL=C awk '
   { line=$0; delete cnt; out=""
     while (match(line, /(topic|task|area|project|wiki)\/[^]", ]+/)) {
       tok=substr(line,RSTART,RLENGTH); cnt[tok]++
       if(cnt[tok]==2) out=out" "tok
       line=substr(line,RSTART+RLENGTH) }
-    if(out!=""){ p=$0; sub(/:.*/,"",p); print "  ✗ " p " :" out } }'
+    if(out!=""){ p=$0; sub(/:.*/,"",p); print "  ✗ " p " :" out } }')
+[ -z "$DUPLICATES" ] || printf '%s\n' "$DUPLICATES"
 echo "  (no ✗ = no in-note duplicates)"
 
 # 4) stats (info, not a failure)
@@ -76,3 +80,4 @@ echo "  has topic but no summary : $(comm -12 <(printf '%s\n' "$HAS_TOPIC") <(gr
 echo "  defined but unused tags: $(comm -13 <(printf '%s\n' "$USED_TT" | LC_ALL=C sort -u) <(LC_ALL=C sort -u "$FLAT") | wc -l)"
 
 echo ""; echo "════════ Done (no ✗ = all green; info is for human judgement) ════════"
+[ -z "$MALFORMED$TYPE_ARRAYS$DRIFT$DUPLICATES" ]

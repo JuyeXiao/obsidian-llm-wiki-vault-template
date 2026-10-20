@@ -1,0 +1,64 @@
+// Read-only end-to-end acceptance of the shipped original example, not a model evaluation.
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const crypto = require('node:crypto');
+const root=path.resolve(__dirname,'../../..');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const {buildMarkdownGraph,resolveTarget,frontmatterField,frontmatterValues}=require('../../../.agents/skills/wiki-lint/scripts/wiki-graph.js');
+const {lintWiki}=require('../../../.agents/skills/wiki-lint/scripts/wiki-lint.js');
+const {bodySha256}=require('../../../.agents/skills/wiki-lint/scripts/wiki-state.js');
+const raw='INBOX/raw/Clippings/Note-Taking Basics (example).md';
+const lit='ZETA/LITERATURE/Note-Taking Basics (example).md';
+const permanent='ZETA/PERMANENT/Zettelkasten Method.md';
+const wiki='INBOX/wiki/Productivity/Note-Taking.md';
+const project='PARA/PROJECTS/Portfolio Website/1. Portfolio Website.md';
+const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
+
+test('original chain resolves raw → literature → permanent and raw → Wiki with a verified decision', () => {
+  const files=[raw,lit,permanent,wiki,project,'INBOX/wiki/index.md','INBOX/wiki/source-decisions.json'];
+  const before=files.map(hash);
+  const graph=buildMarkdownGraph(root);
+  assert.equal(resolveTarget('Note-Taking Basics (example)',graph.index).status,'ambiguous');
+  const reference=frontmatterField(read(lit),'reference');
+  assert.equal(resolveTarget(reference,graph.index,{sourcePath:lit}).match.relativePath,raw);
+  const links=frontmatterValues(read(permanent),'connections');
+  assert.equal(links.length,1);
+  assert.equal(resolveTarget(links[0],graph.index,{sourcePath:permanent}).match.relativePath,lit);
+  assert.equal(frontmatterField(read(lit),'type'),'literature_note');
+  assert.equal(frontmatterField(read(permanent),'type'),'permanent_note');
+  const report=lintWiki(root);
+  assert.deepEqual(report.errors,[]);
+  assert.equal(report.sources.length,1);
+  assert.equal(report.sources[0].implementation_state,'satisfied');
+  assert.equal(report.sources[0].disposition,'ingest_existing');
+  assert.deepEqual(report.sources[0].cited_wiki,[wiki]);
+  assert.equal(report.raw_summary.remaining_orphan,0);
+  const registry=JSON.parse(read('INBOX/wiki/source-decisions.json'));
+  assert.equal(registry.decisions[0].raw_body_sha256,bodySha256(read(raw)));
+  assert.equal(Object.hasOwn(registry.decisions[0],'implementation_state'),false);
+  assert.equal(report.index_summary.expected,2);
+  assert.equal(report.index_summary.missing,0);
+  assert.deepEqual(files.map(hash),before);
+});
+
+test('project backlinks and Permanent MOC use real note identity and an unconfirmed example marker', () => {
+  const helpers=read('SYSTEM/SCRIPTS/datacore_helpers.md');
+  const code=helpers.slice(helpers.indexOf('function linkPath(c)'),helpers.indexOf('// Current PARA/ZETA page'));
+  const H=vm.runInNewContext(code+'\n({buildConnectionIndex,connectionsInclude})');
+  const graph=buildMarkdownGraph(root), ix=H.buildConnectionIndex(graph.index.records.map(r=>({$path:r.relativePath})));
+  const note=p=>({$path:p,value:key=>frontmatterValues(read(p),key)});
+  assert.equal(H.connectionsInclude(note(permanent),{$path:lit},ix),true);
+  assert.equal(H.connectionsInclude(note(permanent),{$path:raw},ix),false);
+  assert.equal(H.connectionsInclude(note(project),{$path:permanent},ix),true);
+  assert.equal(resolveTarget(frontmatterValues(read(project),'wiki_links')[0],graph.index).match.relativePath,wiki);
+  const P=new Function(read('SYSTEM/SCRIPTS/permanent_moc_helpers.md').match(/```js\r?\n([\s\S]*?)\r?\n```/)[1])();
+  const status=P.viewpointStatus(read(permanent));
+  assert.equal(status,'Personal viewpoint pending');
+  const rows=[{title:'Zettelkasten Method',hay:('Zettelkasten Method '+frontmatterField(read(permanent),'summary')+' '+frontmatterValues(read(permanent),'keywords').join(' ')).toLowerCase(),topics:['Productivity'],status,modified:'2026-01-06'}];
+  assert.equal(P.filterRows(rows,'future evidence','Productivity','Personal viewpoint pending','title').length,1);
+  assert.match(read(permanent),/User-confirmed position:\*\* none supplied/);
+  assert.match(read(lit),/## My Annotations\s+# 🔗 Backlinks/);
+});

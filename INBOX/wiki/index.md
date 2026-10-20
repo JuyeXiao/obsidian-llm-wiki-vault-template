@@ -1,17 +1,15 @@
 ---
 title: Wiki Index
 type: wiki_index
+source_count: 0
 cssclasses: [hide-properties_editing, hide-properties_reading]
 ---
 
 # Wiki Index
 
-> Content-oriented catalog of every wiki page, grouped by cluster. The LLM updates this on every ingest (one line per page: `[[page]] · type · one-liner · source count`).
+Original example catalog. Use `/wiki-query` to read and `/wiki-ingest` to maintain it.
 
 ## Productivity
 
-- [[Note-Taking]] · wiki_concept · capturing ideas in your own words and linking them · 1 source
-
----
-
-_This index has one example entry. Run `/wiki-ingest` to absorb your own sources; the agent maintains this file._
+- [[INBOX/wiki/Productivity/Note-Taking]] · concept · Questions, purposeful links and explicit limits · 1 source
+- [[INBOX/wiki/Productivity/Productivity Hub]] · moc · Productivity navigation

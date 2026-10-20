@@ -1,0 +1,1540 @@
+{
+  "reviewed_on": "2026-10-20",
+  "scope": "12 retained bundled plugins at their installed versions; optional upstream installs are excluded",
+  "license_counts": {
+    "GPLv3": 4,
+    "MIT": 6,
+    "MIT-0": 1,
+    "AGPLv3": 1
+  },
+  "project_license_files_restored": 12,
+  "full_dependency_inventory_verified": false,
+  "release_cleared": false,
+  "plugins": [
+    {
+      "id": "custom-sort",
+      "name": "Custom File Explorer sorting",
+      "version": "3.1.6",
+      "repository": "sebastianmc/obsidian-custom-sort",
+      "tag": "3.1.6",
+      "commit": "284bfdf04055b3ec8a5587b133cfffe8ba157486",
+      "source_url": "https://github.com/sebastianmc/obsidian-custom-sort/tree/284bfdf04055b3ec8a5587b133cfffe8ba157486",
+      "source_archive_url": "https://github.com/sebastianmc/obsidian-custom-sort/archive/284bfdf04055b3ec8a5587b133cfffe8ba157486.zip",
+      "project_license": "GPLv3",
+      "package_license_claim": "MIT",
+      "license_file": ".obsidian/plugins/custom-sort/LICENSE.md",
+      "notice_file": ".obsidian/plugins/custom-sort/THIRD-PARTY-NOTICES.txt",
+      "asset_verification": [
+        {
+          "name": "main.js",
+          "local_sha256": "bf4c744112269e3ca8986e8e32899bf3b280899e9c62dc9b3b9782677c771d00",
+          "status": "nosourcemap-comment-only",
+          "upstream_sha256": "8a5c9e8b153c65b717656ed11a9ba9d1022066404157ac2b33a32691bbecb943",
+          "url": "https://github.com/SebastianMC/obsidian-custom-sort/releases/download/3.1.6/main.js"
+        },
+        {
+          "name": "manifest.json",
+          "local_sha256": "4fdc25619e4d258bbca447efa54da902aa38ee24c1e39108b7ef1a4beb28ad88",
+          "status": "exact",
+          "upstream_sha256": "4fdc25619e4d258bbca447efa54da902aa38ee24c1e39108b7ef1a4beb28ad88",
+          "url": "https://github.com/SebastianMC/obsidian-custom-sort/releases/download/3.1.6/manifest.json"
+        }
+      ],
+      "open_items": [
+        "SOURCE_DISTRIBUTION: fixed source archive download and build entry verified on 2026-10-20; complete corresponding source/dependency closure, rebuild and continued availability remain unverified. No public source mirror was created.",
+        "CONFLICTING_METADATA: package.json says MIT; this record follows the restrictive LICENSE text without treating the metadata as an alternative grant. Upstream clarification remains pending."
+      ],
+      "dependencies": [],
+      "dependency_inventory_complete": false,
+      "cleared_for_redistribution": false,
+      "artifact_hashes": {
+        "main.js": "7cff0ae2d492d275bb0369bfe3332860258261b95b4d632c97bd001fcc26967f",
+        "manifest.json": "4fdc25619e4d258bbca447efa54da902aa38ee24c1e39108b7ef1a4beb28ad88"
+      },
+      "source_review": {
+        "reviewed_on": "2026-10-20",
+        "archive_url": "https://codeload.github.com/sebastianmc/obsidian-custom-sort/tar.gz/284bfdf04055b3ec8a5587b133cfffe8ba157486",
+        "archive_sha256": "74652547eca63c42277c5951d7d8e833f7da1fc3993a836e63f6d4d85f8be65f",
+        "archive_files": 85,
+        "archive_download_verified": true,
+        "build_entry": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+        "lock_files": [
+          "yarn.lock"
+        ],
+        "build_executed": false,
+        "complete_corresponding_source_verified": false,
+        "public_source_mirror_created": false,
+        "limitation": "A fixed upstream tree and its build entry were downloaded and read. Dependency closure, rebuild and continued hosting remain unverified."
+      }
+    },
+    {
+      "id": "datacore",
+      "name": "Datacore",
+      "version": "0.1.29",
+      "repository": "blacksmithgu/datacore",
+      "tag": "0.1.29",
+      "commit": "6a1aa7317530d0c524dd3368f52f3032e7cf869e",
+      "source_url": "https://github.com/blacksmithgu/datacore/tree/6a1aa7317530d0c524dd3368f52f3032e7cf869e",
+      "source_archive_url": "https://github.com/blacksmithgu/datacore/archive/6a1aa7317530d0c524dd3368f52f3032e7cf869e.zip",
+      "project_license": "MIT",
+      "package_license_claim": "MIT",
+      "license_file": ".obsidian/plugins/datacore/LICENSE.txt",
+      "notice_file": ".obsidian/plugins/datacore/THIRD-PARTY-NOTICES.txt",
+      "asset_verification": [
+        {
+          "name": "main.js",
+          "local_sha256": "e5164215370325321e50252520ff8deeed7456ad4304bb060bb6e866e965df27",
+          "status": "exact",
+          "upstream_sha256": "e5164215370325321e50252520ff8deeed7456ad4304bb060bb6e866e965df27",
+          "url": "https://github.com/blacksmithgu/datacore/releases/download/0.1.29/main.js"
+        },
+        {
+          "name": "manifest.json",
+          "local_sha256": "a2aa3faa417464351ba24b3d715a09f06e2a822219f525e697b4e716da3f4019",
+          "status": "json-format-only",
+          "upstream_sha256": "d061afca680933e46a6b797e24b0c515934fedbd0cff2e1dc6005c5cf6988f36",
+          "url": "https://github.com/blacksmithgu/datacore/releases/download/0.1.29/manifest.json"
+        },
+        {
+          "name": "styles.css",
+          "local_sha256": "ac31f45cb03dd900196e6b688960404f6ea3c72cd1128a77cabbc63b78c2cfb7",
+          "status": "exact",
+          "upstream_sha256": "ac31f45cb03dd900196e6b688960404f6ea3c72cd1128a77cabbc63b78c2cfb7",
+          "url": "https://github.com/blacksmithgu/datacore/releases/download/0.1.29/styles.css"
+        }
+      ],
+      "open_items": [
+        "MULTIPLE_LOCK_VERSIONS: @jridgewell/trace-mapping, emoji-regex, yaml. Notices conservatively retain every lockfile candidate; exact bundled variant remains unverified."
+      ],
+      "dependencies": [
+        {
+          "name": "@datastructures-js/queue",
+          "version": "4.2.3",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/%40datastructures-js%2Fqueue/4.2.3",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "daabafe750636268483fd40b0fd3ff45d22f5dc7b4f4d25df2cfd9cd10797928",
+              "source": "https://registry.npmjs.org/@datastructures-js/queue/-/queue-4.2.3.tgz"
+            }
+          ]
+        },
+        {
+          "name": "@fortawesome/fontawesome-svg-core",
+          "version": "6.7.2",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/%40fortawesome%2Ffontawesome-svg-core/6.7.2",
+          "notices": [
+            {
+              "file": "LICENSE.txt",
+              "sha256": "9b914eae88817d63b576eab5aafde7068c7a1abae125d7cdfb034f1da43a9afc",
+              "source": "https://registry.npmjs.org/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-6.7.2.tgz"
+            }
+          ]
+        },
+        {
+          "name": "@fortawesome/free-solid-svg-icons",
+          "version": "6.7.2",
+          "license_claim": "(CC-BY-4.0 AND MIT)",
+          "metadata_url": "https://registry.npmjs.org/%40fortawesome%2Ffree-solid-svg-icons/6.7.2",
+          "notices": [
+            {
+              "file": "LICENSE.txt",
+              "sha256": "9b914eae88817d63b576eab5aafde7068c7a1abae125d7cdfb034f1da43a9afc",
+              "source": "https://registry.npmjs.org/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-6.7.2.tgz"
+            }
+          ]
+        },
+        {
+          "name": "@fortawesome/react-fontawesome",
+          "version": "0.2.2",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/%40fortawesome%2Freact-fontawesome/0.2.2",
+          "notices": [
+            {
+              "file": "LICENSE.txt",
+              "sha256": "aaeca2af41f9d13e49205099914902115ca197cdae49f7d2b31bc5d6aa2bbd83",
+              "source": "https://registry.npmjs.org/@fortawesome/react-fontawesome/-/react-fontawesome-0.2.2.tgz"
+            }
+          ]
+        },
+        {
+          "name": "@jridgewell/gen-mapping",
+          "version": "0.3.12",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/%40jridgewell%2Fgen-mapping/0.3.12",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c",
+              "source": "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.12.tgz"
+            }
+          ]
+        },
+        {
+          "name": "@jridgewell/resolve-uri",
+          "version": "3.1.2",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/%40jridgewell%2Fresolve-uri/3.1.2",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "b8778b155bfde5a28b023a558753c0fa058a52bb9de35c343c250be1bbcdedab",
+              "source": "https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz"
+            }
+          ]
+        },
+        {
+          "name": "@jridgewell/sourcemap-codec",
+          "version": "1.5.4",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/%40jridgewell%2Fsourcemap-codec/1.5.4",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c",
+              "source": "https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.4.tgz"
+            }
+          ]
+        },
+        {
+          "name": "@jridgewell/trace-mapping",
+          "version": "0.3.29",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/%40jridgewell%2Ftrace-mapping/0.3.29",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c",
+              "source": "https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.29.tgz"
+            }
+          ]
+        },
+        {
+          "name": "@jridgewell/trace-mapping",
+          "version": "0.3.9",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/%40jridgewell%2Ftrace-mapping/0.3.9",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "0daa3c2445c4bfaaa7e8c69ec2742a8841bc920b75818ef2c7a510242de2b04a",
+              "source": "https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.9.tgz"
+            }
+          ]
+        },
+        {
+          "name": "emoji-regex",
+          "version": "10.4.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/emoji-regex/10.4.0",
+          "notices": [
+            {
+              "file": "LICENSE-MIT.txt",
+              "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a",
+              "source": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-10.4.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "emoji-regex",
+          "version": "8.0.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/emoji-regex/8.0.0",
+          "notices": [
+            {
+              "file": "LICENSE-MIT.txt",
+              "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a",
+              "source": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "emoji-regex",
+          "version": "9.2.2",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/emoji-regex/9.2.2",
+          "notices": [
+            {
+              "file": "LICENSE-MIT.txt",
+              "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a",
+              "source": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz"
+            }
+          ]
+        },
+        {
+          "name": "flatqueue",
+          "version": "2.0.3",
+          "license_claim": "ISC",
+          "metadata_url": "https://registry.npmjs.org/flatqueue/2.0.3",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "08a9d45b1300baf1925a966bcbec26cf9bd4137883d96b79089cba2c72d872bc",
+              "source": "https://registry.npmjs.org/flatqueue/-/flatqueue-2.0.3.tgz"
+            }
+          ]
+        },
+        {
+          "name": "lines-and-columns",
+          "version": "1.2.4",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/lines-and-columns/1.2.4",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "456fe85ad3e71db9523313cf7437b0f90c392d8a48c869908e46716b26d2cf53",
+              "source": "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.2.4.tgz"
+            }
+          ]
+        },
+        {
+          "name": "localforage",
+          "version": "1.10.0",
+          "license_claim": "Apache-2.0",
+          "metadata_url": "https://registry.npmjs.org/localforage/1.10.0",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "8c3c0576866d6c22f56cbe65b8ef20e63c8aa75ec58f8cd139a242edb42bf8f1",
+              "source": "https://registry.npmjs.org/localforage/-/localforage-1.10.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "luxon",
+          "version": "2.5.2",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/luxon/2.5.2",
+          "notices": [
+            {
+              "file": "LICENSE.md",
+              "sha256": "6cb2f2bf697ee9c6fa9eb8f227c63ee6e7a3cba42d4717f14c745ef9b6cbc006",
+              "source": "https://registry.npmjs.org/luxon/-/luxon-2.5.2.tgz"
+            }
+          ]
+        },
+        {
+          "name": "parsimmon",
+          "version": "1.18.1",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/parsimmon/1.18.1",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "8e7f52e74acdcd2ad65c6e01bca6c72d6be1cbf906e85036f75865795da1ddec",
+              "source": "https://registry.npmjs.org/parsimmon/-/parsimmon-1.18.1.tgz"
+            }
+          ]
+        },
+        {
+          "name": "preact",
+          "version": "10.26.9",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/preact/10.26.9",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "1fe6958409c8c257a70c587a18b6f7f412b179b456630790d30b2ec9a8e4b7d4",
+              "source": "https://registry.npmjs.org/preact/-/preact-10.26.9.tgz"
+            }
+          ]
+        },
+        {
+          "name": "react-select",
+          "version": "5.10.2",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/react-select/5.10.2",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "d736dd18c7e53f88217fa2106c748f1a1687bb91d69a1f673fa685269402d784",
+              "source": "https://registry.npmjs.org/react-select/-/react-select-5.10.2.tgz"
+            }
+          ]
+        },
+        {
+          "name": "sorted-btree",
+          "version": "1.8.1",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/sorted-btree/1.8.1",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "66fc8a9b85af6a102720d445a0a49faff7b1a3fe815d9ead09dee2480afd4340",
+              "source": "https://registry.npmjs.org/sorted-btree/-/sorted-btree-1.8.1.tgz"
+            }
+          ]
+        },
+        {
+          "name": "sucrase",
+          "version": "3.35.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/sucrase/3.35.0",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "c43b99fc682391ced47fee2bf964bc387ab5e65ba7b626b39cd6d1facd24e6a5",
+              "source": "https://registry.npmjs.org/sucrase/-/sucrase-3.35.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "ts-interface-checker",
+          "version": "0.1.13",
+          "license_claim": "Apache-2.0",
+          "metadata_url": "https://registry.npmjs.org/ts-interface-checker/0.1.13",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+              "source": "https://registry.npmjs.org/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz"
+            }
+          ]
+        },
+        {
+          "name": "yaml",
+          "version": "1.10.2",
+          "license_claim": "ISC",
+          "metadata_url": "https://registry.npmjs.org/yaml/1.10.2",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "0f10bab9eedc5d50183a6dbce9f76e8db974103bfd32d64674406dfeb7654ee7",
+              "source": "https://registry.npmjs.org/yaml/-/yaml-1.10.2.tgz"
+            }
+          ]
+        },
+        {
+          "name": "yaml",
+          "version": "2.8.0",
+          "license_claim": "ISC",
+          "metadata_url": "https://registry.npmjs.org/yaml/2.8.0",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "5bba27375d93e9119f76c1015f7672cf9ad5f70952296e0842fb2243d6376869",
+              "source": "https://registry.npmjs.org/yaml/-/yaml-2.8.0.tgz"
+            }
+          ]
+        }
+      ],
+      "dependency_inventory_complete": false,
+      "cleared_for_redistribution": false,
+      "artifact_hashes": {
+        "main.js": "e5164215370325321e50252520ff8deeed7456ad4304bb060bb6e866e965df27",
+        "manifest.json": "a2aa3faa417464351ba24b3d715a09f06e2a822219f525e697b4e716da3f4019",
+        "styles.css": "ac31f45cb03dd900196e6b688960404f6ea3c72cd1128a77cabbc63b78c2cfb7"
+      }
+    },
+    {
+      "id": "dataview",
+      "name": "Dataview",
+      "version": "0.5.68",
+      "repository": "blacksmithgu/obsidian-dataview",
+      "tag": "0.5.68",
+      "commit": "29b1ad87e1f2b964b4fa0c209f11d0622469bdb0",
+      "source_url": "https://github.com/blacksmithgu/obsidian-dataview/tree/29b1ad87e1f2b964b4fa0c209f11d0622469bdb0",
+      "source_archive_url": "https://github.com/blacksmithgu/obsidian-dataview/archive/29b1ad87e1f2b964b4fa0c209f11d0622469bdb0.zip",
+      "project_license": "MIT",
+      "package_license_claim": "MIT",
+      "license_file": ".obsidian/plugins/dataview/LICENSE.txt",
+      "notice_file": ".obsidian/plugins/dataview/THIRD-PARTY-NOTICES.txt",
+      "asset_verification": [
+        {
+          "name": "main.js",
+          "local_sha256": "bcdb7a7882051a30427a3fa370533c1052019591e7551bcc12611bb9a726bbb3",
+          "status": "inline-sourcemap-removed-plus-comment",
+          "upstream_sha256": "794e9eaede73920bb8d54b0eda4f5de2182d698cc638774500f24f14bcd4da0b",
+          "url": "https://github.com/blacksmithgu/obsidian-dataview/releases/download/0.5.68/main.js"
+        },
+        {
+          "name": "manifest.json",
+          "local_sha256": "9235db47112da81b85591c79ecb9ae2574e5e72207056e976472f90616286185",
+          "status": "exact",
+          "upstream_sha256": "9235db47112da81b85591c79ecb9ae2574e5e72207056e976472f90616286185",
+          "url": "https://github.com/blacksmithgu/obsidian-dataview/releases/download/0.5.68/manifest.json"
+        },
+        {
+          "name": "styles.css",
+          "local_sha256": "3306dd9032e00f989ba7233a37fd255bc4d3f4340cee661762e952f3f6aa1de9",
+          "status": "exact",
+          "upstream_sha256": "3306dd9032e00f989ba7233a37fd255bc4d3f4340cee661762e952f3f6aa1de9",
+          "url": "https://github.com/blacksmithgu/obsidian-dataview/releases/download/0.5.68/styles.css"
+        }
+      ],
+      "open_items": [
+        "MULTIPLE_LOCK_VERSIONS: emoji-regex. Notices conservatively retain every lockfile candidate; exact bundled variant remains unverified."
+      ],
+      "dependencies": [
+        {
+          "name": "compare-versions",
+          "version": "4.1.4",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/compare-versions/4.1.4",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "4c247e0dce60c6a29332afa80ba7d81243e7045b0e4b6e6e59e21fb5a1a7b5ab",
+              "source": "https://registry.npmjs.org/compare-versions/-/compare-versions-4.1.4.tgz"
+            }
+          ]
+        },
+        {
+          "name": "emoji-regex",
+          "version": "10.2.1",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/emoji-regex/10.2.1",
+          "notices": [
+            {
+              "file": "LICENSE-MIT.txt",
+              "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a",
+              "source": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-10.2.1.tgz"
+            }
+          ]
+        },
+        {
+          "name": "emoji-regex",
+          "version": "8.0.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/emoji-regex/8.0.0",
+          "notices": [
+            {
+              "file": "LICENSE-MIT.txt",
+              "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a",
+              "source": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "localforage",
+          "version": "1.10.0",
+          "license_claim": "Apache-2.0",
+          "metadata_url": "https://registry.npmjs.org/localforage/1.10.0",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "8c3c0576866d6c22f56cbe65b8ef20e63c8aa75ec58f8cd139a242edb42bf8f1",
+              "source": "https://registry.npmjs.org/localforage/-/localforage-1.10.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "luxon",
+          "version": "3.4.3",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/luxon/3.4.3",
+          "notices": [
+            {
+              "file": "LICENSE.md",
+              "sha256": "6cb2f2bf697ee9c6fa9eb8f227c63ee6e7a3cba42d4717f14c745ef9b6cbc006",
+              "source": "https://registry.npmjs.org/luxon/-/luxon-3.4.3.tgz"
+            }
+          ]
+        },
+        {
+          "name": "obsidian-calendar-ui",
+          "version": "0.3.12",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/obsidian-calendar-ui/0.3.12",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "d82eb6573ee60fd3516ea8d8f8d4d7bc3170ec9391a2f975f9868320e943701a",
+              "source": "https://registry.npmjs.org/obsidian-calendar-ui/-/obsidian-calendar-ui-0.3.12.tgz"
+            }
+          ]
+        },
+        {
+          "name": "papaparse",
+          "version": "5.4.1",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/papaparse/5.4.1",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "99aa68e4b42758b09828a46515f70369e5463458ab7a990189f641af2b8d9b4e",
+              "source": "https://registry.npmjs.org/papaparse/-/papaparse-5.4.1.tgz"
+            }
+          ]
+        },
+        {
+          "name": "parsimmon",
+          "version": "1.18.1",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/parsimmon/1.18.1",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "8e7f52e74acdcd2ad65c6e01bca6c72d6be1cbf906e85036f75865795da1ddec",
+              "source": "https://registry.npmjs.org/parsimmon/-/parsimmon-1.18.1.tgz"
+            }
+          ]
+        },
+        {
+          "name": "preact",
+          "version": "10.17.1",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/preact/10.17.1",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "1fe6958409c8c257a70c587a18b6f7f412b179b456630790d30b2ec9a8e4b7d4",
+              "source": "https://registry.npmjs.org/preact/-/preact-10.17.1.tgz"
+            }
+          ]
+        },
+        {
+          "name": "remove-markdown",
+          "version": "0.5.5",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/remove-markdown/0.5.5",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "c75150813352c0b585eb8f7501089fa1f178887c22583c273d32b3d600a47622",
+              "source": "https://registry.npmjs.org/remove-markdown/-/remove-markdown-0.5.5.tgz"
+            }
+          ]
+        }
+      ],
+      "dependency_inventory_complete": false,
+      "cleared_for_redistribution": false,
+      "artifact_hashes": {
+        "main.js": "bcdb7a7882051a30427a3fa370533c1052019591e7551bcc12611bb9a726bbb3",
+        "manifest.json": "9235db47112da81b85591c79ecb9ae2574e5e72207056e976472f90616286185",
+        "styles.css": "3306dd9032e00f989ba7233a37fd255bc4d3f4340cee661762e952f3f6aa1de9"
+      }
+    },
+    {
+      "id": "homepage",
+      "name": "Homepage",
+      "version": "4.4.2",
+      "repository": "mirnovov/obsidian-homepage",
+      "tag": "4.4.2",
+      "commit": "eaa5d29fc7a685aee2129f2e04122cd646349110",
+      "source_url": "https://github.com/mirnovov/obsidian-homepage/tree/eaa5d29fc7a685aee2129f2e04122cd646349110",
+      "source_archive_url": "https://github.com/mirnovov/obsidian-homepage/archive/eaa5d29fc7a685aee2129f2e04122cd646349110.zip",
+      "project_license": "MIT",
+      "package_license_claim": "MIT",
+      "license_file": ".obsidian/plugins/homepage/LICENSE.md",
+      "notice_file": ".obsidian/plugins/homepage/THIRD-PARTY-NOTICES.txt",
+      "asset_verification": [
+        {
+          "name": "main.js",
+          "local_sha256": "ac86db78709143fb95ac9fe3dfc59b771eb7a43c28b120420b8a0c96e3bfe964",
+          "status": "nosourcemap-comment-only",
+          "upstream_sha256": "50f6e1c7fd1f950caa8f8a7502f7d6104a46fd959f81f3651d63b17077a2f0da",
+          "url": "https://github.com/mirnovov/obsidian-homepage/releases/download/4.4.2/main.js"
+        },
+        {
+          "name": "manifest.json",
+          "local_sha256": "3f81933c9b1f5b6f29fc90d63b983fc4d5dd39a6c5783fbf702d484724d31cee",
+          "status": "exact",
+          "upstream_sha256": "3f81933c9b1f5b6f29fc90d63b983fc4d5dd39a6c5783fbf702d484724d31cee",
+          "url": "https://github.com/mirnovov/obsidian-homepage/releases/download/4.4.2/manifest.json"
+        },
+        {
+          "name": "styles.css",
+          "local_sha256": "96e102d93f2463bea8d4a5fa4e4537965eebb11fcd61ece96eda1d2301c64f38",
+          "status": "exact",
+          "upstream_sha256": "96e102d93f2463bea8d4a5fa4e4537965eebb11fcd61ece96eda1d2301c64f38",
+          "url": "https://github.com/mirnovov/obsidian-homepage/releases/download/4.4.2/styles.css"
+        }
+      ],
+      "open_items": [],
+      "dependencies": [
+        {
+          "name": "obsidian-daily-notes-interface",
+          "version": "0.9.4",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/obsidian-daily-notes-interface/0.9.4",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "d82eb6573ee60fd3516ea8d8f8d4d7bc3170ec9391a2f975f9868320e943701a",
+              "source": "https://registry.npmjs.org/obsidian-daily-notes-interface/-/obsidian-daily-notes-interface-0.9.4.tgz"
+            }
+          ]
+        }
+      ],
+      "dependency_inventory_complete": false,
+      "cleared_for_redistribution": false,
+      "artifact_hashes": {
+        "main.js": "ac86db78709143fb95ac9fe3dfc59b771eb7a43c28b120420b8a0c96e3bfe964",
+        "manifest.json": "3f81933c9b1f5b6f29fc90d63b983fc4d5dd39a6c5783fbf702d484724d31cee",
+        "styles.css": "96e102d93f2463bea8d4a5fa4e4537965eebb11fcd61ece96eda1d2301c64f38"
+      }
+    },
+    {
+      "id": "iconic",
+      "name": "Iconic",
+      "version": "1.1.9",
+      "repository": "gfxholo/iconic",
+      "tag": "1.1.9",
+      "commit": "d79c1ec50b83d67ba26a70f4dc8c212a414963ef",
+      "source_url": "https://github.com/gfxholo/iconic/tree/d79c1ec50b83d67ba26a70f4dc8c212a414963ef",
+      "source_archive_url": "https://github.com/gfxholo/iconic/archive/d79c1ec50b83d67ba26a70f4dc8c212a414963ef.zip",
+      "project_license": "MIT-0",
+      "package_license_claim": "MIT-0",
+      "license_file": ".obsidian/plugins/iconic/LICENSE",
+      "notice_file": ".obsidian/plugins/iconic/THIRD-PARTY-NOTICES.txt",
+      "asset_verification": [
+        {
+          "name": "main.js",
+          "local_sha256": "8b3cf63de5316e1fff4db968c533ae30ebc7a9916e5e7468a69ad437a44a091a",
+          "status": "nosourcemap-comment-only",
+          "upstream_sha256": "83f6bd3eef277fd96c08c5a6ab7b3a8df2dca885da1348c449e122719988ce4f",
+          "url": "https://github.com/gfxholo/iconic/releases/download/1.1.9/main.js"
+        },
+        {
+          "name": "manifest.json",
+          "local_sha256": "8236f5909d6864e2ccc1afeae2ac869e7c0f40ab9f537dfeee74df580e597835",
+          "status": "exact",
+          "upstream_sha256": "8236f5909d6864e2ccc1afeae2ac869e7c0f40ab9f537dfeee74df580e597835",
+          "url": "https://github.com/gfxholo/iconic/releases/download/1.1.9/manifest.json"
+        },
+        {
+          "name": "styles.css",
+          "local_sha256": "78ee3acb0f70fb5dac55aabc89773efd5ef724d22bd432799116e3aedb374a20",
+          "status": "exact",
+          "upstream_sha256": "78ee3acb0f70fb5dac55aabc89773efd5ef724d22bd432799116e3aedb374a20",
+          "url": "https://github.com/gfxholo/iconic/releases/download/1.1.9/styles.css"
+        }
+      ],
+      "open_items": [],
+      "dependencies": [],
+      "dependency_inventory_complete": false,
+      "cleared_for_redistribution": false,
+      "artifact_hashes": {
+        "main.js": "8b3cf63de5316e1fff4db968c533ae30ebc7a9916e5e7468a69ad437a44a091a",
+        "manifest.json": "8236f5909d6864e2ccc1afeae2ac869e7c0f40ab9f537dfeee74df580e597835",
+        "styles.css": "78ee3acb0f70fb5dac55aabc89773efd5ef724d22bd432799116e3aedb374a20"
+      }
+    },
+    {
+      "id": "journals",
+      "name": "Journals",
+      "version": "2.1.10",
+      "repository": "srg-kostyrko/obsidian-journal",
+      "tag": "2.1.10",
+      "commit": "21d5cbabc81af2ba9724d85eed46c84773754ac2",
+      "source_url": "https://github.com/srg-kostyrko/obsidian-journal/tree/21d5cbabc81af2ba9724d85eed46c84773754ac2",
+      "source_archive_url": "https://github.com/srg-kostyrko/obsidian-journal/archive/21d5cbabc81af2ba9724d85eed46c84773754ac2.zip",
+      "project_license": "MIT",
+      "package_license_claim": "MIT",
+      "license_file": ".obsidian/plugins/journals/LICENSE",
+      "notice_file": ".obsidian/plugins/journals/THIRD-PARTY-NOTICES.txt",
+      "asset_verification": [
+        {
+          "name": "main.js",
+          "local_sha256": "ef06695e55bd5c3d69a8e0f0276e3fe687eb9daef7b28f8729a83493bec6fa50",
+          "status": "nosourcemap-comment-only",
+          "upstream_sha256": "a4b3a170b066202f9e62f1c3709b8204a03f57b09b966debb364b94d1df25bff",
+          "url": "https://github.com/srg-kostyrko/obsidian-journal/releases/download/2.1.10/main.js"
+        },
+        {
+          "name": "manifest.json",
+          "local_sha256": "50c8e8bdac3c53ae82e0aad4ac1bf46b33cd612f4fd81c2184c65ce0ce53973f",
+          "status": "exact",
+          "upstream_sha256": "50c8e8bdac3c53ae82e0aad4ac1bf46b33cd612f4fd81c2184c65ce0ce53973f",
+          "url": "https://github.com/srg-kostyrko/obsidian-journal/releases/download/2.1.10/manifest.json"
+        },
+        {
+          "name": "styles.css",
+          "local_sha256": "423d43d386294b975709aa61b1ba89f27558ab663640757db9049a71810a2450",
+          "status": "exact",
+          "upstream_sha256": "423d43d386294b975709aa61b1ba89f27558ab663640757db9049a71810a2450",
+          "url": "https://github.com/srg-kostyrko/obsidian-journal/releases/download/2.1.10/styles.css"
+        }
+      ],
+      "open_items": [
+        "MULTIPLE_LOCK_VERSIONS: perfect-debounce. Notices conservatively retain every lockfile candidate; exact bundled variant remains unverified."
+      ],
+      "dependencies": [
+        {
+          "name": "@vee-validate/valibot",
+          "version": "4.15.1",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/%40vee-validate%2Fvalibot/4.15.1",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "a6d9a0b6255a6c3e0bce3d1033c31e6f2fbb00f53340d621958cb95d795832d0",
+              "source": "https://registry.npmjs.org/@vee-validate/valibot/-/valibot-4.15.1.tgz"
+            }
+          ]
+        },
+        {
+          "name": "@vueuse/core",
+          "version": "13.7.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/%40vueuse%2Fcore/13.7.0",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "0f844b1160603552a01662ac2999c14e5fb4df487e65619b9ed4406e43eb3c0b",
+              "source": "https://registry.npmjs.org/@vueuse/core/-/core-13.7.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "eslint-plugin-vue",
+          "version": "10.4.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/eslint-plugin-vue/10.4.0",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "dbbf03317f0101fed5643cd87ca80fb769e358fa4f428445bf2315deeb23a154",
+              "source": "https://registry.npmjs.org/eslint-plugin-vue/-/eslint-plugin-vue-10.4.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "perfect-debounce",
+          "version": "1.0.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/perfect-debounce/1.0.0",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "46231df5a7733c3f52f11b71f3df61813007745b62b09031acfb45fb42d75082",
+              "source": "https://registry.npmjs.org/perfect-debounce/-/perfect-debounce-1.0.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "perfect-debounce",
+          "version": "2.0.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/perfect-debounce/2.0.0",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "46231df5a7733c3f52f11b71f3df61813007745b62b09031acfb45fb42d75082",
+              "source": "https://registry.npmjs.org/perfect-debounce/-/perfect-debounce-2.0.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "valibot",
+          "version": "1.1.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/valibot/1.1.0",
+          "notices": [
+            {
+              "file": "LICENSE.md",
+              "sha256": "1ca6c9ca372cffe26c313464b9d9f0aef2417b27b2bad20396f4769005122d4d",
+              "source": "https://registry.npmjs.org/valibot/-/valibot-1.1.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "vee-validate",
+          "version": "4.15.1",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/vee-validate/4.15.1",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "a6d9a0b6255a6c3e0bce3d1033c31e6f2fbb00f53340d621958cb95d795832d0",
+              "source": "https://registry.npmjs.org/vee-validate/-/vee-validate-4.15.1.tgz"
+            }
+          ]
+        },
+        {
+          "name": "vue",
+          "version": "3.5.19",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/vue/3.5.19",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+              "source": "https://registry.npmjs.org/vue/-/vue-3.5.19.tgz"
+            }
+          ]
+        }
+      ],
+      "dependency_inventory_complete": false,
+      "cleared_for_redistribution": false,
+      "artifact_hashes": {
+        "main.js": "ef06695e55bd5c3d69a8e0f0276e3fe687eb9daef7b28f8729a83493bec6fa50",
+        "manifest.json": "50c8e8bdac3c53ae82e0aad4ac1bf46b33cd612f4fd81c2184c65ce0ce53973f",
+        "styles.css": "423d43d386294b975709aa61b1ba89f27558ab663640757db9049a71810a2450"
+      }
+    },
+    {
+      "id": "note-toolbar",
+      "name": "Note Toolbar",
+      "version": "1.32.15",
+      "repository": "chrisgurney/obsidian-note-toolbar",
+      "tag": "1.32.15",
+      "commit": "3a42ed12e98ef24322690983dfd10416eb7f6927",
+      "source_url": "https://github.com/chrisgurney/obsidian-note-toolbar/tree/3a42ed12e98ef24322690983dfd10416eb7f6927",
+      "source_archive_url": "https://github.com/chrisgurney/obsidian-note-toolbar/archive/3a42ed12e98ef24322690983dfd10416eb7f6927.zip",
+      "project_license": "GPLv3",
+      "package_license_claim": "GPL-3.0",
+      "license_file": ".obsidian/plugins/note-toolbar/LICENSE",
+      "notice_file": ".obsidian/plugins/note-toolbar/THIRD-PARTY-NOTICES.txt",
+      "asset_verification": [
+        {
+          "name": "main.js",
+          "local_sha256": "1b2586c7338a5edeca88cc839c52a37bf7543a8d0e3630e5ddfa0c4ebbb72895",
+          "status": "nosourcemap-comment-only",
+          "upstream_sha256": "9f08ed0dc6fac54afafdf4bb7fc9e0ee36bbd8ffb1ced2d2892b9414d104d93b",
+          "url": "https://github.com/chrisgurney/obsidian-note-toolbar/releases/download/1.32.15/main.js"
+        },
+        {
+          "name": "manifest.json",
+          "local_sha256": "0db88ade6ad07da22d51b78ccf161deed7aa6dd1c8d0a7aafd10ed11f384a8be",
+          "status": "exact",
+          "upstream_sha256": "0db88ade6ad07da22d51b78ccf161deed7aa6dd1c8d0a7aafd10ed11f384a8be",
+          "url": "https://github.com/chrisgurney/obsidian-note-toolbar/releases/download/1.32.15/manifest.json"
+        },
+        {
+          "name": "styles.css",
+          "local_sha256": "df3e8ccd4a55f6fb27eff37f7af97f1185cbaea46cd5e50468b261cdeb09b157",
+          "status": "exact",
+          "upstream_sha256": "df3e8ccd4a55f6fb27eff37f7af97f1185cbaea46cd5e50468b261cdeb09b157",
+          "url": "https://github.com/chrisgurney/obsidian-note-toolbar/releases/download/1.32.15/styles.css"
+        }
+      ],
+      "open_items": [
+        "SOURCE_DISTRIBUTION: fixed source archive download and build entry verified on 2026-10-20; complete corresponding source/dependency closure, rebuild and continued availability remain unverified. No public source mirror was created."
+      ],
+      "dependencies": [
+        {
+          "name": "sortablejs",
+          "version": "1.15.7",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/sortablejs/1.15.7",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "e94dfc31e800d169257569db270457c9f028440c9ccae41e7eb78b2db18f1298",
+              "source": "https://registry.npmjs.org/sortablejs/-/sortablejs-1.15.7.tgz"
+            }
+          ]
+        }
+      ],
+      "dependency_inventory_complete": false,
+      "cleared_for_redistribution": false,
+      "artifact_hashes": {
+        "main.js": "9ceaf6c52fb2e467a3bbd23c64faa18730dfdc59bf2d4a15549d9594c0e367a1",
+        "manifest.json": "0db88ade6ad07da22d51b78ccf161deed7aa6dd1c8d0a7aafd10ed11f384a8be",
+        "styles.css": "df3e8ccd4a55f6fb27eff37f7af97f1185cbaea46cd5e50468b261cdeb09b157"
+      },
+      "source_review": {
+        "reviewed_on": "2026-10-20",
+        "archive_url": "https://codeload.github.com/chrisgurney/obsidian-note-toolbar/tar.gz/3a42ed12e98ef24322690983dfd10416eb7f6927",
+        "archive_sha256": "86e7db5b6280db7c044409b4e2809d28726159ee00f65f93f7ce83556275344b",
+        "archive_files": 260,
+        "archive_download_verified": true,
+        "build_entry": "tsc --noEmit --skipLibCheck && node esbuild.config.mjs production",
+        "lock_files": [
+          "package-lock.json"
+        ],
+        "build_executed": false,
+        "complete_corresponding_source_verified": false,
+        "public_source_mirror_created": false,
+        "limitation": "A fixed upstream tree and its build entry were downloaded and read. Dependency closure, rebuild and continued hosting remain unverified."
+      }
+    },
+    {
+      "id": "obsidian-banners",
+      "name": "Banners",
+      "version": "1.3.3",
+      "repository": "noatpad/obsidian-banners",
+      "tag": "1.3.3",
+      "commit": "b4601ca5481402e62cc0bc477abc717fddcb099d",
+      "source_url": "https://github.com/noatpad/obsidian-banners/tree/b4601ca5481402e62cc0bc477abc717fddcb099d",
+      "source_archive_url": "https://github.com/noatpad/obsidian-banners/archive/b4601ca5481402e62cc0bc477abc717fddcb099d.zip",
+      "project_license": "MIT",
+      "package_license_claim": "MIT",
+      "license_file": ".obsidian/plugins/obsidian-banners/LICENSE",
+      "notice_file": ".obsidian/plugins/obsidian-banners/THIRD-PARTY-NOTICES.txt",
+      "asset_verification": [
+        {
+          "name": "main.js",
+          "local_sha256": "689fbe4a5c3283dba316a367708a091ca1230543fcfb3a81519edc3201cb6c70",
+          "status": "nosourcemap-comment-only",
+          "upstream_sha256": "97e3984dd0ca9388397c150eb9bb34aa3c16f89f4b818f1d26f6f2cd5405fd78",
+          "url": "https://github.com/noatpad/obsidian-banners/releases/download/1.3.3/main.js"
+        },
+        {
+          "name": "manifest.json",
+          "local_sha256": "646b8da9c5cc8231034048b86e827c271d8da4206329775d3693c2656101192d",
+          "status": "exact",
+          "upstream_sha256": "646b8da9c5cc8231034048b86e827c271d8da4206329775d3693c2656101192d",
+          "url": "https://github.com/noatpad/obsidian-banners/releases/download/1.3.3/manifest.json"
+        },
+        {
+          "name": "styles.css",
+          "local_sha256": "1457504f1ec4af0090a75f49a201c3134694d5e006837c4e7b2d156a82026a44",
+          "status": "exact",
+          "upstream_sha256": "1457504f1ec4af0090a75f49a201c3134694d5e006837c4e7b2d156a82026a44",
+          "url": "https://github.com/noatpad/obsidian-banners/releases/download/1.3.3/styles.css"
+        }
+      ],
+      "open_items": [],
+      "dependencies": [
+        {
+          "name": "common-tags",
+          "version": "1.8.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/common-tags/1.8.0",
+          "notices": [
+            {
+              "file": "license.md",
+              "sha256": "eae4e510daa2d573a96dbdc6a4a11e8bd2ce67f53c0b5a373682cb56fcdebc9a",
+              "source": "https://registry.npmjs.org/common-tags/-/common-tags-1.8.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "emoji-regex",
+          "version": "10.0.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/emoji-regex/10.0.0",
+          "notices": [
+            {
+              "file": "LICENSE-MIT.txt",
+              "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a",
+              "source": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-10.0.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "lodash",
+          "version": "4.17.21",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/lodash/4.17.21",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc",
+              "source": "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
+            }
+          ]
+        },
+        {
+          "name": "node-emoji",
+          "version": "1.11.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/node-emoji/1.11.0",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "130e53dfde11496776a2012a0bd11b97bc7748eda2466dfba5d4907ec1cbe84e",
+              "source": "https://registry.npmjs.org/node-emoji/-/node-emoji-1.11.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "twemoji",
+          "version": "13.1.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/twemoji/13.1.0",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "8e67473a73cd94511271b114f11e6a967ed2cb91c3be396205095f9db4fe1b54",
+              "source": "https://registry.npmjs.org/twemoji/-/twemoji-13.1.0.tgz"
+            },
+            {
+              "file": "LICENSE-GRAPHICS",
+              "sha256": "8ae9438818c26e4873b91d8c6ad620526c011e27e125677f13031eda903f007c",
+              "source": "https://registry.npmjs.org/twemoji/-/twemoji-13.1.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "validator",
+          "version": "13.6.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/validator/13.6.0",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "683b3c34623e01daad41cb2a3d0a93578c590f8d0206cbd8b0b579fb7def2603",
+              "source": "https://registry.npmjs.org/validator/-/validator-13.6.0.tgz"
+            }
+          ]
+        }
+      ],
+      "dependency_inventory_complete": false,
+      "cleared_for_redistribution": false,
+      "artifact_hashes": {
+        "main.js": "689fbe4a5c3283dba316a367708a091ca1230543fcfb3a81519edc3201cb6c70",
+        "manifest.json": "646b8da9c5cc8231034048b86e827c271d8da4206329775d3693c2656101192d",
+        "styles.css": "1457504f1ec4af0090a75f49a201c3134694d5e006837c4e7b2d156a82026a44"
+      }
+    },
+    {
+      "id": "obsidian-meta-bind-plugin",
+      "name": "Meta Bind",
+      "version": "1.4.12",
+      "repository": "mprojectscode/obsidian-meta-bind-plugin",
+      "tag": "1.4.12",
+      "commit": "6d41566765e19325150c508d3c1146074df78283",
+      "source_url": "https://github.com/mprojectscode/obsidian-meta-bind-plugin/tree/6d41566765e19325150c508d3c1146074df78283",
+      "source_archive_url": "https://github.com/mprojectscode/obsidian-meta-bind-plugin/archive/6d41566765e19325150c508d3c1146074df78283.zip",
+      "project_license": "GPLv3",
+      "package_license_claim": "GPL-3.0",
+      "license_file": ".obsidian/plugins/obsidian-meta-bind-plugin/LICENSE.txt",
+      "notice_file": ".obsidian/plugins/obsidian-meta-bind-plugin/THIRD-PARTY-NOTICES.txt",
+      "asset_verification": [
+        {
+          "name": "main.js",
+          "local_sha256": "cb42227a7c8938e0f324d128b8c065991778d49dc87a497145ac3b6222a2f990",
+          "status": "nosourcemap-comment-only",
+          "upstream_sha256": "8e8fba773d58a8895ed758e58a0709637ebed14ef4a5fccee78e300454cfe54e",
+          "url": "https://github.com/mProjectsCode/obsidian-meta-bind-plugin/releases/download/1.4.12/main.js"
+        },
+        {
+          "name": "manifest.json",
+          "local_sha256": "8678e2233ececd26d74acc879547748b8c4776e44ac35af20642cffe04ec55c6",
+          "status": "exact",
+          "upstream_sha256": "8678e2233ececd26d74acc879547748b8c4776e44ac35af20642cffe04ec55c6",
+          "url": "https://github.com/mProjectsCode/obsidian-meta-bind-plugin/releases/download/1.4.12/manifest.json"
+        },
+        {
+          "name": "styles.css",
+          "local_sha256": "00bb30d717c46c2bc6711eca76135941e26bb45dbe2f42768413ae2ae4fa9e18",
+          "status": "exact",
+          "upstream_sha256": "00bb30d717c46c2bc6711eca76135941e26bb45dbe2f42768413ae2ae4fa9e18",
+          "url": "https://github.com/mProjectsCode/obsidian-meta-bind-plugin/releases/download/1.4.12/styles.css"
+        }
+      ],
+      "open_items": [
+        "SOURCE_DISTRIBUTION: fixed source archive download and build entry verified on 2026-10-20; complete corresponding source/dependency closure, rebuild and continued availability remain unverified. No public source mirror was created."
+      ],
+      "dependencies": [],
+      "dependency_inventory_complete": false,
+      "cleared_for_redistribution": false,
+      "artifact_hashes": {
+        "main.js": "41adda207539395ddcda9c3fc1ad9c95426cddb20fbed0ce3e6b1c40da2a3883",
+        "manifest.json": "8678e2233ececd26d74acc879547748b8c4776e44ac35af20642cffe04ec55c6",
+        "styles.css": "00bb30d717c46c2bc6711eca76135941e26bb45dbe2f42768413ae2ae4fa9e18"
+      },
+      "source_review": {
+        "reviewed_on": "2026-10-20",
+        "archive_url": "https://codeload.github.com/mprojectscode/obsidian-meta-bind-plugin/tar.gz/6d41566765e19325150c508d3c1146074df78283",
+        "archive_sha256": "18aa874e709473ddce5e28f0646e3321c02a39f2eb914113a87c6b854b2aaa99",
+        "archive_files": 390,
+        "archive_download_verified": true,
+        "build_entry": "vite build --mode=production",
+        "lock_files": [
+          "bun.lock"
+        ],
+        "build_executed": false,
+        "complete_corresponding_source_verified": false,
+        "public_source_mirror_created": false,
+        "limitation": "A fixed upstream tree and its build entry were downloaded and read. Dependency closure, rebuild and continued hosting remain unverified."
+      }
+    },
+    {
+      "id": "obsidian-style-settings",
+      "name": "Style Settings",
+      "version": "1.0.9",
+      "repository": "obsidian-community/obsidian-style-settings",
+      "tag": "1.0.9",
+      "commit": "4ebec6ae0131a9d5e8307bb5e26d59db5ba2e81c",
+      "source_url": "https://github.com/obsidian-community/obsidian-style-settings/tree/4ebec6ae0131a9d5e8307bb5e26d59db5ba2e81c",
+      "source_archive_url": "https://github.com/obsidian-community/obsidian-style-settings/archive/4ebec6ae0131a9d5e8307bb5e26d59db5ba2e81c.zip",
+      "project_license": "GPLv3",
+      "package_license_claim": "MIT",
+      "license_file": ".obsidian/plugins/obsidian-style-settings/LICENSE.md",
+      "notice_file": ".obsidian/plugins/obsidian-style-settings/THIRD-PARTY-NOTICES.txt",
+      "asset_verification": [
+        {
+          "name": "main.js",
+          "local_sha256": "1828abaacdab4c5578b705a625c585b30512f8efad4c7cfc5a18e70cc3557468",
+          "status": "exact",
+          "upstream_sha256": "1828abaacdab4c5578b705a625c585b30512f8efad4c7cfc5a18e70cc3557468",
+          "url": "https://github.com/community-archive/obsidian-style-settings/releases/download/1.0.9/main.js"
+        },
+        {
+          "name": "manifest.json",
+          "local_sha256": "9cffdc20cf2aa1354820e0050b694b0f9b576446e3d5d44a36ae8b0187e5bfb8",
+          "status": "exact",
+          "upstream_sha256": "9cffdc20cf2aa1354820e0050b694b0f9b576446e3d5d44a36ae8b0187e5bfb8",
+          "url": "https://github.com/community-archive/obsidian-style-settings/releases/download/1.0.9/manifest.json"
+        },
+        {
+          "name": "styles.css",
+          "local_sha256": "ee7937d2be50653a89ccb30ae5f0572b23507d5b7f1328d005271a363075bfd8",
+          "status": "exact",
+          "upstream_sha256": "ee7937d2be50653a89ccb30ae5f0572b23507d5b7f1328d005271a363075bfd8",
+          "url": "https://github.com/community-archive/obsidian-style-settings/releases/download/1.0.9/styles.css"
+        }
+      ],
+      "open_items": [
+        "SOURCE_DISTRIBUTION: fixed source archive download and build entry verified on 2026-10-20; complete corresponding source/dependency closure, rebuild and continued availability remain unverified. No public source mirror was created.",
+        "CONFLICTING_METADATA: package.json says MIT; this record follows the restrictive LICENSE text without treating the metadata as an alternative grant. Upstream clarification remains pending."
+      ],
+      "dependencies": [
+        {
+          "name": "@types/chroma-js",
+          "version": "2.1.3",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/%40types%2Fchroma-js/2.1.3",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+              "source": "https://registry.npmjs.org/@types/chroma-js/-/chroma-js-2.1.3.tgz"
+            }
+          ]
+        },
+        {
+          "name": "@types/js-yaml",
+          "version": "4.0.3",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/%40types%2Fjs-yaml/4.0.3",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+              "source": "https://registry.npmjs.org/@types/js-yaml/-/js-yaml-4.0.3.tgz"
+            }
+          ]
+        },
+        {
+          "name": "chroma-js",
+          "version": "2.1.2",
+          "license_claim": "(BSD-3-Clause AND Apache-2.0)",
+          "metadata_url": "https://registry.npmjs.org/chroma-js/2.1.2",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "c266032eef15ef0c01e7b0cca314b2944399d357f18d591e6ca72699d667cd23",
+              "source": "https://registry.npmjs.org/chroma-js/-/chroma-js-2.1.2.tgz"
+            },
+            {
+              "file": "license.coffee",
+              "sha256": "45a9204625f07b535986c03bf86308d78131ba34d4981a1d3c327a899fe70f52",
+              "source": "https://registry.npmjs.org/chroma-js/-/chroma-js-2.1.2.tgz"
+            }
+          ]
+        },
+        {
+          "name": "detect-indent",
+          "version": "7.0.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/detect-indent/7.0.0",
+          "notices": [
+            {
+              "file": "license",
+              "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+              "source": "https://registry.npmjs.org/detect-indent/-/detect-indent-7.0.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "dotenv",
+          "version": "10.0.0",
+          "license_claim": "BSD-2-Clause",
+          "metadata_url": "https://registry.npmjs.org/dotenv/10.0.0",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "74b629b24865e1e83c5277ee84590b7937644d6fd959d0c7bdce758676cd2ced",
+              "source": "https://registry.npmjs.org/dotenv/-/dotenv-10.0.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "fuzzysort",
+          "version": "2.0.4",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/fuzzysort/2.0.4",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "626c3f57d6c312eb777f144bf8e255ece53a9bd081daf75fb12584584f75791c",
+              "source": "https://registry.npmjs.org/fuzzysort/-/fuzzysort-2.0.4.tgz"
+            }
+          ]
+        },
+        {
+          "name": "js-yaml",
+          "version": "4.1.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/js-yaml/4.1.0",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550",
+              "source": "https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "@simonwep/pickr",
+          "commit": "a17739f7aa1871b44da778cbb79ae76dae77d839",
+          "notices": [
+            {
+              "sha256": "2e692753439814e70633ae71e6c6fc22950cd4e9f17b7aaab11a768ae07b6053",
+              "source": "https://raw.githubusercontent.com/nothingislost/pickr/a17739f7aa1871b44da778cbb79ae76dae77d839/LICENSE"
+            }
+          ]
+        }
+      ],
+      "dependency_inventory_complete": false,
+      "cleared_for_redistribution": false,
+      "artifact_hashes": {
+        "main.js": "1828abaacdab4c5578b705a625c585b30512f8efad4c7cfc5a18e70cc3557468",
+        "manifest.json": "9cffdc20cf2aa1354820e0050b694b0f9b576446e3d5d44a36ae8b0187e5bfb8",
+        "styles.css": "ee7937d2be50653a89ccb30ae5f0572b23507d5b7f1328d005271a363075bfd8"
+      },
+      "source_review": {
+        "reviewed_on": "2026-10-20",
+        "archive_url": "https://codeload.github.com/obsidian-community/obsidian-style-settings/tar.gz/4ebec6ae0131a9d5e8307bb5e26d59db5ba2e81c",
+        "archive_sha256": "bc3aea1f93b6a241f904fe6c5aadd158879f77b4f24520dec34fca8eae5c56ec",
+        "archive_files": 69,
+        "archive_download_verified": true,
+        "build_entry": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+        "lock_files": [
+          "yarn.lock"
+        ],
+        "build_executed": false,
+        "complete_corresponding_source_verified": false,
+        "public_source_mirror_created": false,
+        "limitation": "A fixed upstream tree and its build entry were downloaded and read. Dependency closure, rebuild and continued hosting remain unverified."
+      }
+    },
+    {
+      "id": "quickadd",
+      "name": "QuickAdd",
+      "version": "2.12.2",
+      "repository": "chhoumann/quickadd",
+      "tag": "2.12.2",
+      "commit": "d38644d70a65735fe1fe347aa9a172d378b6c0a4",
+      "source_url": "https://github.com/chhoumann/quickadd/tree/d38644d70a65735fe1fe347aa9a172d378b6c0a4",
+      "source_archive_url": "https://github.com/chhoumann/quickadd/archive/d38644d70a65735fe1fe347aa9a172d378b6c0a4.zip",
+      "project_license": "MIT",
+      "package_license_claim": "MIT",
+      "license_file": ".obsidian/plugins/quickadd/LICENSE",
+      "notice_file": ".obsidian/plugins/quickadd/THIRD-PARTY-NOTICES.txt",
+      "asset_verification": [
+        {
+          "name": "main.js",
+          "local_sha256": "7acb43cba876e2f7b161cde276069c27ec5aa4c837957e71bf2e6bfe661c3293",
+          "status": "nosourcemap-comment-only",
+          "upstream_sha256": "8afe45335c894a72dc22a3fb46d126a6caf548774aa6a081931da435e292efbb",
+          "url": "https://github.com/chhoumann/quickadd/releases/download/2.12.2/main.js"
+        },
+        {
+          "name": "manifest.json",
+          "local_sha256": "3dd8caef1b1f3e1a0ed67a0d8d0546a73f28cee495109be8e0da39d9ef0177b7",
+          "status": "exact",
+          "upstream_sha256": "3dd8caef1b1f3e1a0ed67a0d8d0546a73f28cee495109be8e0da39d9ef0177b7",
+          "url": "https://github.com/chhoumann/quickadd/releases/download/2.12.2/manifest.json"
+        },
+        {
+          "name": "styles.css",
+          "local_sha256": "7198c40b23c4b1ba825156f376855e6122ed8a7f8792e6bd813ebb86534e133e",
+          "status": "exact",
+          "upstream_sha256": "7198c40b23c4b1ba825156f376855e6122ed8a7f8792e6bd813ebb86534e133e",
+          "url": "https://github.com/chhoumann/quickadd/releases/download/2.12.2/styles.css"
+        }
+      ],
+      "open_items": [],
+      "dependencies": [
+        {
+          "name": "chrono-node",
+          "version": "2.9.0",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/chrono-node/2.9.0",
+          "notices": [
+            {
+              "file": "LICENSE.txt",
+              "sha256": "c91de20bdc82cf4db26ac49e77670ca864a3c1da4179606eefe32436aa114d98",
+              "source": "https://registry.npmjs.org/chrono-node/-/chrono-node-2.9.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "fuse.js",
+          "version": "7.1.0",
+          "license_claim": "Apache-2.0",
+          "metadata_url": "https://registry.npmjs.org/fuse.js/7.1.0",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "cc807e3caa26cdee316bab2ff6fdb508a2f619b74959fe59e513ef6e61635ebe",
+              "source": "https://registry.npmjs.org/fuse.js/-/fuse.js-7.1.0.tgz"
+            }
+          ]
+        },
+        {
+          "name": "js-tiktoken",
+          "version": "1.0.21",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/js-tiktoken/1.0.21",
+          "notices": [
+            {
+              "file": "upstream-LICENSE",
+              "sha256": "418cb499b436128d653d79941333a5437b7be2ea9213dcc2f04d15d5d2c51d86",
+              "source": "https://raw.githubusercontent.com/dqbd/tiktoken/4c8b748e07992c00386f3180af5c574b27b65139/LICENSE"
+            }
+          ]
+        },
+        {
+          "name": "zustand",
+          "version": "5.0.12",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/zustand/5.0.12",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "c1e6e266563517467b1bf874817d23e426f3149252bd7d42758cd697514b8417",
+              "source": "https://registry.npmjs.org/zustand/-/zustand-5.0.12.tgz"
+            }
+          ]
+        }
+      ],
+      "dependency_inventory_complete": false,
+      "cleared_for_redistribution": false,
+      "artifact_hashes": {
+        "main.js": "7acb43cba876e2f7b161cde276069c27ec5aa4c837957e71bf2e6bfe661c3293",
+        "manifest.json": "3dd8caef1b1f3e1a0ed67a0d8d0546a73f28cee495109be8e0da39d9ef0177b7",
+        "styles.css": "7198c40b23c4b1ba825156f376855e6122ed8a7f8792e6bd813ebb86534e133e"
+      }
+    },
+    {
+      "id": "templater-obsidian",
+      "name": "Templater",
+      "version": "2.20.5",
+      "repository": "silentvoid13/Templater",
+      "tag": "2.20.5",
+      "commit": "e818dc6cd37aa9aecbfee49ab06ee343f8b12e01",
+      "source_url": "https://github.com/silentvoid13/Templater/tree/e818dc6cd37aa9aecbfee49ab06ee343f8b12e01",
+      "source_archive_url": "https://github.com/silentvoid13/Templater/archive/e818dc6cd37aa9aecbfee49ab06ee343f8b12e01.zip",
+      "project_license": "AGPLv3",
+      "package_license_claim": "AGPL-3.0-only",
+      "license_file": ".obsidian/plugins/templater-obsidian/LICENSE.TXT",
+      "notice_file": ".obsidian/plugins/templater-obsidian/THIRD-PARTY-NOTICES.txt",
+      "asset_verification": [
+        {
+          "name": "main.js",
+          "local_sha256": "804536468672c6cd1a1d8a2f418a94e0a15e8e4af1a07236f147dccf311a4431",
+          "status": "nosourcemap-comment-only",
+          "upstream_sha256": "81c8d0bb212c9c1269902eceee4baa21c83ba85d6d8dfa348a80416bc72c5eec",
+          "url": "https://github.com/SilentVoid13/Templater/releases/download/2.20.5/main.js"
+        },
+        {
+          "name": "manifest.json",
+          "local_sha256": "5df1451e29cabdeca445ddf346e51fac0a93f007bf0f8d100924d35d7a3a03d8",
+          "status": "exact",
+          "upstream_sha256": "5df1451e29cabdeca445ddf346e51fac0a93f007bf0f8d100924d35d7a3a03d8",
+          "url": "https://github.com/SilentVoid13/Templater/releases/download/2.20.5/manifest.json"
+        },
+        {
+          "name": "styles.css",
+          "local_sha256": "7d85bcd129e9f38a8932455bdf05c9629ce466ab1236dc933b7b7aea55350c04",
+          "status": "exact",
+          "upstream_sha256": "7d85bcd129e9f38a8932455bdf05c9629ce466ab1236dc933b7b7aea55350c04",
+          "url": "https://github.com/SilentVoid13/Templater/releases/download/2.20.5/styles.css"
+        }
+      ],
+      "open_items": [
+        "SOURCE_DISTRIBUTION: fixed source archive download and build entry verified on 2026-10-20; complete corresponding source/dependency closure, rebuild and continued availability remain unverified. No public source mirror was created.",
+        "MULTIPLE_LOCK_VERSIONS: typescript. Notices conservatively retain every lockfile candidate; exact bundled variant remains unverified."
+      ],
+      "dependencies": [
+        {
+          "name": "@microsoft/tsdoc",
+          "version": "0.15.1",
+          "license_claim": "MIT",
+          "metadata_url": "https://registry.npmjs.org/%40microsoft%2Ftsdoc/0.15.1",
+          "notices": [
+            {
+              "file": "LICENSE",
+              "sha256": "c5ff7150f61127f50e4825271901fe978b7decaf85116b0a0ce4cf3b2ab40574",
+              "source": "https://registry.npmjs.org/@microsoft/tsdoc/-/tsdoc-0.15.1.tgz"
+            }
+          ]
+        },
+        {
+          "name": "@silentvoid13/rusty_engine",
+          "version": "0.4.0",
+          "license_claim": "AGPL-3.0 (upstream LICENSE.TXT)",
+          "metadata_url": "https://registry.npmjs.org/%40silentvoid13%2Frusty_engine/0.4.0",
+          "notices": [
+            {
+              "file": "LICENSE.TXT",
+              "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+              "source": "https://raw.githubusercontent.com/SilentVoid13/rusty_engine/aa76da9652851da0401b51b5ff6f36e49478b596/LICENSE.TXT"
+            }
+          ],
+          "source_evidence": {
+            "npm_git_head": "096721a85178108b0027e2e14a3902a00a7325f6",
+            "licensed_commit": "aa76da9652851da0401b51b5ff6f36e49478b596",
+            "comparison": "https://github.com/SilentVoid13/rusty_engine/compare/096721a85178108b0027e2e14a3902a00a7325f6...aa76da9652851da0401b51b5ff6f36e49478b596",
+            "difference": "Only LICENSE.TXT added; Rust source unchanged. No WASM rebuild."
+          }
+        },
+        {
+          "name": "typescript",
+          "version": "4.9.5",
+          "license_claim": "Apache-2.0",
+          "metadata_url": "https://registry.npmjs.org/typescript/4.9.5",
+          "notices": [
+            {
+              "file": "LICENSE.txt",
+              "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47",
+              "source": "https://registry.npmjs.org/typescript/-/typescript-4.9.5.tgz"
+            }
+          ]
+        },
+        {
+          "name": "typescript",
+          "version": "5.4.5",
+          "license_claim": "Apache-2.0",
+          "metadata_url": "https://registry.npmjs.org/typescript/5.4.5",
+          "notices": [
+            {
+              "file": "LICENSE.txt",
+              "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47",
+              "source": "https://registry.npmjs.org/typescript/-/typescript-5.4.5.tgz"
+            }
+          ]
+        }
+      ],
+      "dependency_inventory_complete": false,
+      "cleared_for_redistribution": false,
+      "artifact_hashes": {
+        "main.js": "a255d8a1a8546cfd93fc00d1885558f2fdd7ab306ea02673c1d430798166b72e",
+        "manifest.json": "5df1451e29cabdeca445ddf346e51fac0a93f007bf0f8d100924d35d7a3a03d8",
+        "styles.css": "7d85bcd129e9f38a8932455bdf05c9629ce466ab1236dc933b7b7aea55350c04"
+      },
+      "source_review": {
+        "reviewed_on": "2026-10-20",
+        "archive_url": "https://codeload.github.com/silentvoid13/Templater/tar.gz/e818dc6cd37aa9aecbfee49ab06ee343f8b12e01",
+        "archive_sha256": "fa002e1f08166955f105cd283d42e9f0dee12f9497579f49701acb3f439c615d",
+        "archive_files": 125,
+        "archive_download_verified": true,
+        "build_entry": "node esbuild.config.mjs production",
+        "lock_files": [
+          "pnpm-lock.yaml"
+        ],
+        "build_executed": false,
+        "complete_corresponding_source_verified": false,
+        "public_source_mirror_created": false,
+        "limitation": "A fixed upstream tree and its build entry were downloaded and read. Dependency closure, rebuild and continued hosting remain unverified."
+      }
+    }
+  ],
+  "bundle_reduction": {
+    "previous_count": 54,
+    "current_count": 12,
+    "removed_count": 42,
+    "retained_programs_changed": false,
+    "git_history_rewritten": false
+  }
+}

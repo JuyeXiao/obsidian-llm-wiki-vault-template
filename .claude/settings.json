@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/hooks/validate-vault-write.py",
+            "command": "python \"$(git rev-parse --show-toplevel)/.claude/hooks/validate-vault-write.py\"",
             "timeout": 30,
             "statusMessage": "Validating vault write rules"
           }
